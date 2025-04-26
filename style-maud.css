@@ -1,4 +1,3 @@
-
 :root {
   --rouge: #E63946;
   --orange: #F4A261;
@@ -10,14 +9,16 @@
   --violet: #9D4EDD;
   --rose: #F06595;
   --noir: #000000;
-  --blanc: #F8F9FA;
+  --brun-cacao: #5A3E36;
+  --blanc-creme: #FAF3E0;
+  --prune-doux: #7D5A6A;
 
   --font-principale: 'Segoe UI', sans-serif;
 }
 
 body {
-  background-color: var(--noir);
-  color: var(--blanc);
+  background-color: var(--blanc-creme);
+  color: var(--brun-cacao);
   font-family: var(--font-principale);
   margin: 0;
   padding: 0;
@@ -30,7 +31,7 @@ header {
 }
 
 header img {
-  max-width: 180px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -45,31 +46,34 @@ header p {
 }
 
 nav {
-  background-color: var(--bleu-foncé);
+  background-color: #FFF5E1; /* ou var(--blanc-creme) si tu veux rester cohérent */
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 0.5rem;
   flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optionnel pour un effet flottant */
 }
 
 nav a {
-  color: var(--blanc);
+  color: var(--prune-doux) !important;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--jaune);
+  color: var(--rose) !important; /* Tu peux aussi mettre var(--violet) si tu préfères */
 }
 
 main {
   padding: 2rem;
-  background-color: var(--bleu-foncé);
+  background-color: var(--blanc-creme);
 }
 
 h2 {
-  color: var(--jaune);
+  color: var(--prune-doux) !important;
   margin-bottom: 1rem;
 }
 
@@ -79,8 +83,8 @@ p {
 }
 
 .button {
-  background-color: var(--vert-clair);
-  color: var(--noir);
+  background-color: var(--rose);
+  color: var(--blanc-creme);
   padding: 1rem 2rem;
   border: none;
   border-radius: 30px;
@@ -90,12 +94,12 @@ p {
 }
 
 .button:hover {
-  background-color: var(--vert-foncé);
+  background-color: var(--violet);
 }
 
 footer {
-  background-color: var(--rouge);
-  color: var(--blanc);
+  background: linear-gradient(to right, var(--rose), var(--orange), var(--jaune), var(--vert-clair), var(--bleu-ciel), var(--violet));
+  color: var(--blanc-creme);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
@@ -115,4 +119,139 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+/* Animation au scroll : fade in vers le haut */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe animée */
+h2 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Classe déclenchée par JS pour les h2 au scroll */
+h2.appear {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Animation spécifique pour le premier h2 "Mon Parcours" au chargement */
+h2.appear-static {
+  opacity: 1;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF5E1;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu a {
+  color: var(--prune-doux);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: var(--rose);
+  color: var(--blanc-creme);
+}
+
+/* Bouton menu */
+.menu-toggle {
+  background-color: transparent;
+  color: var(--prune-doux);
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+ menu-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 auto 0.5rem auto;
+  padding: 0.2rem;
+  max-height: 50px;
+}
+
+.menu-toggle,
+.menu-btn {
+  background-color: transparent;
+  color: var(--prune-doux);
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-btn:hover,
+.menu-toggle:hover {
+  background-color: var(--rose);
+  color: var(--blanc-creme);
+}
+.menu-toggle,
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--prune-doux);
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  height: 48px;
+  min-width: 120px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover,
+.menu-btn:hover {
+  background-color: var(--rose);
+  color: var(--blanc-creme);
 }
