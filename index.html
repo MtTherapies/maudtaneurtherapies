@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="SNdp6ci2j4LfJ5yrxLCZcQp2b7_h4-4DnybOl7A142Q" />
-    <title>Bienvenue sur Maud Taneur Thérapies</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="SNdp6ci2j4LfJ5yrxLCZcQp2b7_h4-4DnybOl7A142Q" />
+  <title>Maud Taneur Thérapies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-maud.css">
+  <style>
+    :root {
+      --rouge: #E63946;
+      --orange: #F4A261;
+      --jaune: #F8C703;
+      --vert-clair: #2A9D8F;
+      --vert-foncé: #1B9C63;
+      --bleu-ciel: #3ABEFF;
+      --bleu-foncé: #264653;
+      --violet: #9D4EDD;
+      --rose: #F06595;
+      --noir: #000000;
+      --blanc: #F8F9FA;
+      --font-principale: 'Segoe UI', sans-serif;
+    }
+  </style>
 </head>
-<body>
-    <h1>Site en construction 🚧</h1>
-    <p>Merci de revenir bientôt !</p>
+<body class="accueil">
+  <header>
+    <button class="menu-toggle">☰ Menu</button>
+    <nav class="menu">
+      <ul>
+        <li><a href="soins-energetiques.html">✨ Soins énergétiques</a></li>
+        <li><a href="soins-a-distance.html">🌌 Soins énergétiques à distance</a></li>
+        <li><a href="arret-du-tabac.html">🚭 Séance magnétisme Arrêt du tabac</a></li>
+        <li><a href="coupeur-de-feu.html">🔥 Séance magnétisme Coupeur de feu</a></li>
+        <li><a href="massages.html">💆‍♀️ Massages</a></li>
+        <li><a href="coaching">🌱 Coaching</a></li>
+        <li><a href="blog">✍️ Blog</a></li>
+        <li><a href="avis-galerie.html">👥 Avis & Galerie Photos</a></li>
+        <li><a href="contact-agenda.html">🗕️ Contact & Agenda</a></li>
+        <li><a href="tarifs.html">💰 Tarifs</a></li>
+        <li><a href="horaires.html">⏰ Horaires & Réservations</a></li>
+      </ul>
+    </nav>
+    <img src="https://github.com/maudtaneurtherapies/maudtaneur.github.io/blob/main/logo-maud-taneur.png?raw=true" alt="Logo Maud Taneur">
+    <h1>Maud Taneur Thérapies</h1>
+  </header>
+
+  <main>
+    <section class="presentation">
+      <h2>Mon Parcours</h2>
+      <p>Après de nombreuses années dans l’aide à la personne, j’ai décidé de revenir à l’essentiel : mon lien profond avec les énergies...</p>
+      <p>Quand j'avais 20 ans, une magnétiseuse reconnue de Mâcon...</p>
+      <p>Mais il y a trois ans, un véritable déclic s’est produit...</p>
+      <p>Je me suis alors formée davantage auprès de NR...</p>
+      <p>En mars 2025, je me suis lancée officiellement...</p>
+
+      <h2>Ma Vision</h2>
+      <p>Mon intention est toujours pure, centrée sur l’humain et le cœur...</p>
+      <p>Ma démarche est profondément tournée vers le soin, l’humain, l’écoute...</p>
+
+      <h2>Prestations proposées 🌿</h2>
+      <ul>
+        <li>Rééquilibrages énergétiques...</li>
+        <li>Soins énergétiques ciblés...</li>
+        <li>Soins énergétiques à distance...</li>
+        <li>Magnétisme - coupeur de feu...</li>
+        <li>Magnétisme pour l’arrêt du tabac...</li>
+        <li>Massages dynamisants...</li>
+        <li>Massages relaxants...</li>
+        <li>Massage crânien...</li>
+        <li>Massages à la bougie...</li>
+        <li>Massages aux pierres chaudes...</li>
+        <li>Soin minceur avec machine...</li>
+        <li>Coaching sur-mesure...</li>
+      </ul>
+
+      <h2>Infos pratiques</h2>
+      <p>Vous pouvez prendre rendez-vous directement via le planning en ligne...</p>
+      <p>Je propose deux plages horaires par jour (hors dimanche)...</p>
+
+      <h3>Une question qu’on me pose souvent :</h3>
+      <blockquote>
+        “Le magnétisme, ça s’apprend ?”
+        <br><br>
+        Je crois que nous avons tous cette énergie en nous...
+      </blockquote>
+
+      <h2>✨✨✨ Bienvenue dans mon univers ✨✨✨</h2>
+      <p>
+        Un espace de soin, d’écoute et de bienveillance.<br>
+        Je vous accueille dans un cadre chaleureux et apaisant, à mon domicile à Replonges.<br><br>
+        <strong>Contactez-moi 👐🌈🪷</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Maud Taneur - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('h2').forEach(h2 => {
+      observer.observe(h2);
+    });
+  </script>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    });
+  </script>
 </body>
 </html>
