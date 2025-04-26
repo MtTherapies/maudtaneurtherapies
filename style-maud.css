@@ -255,3 +255,7 @@ nav ul {
   background-color: var(--rose);
   color: var(--blanc-creme);
 }
+h1 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+}
