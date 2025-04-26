@@ -1,0 +1,118 @@
+
+:root {
+  --rouge: #E63946;
+  --orange: #F4A261;
+  --jaune: #F8C703;
+  --vert-clair: #2A9D8F;
+  --vert-foncé: #1B9C63;
+  --bleu-ciel: #3ABEFF;
+  --bleu-foncé: #264653;
+  --violet: #9D4EDD;
+  --rose: #F06595;
+  --noir: #000000;
+  --blanc: #F8F9FA;
+
+  --font-principale: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--noir);
+  color: var(--blanc);
+  font-family: var(--font-principale);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(to right, var(--rose), var(--orange), var(--jaune), var(--vert-clair), var(--bleu-ciel), var(--violet));
+  padding: 2rem 1rem 1rem;
+}
+
+header img {
+  max-width: 180px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+nav {
+  background-color: var(--bleu-foncé);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--blanc);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--jaune);
+}
+
+main {
+  padding: 2rem;
+  background-color: var(--bleu-foncé);
+}
+
+h2 {
+  color: var(--jaune);
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: var(--vert-clair);
+  color: var(--noir);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--vert-foncé);
+}
+
+footer {
+  background-color: var(--rouge);
+  color: var(--blanc);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
