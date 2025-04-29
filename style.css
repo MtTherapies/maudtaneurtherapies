@@ -15,7 +15,7 @@ main {
 footer {
   background: url('https://github.com/MtTherapies/maudtaneurtherapies/blob/main/Screenshot_3.png?raw=true') 
               center center/cover no-repeat;
-  min-height: 220px;
+  min-height: 120px;
   padding: 40px 20px;
   text-align: center;
   color: white;
