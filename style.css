@@ -9,6 +9,7 @@ html, body {
 
 main {
   flex: 1;
+  min-height: 70vh;
 }
 
 footer {
