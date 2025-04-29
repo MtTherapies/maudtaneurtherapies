@@ -1,0 +1,28 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Comfortaa', Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background: url('https://github.com/MtTherapies/maudtaneurtherapies/blob/main/Screenshot_3.png?raw=true') 
+              center center/cover no-repeat;
+  min-height: 220px;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
