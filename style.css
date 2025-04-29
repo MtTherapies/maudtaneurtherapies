@@ -27,3 +27,8 @@ footer a {
   color: white;
   text-decoration: underline;
 }
+footer div {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
