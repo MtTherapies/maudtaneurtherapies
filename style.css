@@ -36,18 +36,17 @@ footer > div {
   padding-left: 40px;
 }
 
-/* Responsive : supprimer padding-left sur mobile */
-@media (max-width: 768px) {
-  footer > div {
-    padding-left: 0;
-  }
-}
 .spacer {
   min-height: 50vh;
 }
 
+/* Responsive pour mobile */
 @media (max-width: 768px) {
+  footer > div {
+    padding-left: 0;
+  }
+
   .spacer {
-    min-height: 90vh;
+    min-height: 60vh; /* et pas 90vh, 90vh c'est beaucoup trop grand */
   }
 }
