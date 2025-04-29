@@ -36,25 +36,4 @@ footer > div {
   align-items: center;
   justify-content: center;
 }
-.footer-sub {
-  font-style: italic;
-  margin: 5px 0;
-  font-size: 1.1em;
-}
 
-.footer-links {
-  margin-top: 20px;
-}
-
-.footer-links a {
-  color: #ffffff;
-  font-size: 14px;
-  font-style: italic;
-  margin: 0 10px;
-  text-decoration: underline;
-}
-footer {
-  width: 100vw;
-  position: relative;
-  left: 0;
-}
