@@ -1,24 +1,8 @@
 
-html, body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Comfortaa', Arial, sans-serif;
-}
-
-main {
-  flex: 1;
-}
-
 footer {
   position: relative;
-  left: 0;
-  right: 0;
   width: 100%;
-  max-width: none;
-  background: url('https://github.com/MtTherapies/maudtaneurtherapies/blob/main/Screenshot_3.png?raw=true') center 45%/cover no-repeat;
+  background: url('https://github.com/MtTherapies/maudtaneurtherapies/blob/main/Screenshot_3.png?raw=true') center center/cover no-repeat;
   min-height: 100px;
   padding: 20px;
   color: white;
@@ -28,19 +12,21 @@ footer {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
+  margin-top: auto;
 }
 
 footer > div {
   width: fit-content;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
-footer > div {
-  padding-left: 10px;
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  footer > div {
+    padding-left: 0;
+  }
 }
-
