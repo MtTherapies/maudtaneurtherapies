@@ -31,25 +31,6 @@ footer > div {
   text-align: center;
   width: fit-content;
 }
-footer {
-  background: url('https://github.com/MtTherapies/maudtaneurtherapies/blob/main/Screenshot_3.png?raw=true')
-              center center/cover no-repeat;
-  min-height: 80px;
-  padding: 15px 10px;
-  color: white;
-  margin-top: auto;
-  font-size: 0.9em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-footer > div {
-  margin: 0 auto;
-  text-align: center;
-  width: fit-content;
-}
 .footer-sub {
   font-style: italic;
   margin: 5px 0;
