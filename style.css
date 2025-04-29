@@ -43,11 +43,11 @@ footer > div {
   }
 }
 .spacer {
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 @media (max-width: 768px) {
   .spacer {
-    min-height: 70vh;
+    min-height: 90vh;
   }
 }
