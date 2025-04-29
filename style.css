@@ -42,3 +42,12 @@ footer > div {
     padding-left: 0;
   }
 }
+.spacer {
+  min-height: 50vh;
+}
+
+@media (max-width: 768px) {
+  .spacer {
+    min-height: 70vh;
+  }
+}
