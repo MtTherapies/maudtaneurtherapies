@@ -49,3 +49,20 @@ footer > div {
   max-width: 800px;
   width: 100%;
 }
+.footer-sub {
+  font-style: italic;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 14px;
+  font-style: italic;
+  margin: 0 10px;
+  text-decoration: underline;
+}
