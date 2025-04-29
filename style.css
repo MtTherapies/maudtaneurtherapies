@@ -43,7 +43,7 @@ footer > div {
   }
 }
 .spacer {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 768px) {
