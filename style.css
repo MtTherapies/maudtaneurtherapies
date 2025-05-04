@@ -47,7 +47,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin: 8px 0;
+  margin: 20px 0; /* Augmente l'espacement vertical */
   flex-wrap: wrap;
   text-align: center;
 }
