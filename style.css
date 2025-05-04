@@ -29,3 +29,15 @@ a {
   text-decoration: underline;
   font-weight: 500;
 }
+
+p {
+  text-align: center; /* Remet le texte centré comme avant */
+  font-family: Comfortaa, Arial, sans-serif; /* Police d'origine */
+  font-weight: 500;
+  color: #000000; /* Couleur standard du texte */
+}
+
+a {
+  color: #008cba; /* bleu doux */
+  text-decoration: underline;
+}
