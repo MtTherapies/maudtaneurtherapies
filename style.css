@@ -8,3 +8,24 @@ body {
 h1 {
   text-decoration: underline;
   color: #91466F; /* prune léger */
+body {
+  font-family: 'Comfortaa', Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+}
+
+p {
+  text-align: left;
+  margin: 12px 0;
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+a {
+  color: #007ea7;
+  text-decoration: underline;
+  font-weight: 500;
+}
