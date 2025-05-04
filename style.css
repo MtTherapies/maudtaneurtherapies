@@ -41,3 +41,13 @@ a {
   color: #008cba; /* bleu doux */
   text-decoration: underline;
 }
+
+.soin-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+  text-align: center;
+}
