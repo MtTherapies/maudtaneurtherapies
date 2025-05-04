@@ -44,10 +44,15 @@ a {
 
 .soin-ligne {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 8px;
-  margin: 40px 0; /* Augmente l'espacement vertical */
+  margin-bottom: 30px;
   flex-wrap: wrap;
-  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.soin-ligne span {
+  line-height: 1.6;
 }
