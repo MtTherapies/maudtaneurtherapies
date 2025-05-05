@@ -66,3 +66,14 @@ body {
   margin-top: 30px;
   font-size: 1.1em;
 }
+
+@media screen and (max-width: 768px) {
+  .corps {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .emoji-line,
+  .soin-ligne {
+    text-align: center;
+  }
