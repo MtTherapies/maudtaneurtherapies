@@ -47,3 +47,9 @@ a {
 .soin-ligne {
   white-space: nowrap;
 }
+
+}
+.soin-ligne.soin-longue {
+  font-size: 1.05em; /* légèrement plus petit */
+  white-space: nowrap;
+}
