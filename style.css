@@ -1,65 +1,68 @@
-/* Style général */
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Titres principaux h1 : soulignés et prune léger */
-h1 {
-  text-decoration: underline;
-  color: #91466F; /* prune léger */
-body {
   font-family: 'Comfortaa', Arial, sans-serif;
-  line-height: 1.6;
-  color: #000;
-}
-
-p {
-  text-align: left;
-  margin: 12px 0;
-}
-
-.emoji {
-  font-size: 1.2em;
-  margin-right: 5px;
-}
-
-a {
-  color: #007ea7;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-p {
-  text-align: center; /* Remet le texte centré comme avant */
-  font-family: Comfortaa, Arial, sans-serif; /* Police d'origine */
-  font-weight: 500;
-  color: #000000; /* Couleur standard du texte */
-}
-
-a {
-  color: #008cba; /* bleu doux */
-  text-decoration: underline;
-}
-
-.soin-ligne {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.soin-ligne span {
-  line-height: 1.6;
-}
-
-.soin-ligne {
+  background-color: #fff;
   text-align: center;
-  margin-bottom: 40px; /* espace entre chaque bloc */
+}
+
+.header-image {
+  width: 100%;
+  height: 300px;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/f6b8f5ba8dcc6b0d0d90368f2c8e97f6e6ed708f/image%201.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.titre-principal {
+  text-align: center;
+  color: #741b47;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-decoration: underline;
+  margin: 30px 10px;
+}
+
+.emoji-line {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.intro h2 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.intro p {
   font-size: 1.2em;
-  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.soins {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.soins p {
+  font-size: 1.15em;
+  margin: 25px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soins a {
+  color: #0077b6;
+  text-decoration: underline;
+}
+
+.citation {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 1.1em;
 }
