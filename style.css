@@ -77,3 +77,9 @@ body {
   .soin-ligne {
     text-align: center;
   }
+
+.soin-ligne a {
+    display: inline;
+    white-space: normal;
+  }
+}
