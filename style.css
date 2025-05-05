@@ -81,3 +81,8 @@ a {
 .text-wrapper {
   text-align: center;
 }
+
+}
+.soin-ligne {
+  white-space: nowrap;
+}
