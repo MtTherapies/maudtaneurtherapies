@@ -1,46 +1,68 @@
 /* Style général */
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Titres principaux h1 : soulignés et prune léger */
+h1 {
+  text-decoration: underline;
+  color: #91466F; /* prune léger */
+body {
   font-family: 'Comfortaa', Arial, sans-serif;
   line-height: 1.6;
   color: #000;
 }
-h1 {
-  text-decoration: underline;
-  color: #91466F; /* prune léger */
-}
+
 p {
-  text-align: center;
-  font-family: 'Comfortaa', Arial, sans-serif;
-  font-weight: 500;
-  color: #000;
+  text-align: left;
   margin: 12px 0;
 }
-a {
-  color: #008cba; /* bleu doux */
-  text-decoration: underline;
-  font-weight: 500;
-}
+
 .emoji {
   font-size: 1.2em;
   margin-right: 5px;
 }
-}
-}
+
+a {
+  color: #007ea7;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
-.soin-ligne {
-  display: block;
-  text-align: center;
-  margin-bottom: 40px;
-  white-space: nowrap;
-  font-size: 1.2em;
-  line-height: 2.2;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+p {
+  text-align: center; /* Remet le texte centré comme avant */
+  font-family: Comfortaa, Arial, sans-serif; /* Police d'origine */
+  font-weight: 500;
+  color: #000000; /* Couleur standard du texte */
 }
 
+a {
+  color: #008cba; /* bleu doux */
+  text-decoration: underline;
+}
 .soin-ligne {
   max-width: 900px;
+  margin-bottom: 40px;
+}
+
+}
+.soin-ligne {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+}
+.soin-ligne {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+}
+.soin-ligne {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+.text-wrapper {
+  text-align: center;
 }
