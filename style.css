@@ -70,3 +70,14 @@ a {
   overflow-x: auto;
   max-width: 100%;
 }
+
+}
+.soin-ligne {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 40px;
+  white-space: nowrap;
+}
+.text-wrapper {
+  text-align: center;
+}
