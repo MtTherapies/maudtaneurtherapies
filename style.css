@@ -53,3 +53,11 @@ a {
   font-size: 1.05em; /* légèrement plus petit */
   white-space: nowrap;
 }
+
+}
+.soin-ligne.soin-longue {
+  display: inline-block;
+  transform: scaleX(0.92); /* Réduit un peu la largeur */
+  transform-origin: left;
+  white-space: nowrap;
+}
