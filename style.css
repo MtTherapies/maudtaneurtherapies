@@ -60,3 +60,11 @@ a {
 .soin-ligne {
   margin-bottom: 30px !important;
 }
+
+}
+.soin-ligne {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  white-space: nowrap; /* empêche les retours à la ligne */
+}
