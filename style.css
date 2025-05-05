@@ -82,4 +82,16 @@ body {
     display: inline;
     white-space: normal;
   }
+
+  @media screen and (max-width: 768px) {
+  .soins-container a {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    text-align: center;
+    white-space: normal !important;
+    word-break: break-word;
+    padding: 10px 0;
+  }
 }
