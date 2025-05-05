@@ -64,16 +64,8 @@ a {
   line-height: 1.6;
 }
 
-
-p.intention-titre {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-p.intention-texte {
-  font-size: 1.2em;
-  line-height: 1.8;
-  margin-bottom: 35px;
+.mon-intention {
+    font-size: 1.3em;
+    display: block;
+    margin: 25px 0;
 }
