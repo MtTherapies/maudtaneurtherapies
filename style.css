@@ -98,15 +98,19 @@ body {
   
 }
 
-.soin {
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  display: block;
-}
+
 
 @media screen and (max-width: 600px) {
-  .soin {
-    font-size: 0.85rem !important;
-  }
+  
+}
+
+.soin {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+.soin::-webkit-scrollbar {
+  display: none;
 }
