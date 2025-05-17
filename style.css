@@ -107,27 +107,26 @@ a {
 /* Footer avec image de fond et texte superposé */
 
 
+
 .footer-banner {
   position: relative;
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
   background-size: cover;
   background-position: center;
   height: 200px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 30px;
 }
-
 
 
 .footer-links {
+  position: absolute;
+  top: 25px;
+  left: 120px;
   color: white;
   font-style: italic;
-  font-size: 1.5em;
-  text-align: center;
+  font-size: 1.6em;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
+
 
 .footer-links a {
   color: white;
