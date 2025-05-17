@@ -64,7 +64,7 @@ a {
   display: none;
   position: fixed;
   top: 15px;
-  left: 180px;
+  `0px;
   font-size: 2em;
   background: none;
   border: none;
@@ -99,7 +99,7 @@ a {
   }
 
   body {
-    margin-left: 180px;
+    margin-`0px;
   }
 }
 
@@ -120,7 +120,7 @@ a {
 .footer-links {
   position: absolute;
   top: 25px;
-  left: 300px;
+  `0px;
   color: white;
   font-style: italic;
   font-size: 1.6em;
