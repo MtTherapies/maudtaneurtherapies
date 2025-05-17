@@ -105,13 +105,18 @@ a {
 
 
 /* Footer avec image de fond et texte superposé */
+
 .footer-banner {
   position: relative;
-  background-image: url('footer.jpg');
+  background-image: url('footer_clean.jpg');
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .footer-links {
   position: absolute;
   bottom: 12px;
