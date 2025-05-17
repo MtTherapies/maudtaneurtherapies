@@ -1,3 +1,17 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  padding-top: 20px;
+  color: #fff;
+  text-align: left;
+  z-index: 1500;
+  transform: translateX(0);
+}
+
 body {
   margin: 0;
   font-family: 'Comfortaa', Arial, sans-serif;
@@ -164,19 +178,7 @@ a {
   }
 }
 
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  padding-top: 20px;
-  color: #fff;
-  text-align: left;
-  z-index: 1500;
-  transform: translateX(0);
-}
+
 
 .sidebar .logo {
   font-size: 1.2em;
@@ -239,19 +241,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  padding-top: 20px;
-  color: #fff;
-  text-align: left;
-  z-index: 1500;
-  transform: translateX(0);
-}
+  
 
   .sidebar.open {
     transform: translateX(0);
