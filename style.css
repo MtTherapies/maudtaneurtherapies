@@ -1,18 +1,3 @@
-.sidebar {
-  padding-left: 15px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  padding-top: 20px;
-  color: #fff;
-  text-align: left;
-  z-index: 1500;
-  transform: translateX(0);
-}
-
 body {
   margin: 0;
   font-family: 'Comfortaa', Arial, sans-serif;
@@ -106,14 +91,6 @@ body {
     padding: 10px 0;
 }
 
-
-
-
-
-
-
-
-
 .soin {
   white-space: nowrap;
   overflow-x: auto;
@@ -175,32 +152,11 @@ a {
 
 
 
-.sidebar .logo {
-  font-size: 1.2em;
-  text-align: center;
-  padding: 10px;
-  color: white;
-}
 
-.sidebar ul {
-  list-style: none;
-  
-  padding: 0;
-  margin: 30px 0 0 0;
-}
 
-.sidebar ul li {
-  padding: 12px 20px;
-}
 
-.sidebar ul li a {
-  font-size: 1.1em;
-  padding: 6px 0;
-  color: #ccc;
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
-}
+
+
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
@@ -212,12 +168,9 @@ body {
 }
   
 
-
 /* Bouton burger */
 
-
 /* Responsive sidebar */
-
 
   
 
@@ -239,22 +192,51 @@ body {
 }
 
 /* Sidebar desktop */
+
+
+/* Logo et liens */
+
+
+
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #b56de8;
+}
+
+/* Burger */
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  
+
+  body {
+    margin-left: 0 !important;
+}
+
+@media screen and (min-width: 769px) {
+
+/* Sidebar desktop */
 .sidebar {
-  padding-left: 15px;
   position: fixed;
   left: 0;
   top: 0;
   width: 220px;
   height: 100vh;
   background-color: #111;
-  padding-top: 20px;
+  padding: 20px 15px;
   color: #fff;
   text-align: left;
   z-index: 1500;
   transform: translateX(0);
 }
-
-/* Logo et liens */
 .sidebar .logo {
   font-size: 1.2em;
   text-align: center;
@@ -263,12 +245,11 @@ body {
 }
 .sidebar ul {
   list-style: none;
-  
   padding: 0;
   margin: 30px 0 0 0;
 }
 .sidebar ul li {
-  padding: 12px 20px;
+  padding: 12px 0;
 }
 .sidebar ul li a {
   font-size: 1.1em;
@@ -283,7 +264,7 @@ body {
   color: #b56de8;
 }
 
-/* Burger */
+/* Bouton burger */
 .burger {
   display: none;
   position: fixed;
@@ -299,7 +280,6 @@ body {
 /* Responsive */
 @media screen and (max-width: 768px) {
   .sidebar {
-  padding-left: 15px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
@@ -320,5 +300,9 @@ body {
 @media screen and (min-width: 769px) {
   .burger {
     display: none !important;
+  }
+
+  body {
+    margin-left: 220px;
   }
 }
