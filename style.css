@@ -131,3 +131,35 @@ body {
   font-size: 1.1em;
   padding: 0 5px;
 }
+
+/* Améliorations responsive globales */
+body {
+  padding: 0 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .titre-principal {
+    font-size: 1.8em;
+  }
+
+  .intro h2,
+  .intro p,
+  .soins p,
+  .citation,
+  .footer {
+    font-size: 1em;
+  }
+}
