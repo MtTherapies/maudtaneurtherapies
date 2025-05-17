@@ -47,9 +47,6 @@ body {
 .soins p {
   font-size: 1.15em;
   margin: 25px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .soins a {
