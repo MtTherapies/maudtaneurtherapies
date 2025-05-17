@@ -114,3 +114,20 @@ body {
 .soin::-webkit-scrollbar {
   display: none;
 }
+
+.soin-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 10px 0;
+}
+
+.soin-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.soin {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 0 5px;
+}
