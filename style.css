@@ -174,7 +174,8 @@ a {
   padding-top: 20px;
   color: #fff;
   text-align: left;
-  z-index: 1000;
+  z-index: 1500;
+  transform: translateX(0);
 }
 
 .sidebar .logo {
@@ -239,16 +240,18 @@ body {
 
 @media screen and (max-width: 768px) {
   .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 220px;
-    background-color: #111;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1500;
-  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  padding-top: 20px;
+  color: #fff;
+  text-align: left;
+  z-index: 1500;
+  transform: translateX(0);
+}
 
   .sidebar.open {
     transform: translateX(0);
