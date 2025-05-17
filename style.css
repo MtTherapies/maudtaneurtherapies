@@ -102,3 +102,29 @@ a {
     margin-left: 220px;
   }
 }
+
+
+/* Footer avec image de fond et texte superposé */
+.footer-banner {
+  position: relative;
+  background-image: url('footer.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+.footer-links {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  color: white;
+  font-style: italic;
+  font-size: 1.2em;
+}
+.footer-links a {
+  color: white;
+  text-decoration: underline;
+  margin-right: 8px;
+}
+.footer-links a:hover {
+  color: #ccc;
+}
