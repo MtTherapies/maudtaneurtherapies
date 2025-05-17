@@ -1,4 +1,5 @@
 .sidebar {
+  padding-left: 15px;
   position: fixed;
   left: 0;
   top: 0;
@@ -182,7 +183,8 @@ a {
 }
 
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
+  
   padding: 0;
   margin: 30px 0 0 0;
 }
@@ -192,6 +194,8 @@ a {
 }
 
 .sidebar ul li a {
+  font-size: 1.1em;
+  padding: 6px 0;
   color: #ccc;
   text-decoration: none;
   display: block;
@@ -236,6 +240,7 @@ body {
 
 /* Sidebar desktop */
 .sidebar {
+  padding-left: 15px;
   position: fixed;
   left: 0;
   top: 0;
@@ -257,7 +262,8 @@ body {
   color: white;
 }
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
+  
   padding: 0;
   margin: 30px 0 0 0;
 }
@@ -265,6 +271,8 @@ body {
   padding: 12px 20px;
 }
 .sidebar ul li a {
+  font-size: 1.1em;
+  padding: 6px 0;
   color: #ccc;
   text-decoration: none;
   display: block;
@@ -291,6 +299,7 @@ body {
 /* Responsive */
 @media screen and (max-width: 768px) {
   .sidebar {
+  padding-left: 15px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
@@ -305,5 +314,11 @@ body {
 
   body {
     margin-left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .burger {
+    display: none !important;
   }
 }
