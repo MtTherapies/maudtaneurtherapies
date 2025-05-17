@@ -244,3 +244,41 @@ body {
     margin-left: 0 !important;
   }
 }
+
+/* BOUTON BURGER */
+.burger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 2000; /* Doit être AU-DESSUS de la sidebar */
+}
+
+/* RESPONSIVE MENU */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1500;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: block;
+  }
+
+  body {
+    margin-left: 0 !important;
+  }
+}
