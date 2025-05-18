@@ -120,7 +120,7 @@ a {
 .footer-links {
   position: absolute;
   top: 25px;
-  left: 160px; /* valeur ajustée pour être un peu plus à gauche */
+  left: 140px; /* encore plus à gauche */
   color: white;
   font-style: italic;
   font-size: 1.6em;
