@@ -135,3 +135,7 @@ a {
 .footer-links a:hover {
   color: #ccc;
 }
+
+.footer-links {
+  left: 100px !important;
+}
