@@ -120,13 +120,12 @@ a {
 .footer-links {
   position: absolute;
   top: 25px;
-  left: 550px !important;
+  left: 160px; /* valeur ajustée pour être un peu plus à gauche */
   color: white;
   font-style: italic;
   font-size: 1.6em;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
-
 
 .footer-links a {
   color: white;
