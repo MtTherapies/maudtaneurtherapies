@@ -7,24 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-
-
-
-
-
-
-
+<style>
+  .banniere img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+</style>
 
 
 <style>
 .footer-links {
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: 220px;
   color: white;
   font-style: italic;
   font-size: 1.6em;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  width: max-content;
 }
 </style>
 
@@ -44,8 +47,10 @@
   </ul>
 </nav>
 
-  <div class="banniere"><img src="https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/banniere.jpg" alt="Bannière soins énergétiques" /></div>
-<button id="menu-toggle" class="burger">&#9776;</button>
+  <div class="banniere">
+    <img src=https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/banniere.jpg />
+  </div>
+  <button id="menu-toggle" class="burger">&#9776;</button>
   <div class="header-image"></div>
   <h1 id="accueil" class="titre-principal">Maud, énergéticienne</h1>
   <div class="emoji-line">✨🌿🌸</div>
@@ -86,15 +91,5 @@
       sidebar.classList.toggle("open");
     });
   </script>
-
-  
-  <footer class="footer-banner">
-    <img src="footer.jpg" alt="CGV et Mentions légales" />
-    <div class="footer-links">
-      <a href="cgv.html">CGV</a> et <a href="mentions.html">Mentions légales</a>
-    </div>
-  </footer>
-
-
 </body>
 </html>
