@@ -255,3 +255,7 @@ h1.titre-principal {
   margin-top: 10px !important;
   padding-top: 0px !important;
 }
+
+.soin-scroll:first-of-type {
+  margin-top: 10px !important;
+}
