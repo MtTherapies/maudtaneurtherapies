@@ -205,3 +205,21 @@ h2#mes-soins {
   margin-top: 80px;
   margin-bottom: 20px;
 }
+
+/* Ajustements haut de page */
+h1.titre-principal {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.emoji-line {
+  font-size: 1.6em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 1.6em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
