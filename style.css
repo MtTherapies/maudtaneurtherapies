@@ -259,3 +259,7 @@ h1.titre-principal {
 .soin-scroll:first-of-type {
   margin-top: 10px !important;
 }
+
+.soins > .soin-scroll:first-child {
+  margin-top: 10px !important;
+}
