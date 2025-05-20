@@ -275,3 +275,8 @@ h1.titre-principal {
 .emoji-line {
   margin-top: 80px !important;
 }
+
+emoji-line {
+  display: block !important;
+  margin-top: 40px !important; /* ou la valeur que tu veux */
+}
