@@ -153,6 +153,13 @@ h1.titre-principal,
   text-decoration: none;
 }
 
+.souligner {
+  text-decoration: underline;
+}
+
+.emoji {
+  text-decoration: none !important;
+}
 
 
 
