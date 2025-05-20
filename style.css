@@ -200,3 +200,8 @@ h2 .souligner {
 h2#mes-soins {
   margin-top: 80px;
 }
+
+#mes-soins {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
