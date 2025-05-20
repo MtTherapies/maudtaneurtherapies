@@ -266,3 +266,11 @@ h1.titre-principal {
 h1, h2 {
   font-family: 'Poppins', sans-serif !important;
 }
+
+h1 {
+  font-size: 2.6em !important;
+}
+
+h2 {
+  font-size: 1.8em !important;
+}
