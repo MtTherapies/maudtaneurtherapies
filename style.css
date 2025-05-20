@@ -190,3 +190,9 @@ h1.titre-principal {
 .soin-scroll {
   margin-bottom: 45px;
 }
+
+h2 .souligner {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
