@@ -160,9 +160,10 @@ h1.titre-principal {
   text-decoration: none !important;
 }
 
-
-
-
-
-
-
+/* Espacement entre les sections principales */
+.intro,
+.soins,
+.citation,
+.footer {
+  margin-top: 60px;
+}
