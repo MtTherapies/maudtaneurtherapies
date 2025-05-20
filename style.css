@@ -169,10 +169,7 @@ h1.titre-principal {
 }
 
 /* Espacement affiné pour meilleure lisibilité */
-.emoji-line {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+.
 
 .intro {
   margin-top: 60px;
@@ -212,11 +209,7 @@ h1.titre-principal {
   margin-bottom: 10px;
 }
 
-.emoji-line {
-  font-size: 1.6em;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
+.
 
 .intro h2 {
   font-size: 1.6em;
@@ -230,11 +223,7 @@ h1.titre-principal {
   margin-bottom: 5px !important;
 }
 
-.emoji-line {
-  font-size: 1.4em !important;
-  margin-top: 5px !important;
-  margin-bottom: 10px !important;
-}
+.
 
 .intro {
   margin-top: 20px !important;
@@ -269,14 +258,15 @@ h1.titre-principal {
 }
 
 h1.titre-principal {
-  margin-bottom: 30px !important;
+  margin-bottom: 5px !important;
 }
 
+/* Correction finale espacement emojis */
 .emoji-line {
-  margin-top: 80px !important;
+  display: block !important;
+  margin-top: 40px !important;
 }
 
-emoji-line {
-  display: block !important;
-  margin-top: 40px !important; /* ou la valeur que tu veux */
+h1.titre-principal {
+  line-height: 1.1 !important;
 }
