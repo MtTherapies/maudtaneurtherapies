@@ -139,3 +139,8 @@ a {
 .footer-links {
   left: 100px !important;
 }
+
+h1.titre-principal,
+.intro h2 {
+  text-decoration: underline;
+}
