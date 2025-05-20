@@ -140,8 +140,7 @@ a {
   left: 100px !important;
 }
 
-h1.titre-principal,
-.intro h2 {
+h1.titre-principal {
   text-decoration: underline;
 }
 
