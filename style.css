@@ -263,3 +263,7 @@ h1.titre-principal {
 .soins > .soin-scroll:first-child {
   margin-top: 10px !important;
 }
+
+#mes-soins {
+  padding-bottom: 10px !important;
+}
