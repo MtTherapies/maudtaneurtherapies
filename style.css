@@ -366,3 +366,17 @@ h2 {
   padding: 0 15px;
   font-weight: 600;
 }
+
+h2.single-line-title,
+.single-line-title {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block !important;
+  text-align: left !important;
+  padding: 0 15px !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
