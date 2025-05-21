@@ -399,3 +399,25 @@ h2.single-line-title,
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   z-index: 2;
 }
+
+.footer-banner {
+  position: relative;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  overflow: hidden;
+}
+
+.footer-legal-link {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: clamp(14px, 4vw, 18px);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  z-index: 2;
+}
