@@ -455,3 +455,8 @@ h2.single-line-title,
   vertical-align: middle;
   margin-top: 2px;
 }
+
+.soin a {
+  color: #800080; /* Violet profond */
+  text-decoration: underline;
+}
