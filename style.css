@@ -357,12 +357,12 @@ h2 {
 }
 
 .single-line-title {
-  font-size: clamp(1rem, 4vw, 1.6rem);
+  font-size: 20px !important; /* ou 22px si tu veux encore plus lisible */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  text-align: left; /* ou center si tu préfères */
-  padding: 0 5vw;
-  font-weight: 500;
+  text-align: left;
+  padding: 0 15px;
+  font-weight: 600;
 }
