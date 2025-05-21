@@ -297,6 +297,22 @@ h2 {
 }
 
 .accroche {
-  font-size: 1.2em;
-  line-height: 1.6;
+  font-size: 2.6em;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
