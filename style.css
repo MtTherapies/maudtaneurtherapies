@@ -338,3 +338,18 @@ h2 {
     box-sizing: border-box;
   }
 }
+
+
+.single-line-title {
+  white-space: nowrap;
+  font-size: 1.2em;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .single-line-title {
+    font-size: 1em;
+  }
+}
