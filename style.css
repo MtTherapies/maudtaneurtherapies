@@ -390,10 +390,11 @@ h2.single-line-title,
   position: absolute;
   bottom: 15px;
   left: 20px;
-  font-size: 22px;
+  font-size: clamp(16px, 4vw, 22px); /* s’adapte à la taille d’écran */
   color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   white-space: nowrap;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  max-width: 90%;
 }
