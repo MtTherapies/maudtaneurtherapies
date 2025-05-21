@@ -350,6 +350,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .single-line-title {
-    font-size: 1em;
+   font-size: 0.9em;
+   padding: 0 10px;
   }
 }
