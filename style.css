@@ -108,13 +108,7 @@ a {
 
 
 
-.footer-banner {
-  position: relative;
-  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-}
+
 
 
 .footer-links {
@@ -381,43 +375,27 @@ h2.single-line-title,
   max-width: 100% !important;
 }
 
-
-.footer-banner {
-  position: relative;
-}
-
-.footer-banner-title {
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  font-size: clamp(16px, 4vw, 22px); /* s’adapte à la taille d’écran */
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  white-space: nowrap;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-  max-width: 90%;
-}
-
 .footer-banner {
   position: relative;
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
   background-size: cover;
   background-position: center;
   height: 200px;
-  overflow: hidden; /* évite tout débordement */
+  overflow: hidden;
 }
 
 .footer-banner-title {
   position: absolute;
-  bottom: 15px;
-  left: 20px;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
   font-size: clamp(16px, 4vw, 20px);
   color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   white-space: nowrap;
+  text-align: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  max-width: 90%;
   z-index: 2;
 }
