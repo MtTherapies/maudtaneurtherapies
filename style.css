@@ -447,3 +447,9 @@ h2.single-line-title,
 .social-icons img:hover {
   transform: scale(1.1);
 }
+
+.social-icons img[alt="Google"] {
+  height: 28px;
+  width: auto;
+  margin-top: 6px;
+}
