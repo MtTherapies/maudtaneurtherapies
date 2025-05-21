@@ -421,3 +421,29 @@ h2.single-line-title,
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   z-index: 2;
 }
+
+.footer-social-section {
+  text-align: center;
+  margin-bottom: 40px; /* espace avec la bannière */
+}
+
+.footer-social-section .accroche {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
