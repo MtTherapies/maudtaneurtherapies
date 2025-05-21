@@ -380,3 +380,20 @@ h2.single-line-title,
   margin: 0 auto !important;
   max-width: 100% !important;
 }
+
+
+.footer-banner {
+  position: relative;
+}
+
+.footer-banner-title {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 22px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
