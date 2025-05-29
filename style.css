@@ -491,3 +491,7 @@ body:not(.home) .banniere {
   align-items: center;
   justify-content: center;
 }
+
+.sidebar.open ~ .burger {
+  color: white;
+}
