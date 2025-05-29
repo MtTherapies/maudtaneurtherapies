@@ -508,3 +508,26 @@ body.menu-open .burger {
 .burger.open {
   color: white !important;
 }
+
+.burger {
+  color: black;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+  font-size: 2em;
+  background: none;
+  border: none;
+}
+
+.burger.open {
+  color: white !important;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  height: 100%;
+}
