@@ -431,3 +431,14 @@ h2.single-line-title,
 .footer-legal a:hover {
   color: #ccc;
 }
+
+@media screen and (min-width: 769px) {
+  .footer-banner {
+    justify-content: flex-start;
+  }
+
+  .footer-legal {
+    margin-left: 60px;
+    text-align: left;
+  }
+}
