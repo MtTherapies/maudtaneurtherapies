@@ -461,9 +461,9 @@ h2.single-line-title,
   width: 100%;
   height: 260px;
   background-image: url('banniere-soin.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 47% 0%;
   display: flex;
   align-items: center;
   justify-content: center;
