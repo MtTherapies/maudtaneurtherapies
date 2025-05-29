@@ -404,3 +404,21 @@ h2.single-line-title,
     width: 30px;
   }
 }
+
+.footer-banner {
+  position: relative;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;   /* centre verticalement */
+}
+
+.footer-legal-link {
+  margin-left: 40px; /* ajuste cette valeur pour reculer plus ou moins */
+  font-size: 1.1em;
+  color: #0077b6;
+  text-decoration: underline;
+  font-style: italic;
+}
