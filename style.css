@@ -449,3 +449,16 @@ h2.single-line-title,
   height: auto;
   display: block;
 }
+
+
+.banniere-soin {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-image: url('banniere-soins.jpg');
+  background-size: cover;
+  background-position: 47% 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
