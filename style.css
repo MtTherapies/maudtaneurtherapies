@@ -61,13 +61,14 @@ a {
 
 /* Bouton burger */
 .burger {
+  display: none;
   position: fixed;
   top: 15px;
   left: 15px;
   font-size: 2em;
   background: none;
   border: none;
-  color: black;
+  color: white;
   z-index: 2000;
 }
 
@@ -78,20 +79,11 @@ a {
     transition: transform 0.3s ease;
   }
 
-  .sidebar.open {
-    transform: translateX(0);
-  }
+  
 
   .burger {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 2em;
-  background: none;
-  border: none;
-  color: black;
-  z-index: 2000;
-}
+    display: block;
+  }
 
   body {
     margin-left: 0 !important;
@@ -101,15 +93,8 @@ a {
 /* Forcer le menu fixe et cacher le burger sur PC */
 @media screen and (min-width: 769px) {
   .burger {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 2em;
-  background: none;
-  border: none;
-  color: black;
-  z-index: 2000;
-}
+    display: none !important;
+  }
 
   body {
     margin-left: 15px;
@@ -457,7 +442,18 @@ h2.single-line-title,
   height: auto;
 }
 
-
+.banniere-soin {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-image: url('banniere-soin.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Suppression des bannières HTML parasites */
 
@@ -465,19 +461,6 @@ h2.single-line-title,
 @media screen and (min-width: 769px) {
   
 }
-
-
-
-
-body:not(.home) .banniere {
-  display: none !important;
-}
-
-
-@media screen and (min-width: 769px) {
-  
-}
-
 
 .banniere-soin {
   position: relative;
@@ -492,23 +475,28 @@ body:not(.home) .banniere {
   justify-content: center;
 }
 
-.sidebar.open ~ .burger {
-  color: white;
+
+body:not(.home) .banniere {
+  display: none !important;
 }
 
-.sidebar {
-  position: fixed;
+
+@media screen and (min-width: 769px) {
+  .banniere-soin {
+    background-size: cover;
+    background-position: 55% 40%;
+  }
 }
 
 
 /* Rendre le bouton blanc quand le menu est ouvert */
-.sidebar.open + .burger,
 .sidebar.open ~ .burger,
-.sidebar.open .burger {
+.sidebar.open + .burger,
+body.menu-open .burger {
   color: white !important;
 }
 
-
+/* Corriger le décalage de la bannière sur mobile */
 @media screen and (max-width: 768px) {
   .banniere-soin {
     margin-top: 60px;
