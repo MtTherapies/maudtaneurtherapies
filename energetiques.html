@@ -7,6 +7,22 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <button class="burger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+  <script>
+  const burger = document.querySelector('.burger');
+  const sidebar = document.querySelector('.sidebar');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    sidebar.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+</script>
   <body>
 <nav class="sidebar">
 <div class="logo">
