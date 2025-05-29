@@ -108,7 +108,7 @@ a {
 .footer-banner {
   position: relative;
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
-  background-size: 1200px auto;
+  background-size: cover;
   background-position: center;
   height: 200px;
 }
@@ -399,7 +399,7 @@ h2.single-line-title,
 .footer-banner {
   position: relative;
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
-  background-size: 1200px auto;
+  background-size: cover;
   background-position: center;
   height: 200px;
   display: flex;
@@ -444,6 +444,18 @@ h2.single-line-title,
   height: auto;
 }
 
+.banniere-soin {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-image: url('banniere-soin.jpg');
+  background-size: cover;
+  background-position: 47% -10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Suppression des bannières HTML parasites */
 .banniere {
   display: none !important;
@@ -455,40 +467,6 @@ h2.single-line-title,
   }
 }
 
-
 .banniere-soin {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  background-image: url('banniere-soin.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-@media screen and (min-width: 769px) {
-  .banniere-soin {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  background-image: url('banniere-soin.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-}
-
-
-@media screen and (min-width: 769px) {
-  .banniere-soin {
-    background-size: 1100px auto;
-    background-position: 55% 40%;
-  }
+  outline: 4px solid red;
 }
