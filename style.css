@@ -411,24 +411,23 @@ h2.single-line-title,
   background-size: cover;
   background-position: center;
   height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-links {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-  color: white;
-  font-style: italic;
+.footer-legal {
+  text-align: center;
+}
+
+.footer-legal a {
   font-size: 1.2em;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
-
-.footer-links a {
+  font-style: italic;
   color: white;
   text-decoration: underline;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-.footer-links a:hover {
+.footer-legal a:hover {
   color: #ccc;
 }
