@@ -443,3 +443,10 @@ h2.single-line-title,
   height: auto;
   display: block;
 }
+
+.contenu-central {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
