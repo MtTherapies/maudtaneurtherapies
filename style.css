@@ -1,566 +1,492 @@
 /* Base */
-bodyhtml, body {
+body {
   margin: 0;
-  padding: 0;
-  width: 100%;
   overflow-x: hidden;
 }
 
-imghtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-ahtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+a {
+  font-size: 1em;
+  color: #0077b6;
+  text-decoration: underline;
 }
 
 /* Sidebar pour PC */
-.sidebarhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  padding: 20px 15px;
+  color: #fff;
+  text-align: left;
+  z-index: 1500;
+  transform: translateX(0);
 }
-.sidebar .logohtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.sidebar .logo {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+  color: white;
 }
-.sidebar ulhtml, body {
-  margin: 0;
+.sidebar ul {
+  list-style: none;
   padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+  margin: 30px 0 0 0;
 }
-.sidebar ul lihtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.sidebar ul li {
+  padding: 12px 0;
 }
-.sidebar ul li ahtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.sidebar ul li a {
+  font-size: 1.1em;
+  padding: 6px 0;
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
 }
 .sidebar ul li a:hover,
-.sidebar ul li a.activehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.sidebar ul li a.active {
+  color: #b56de8;
 }
 
 /* Bouton burger */
-.burgerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.burger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 2000;
 }
 
 /* Responsive mobile */
-@media screen and (max-width: 768px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
 
-  .sidebar.openhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+  .sidebar.open {
+    transform: translateX(0);
+  }
 
-  .burgerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+  .burger {
+    display: block;
+  }
 
-  bodyhtml, body {
+  body {
   margin: 0;
-  padding: 0;
-  width: 100%;
   overflow-x: hidden;
 }
 }
 
 /* Forcer le menu fixe et cacher le burger sur PC */
-@media screen and (min-width: 769px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (min-width: 769px) {
+  .burger {
+    display: none !important;
+  }
 
-  bodyhtml, body {
+  body {
   margin: 0;
-  padding: 0;
-  width: 100%;
   overflow-x: hidden;
 }
 }
 
 /* Footer avec image de fond et texte superposé */
 
-.footer-bannerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-banner {
+  position: relative;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
+  background-size: 1200px auto;
+  background-position: center;
+  height: 320px;
 }
 
-.footer-linkshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-links {
+  position: absolute;
+  top: 25px;
+  left: 100px; /* encore plus à gauche */
+  color: white;
+  font-style: italic;
+  font-size: 1.6em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
-.footer-links ahtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-links a {
+  color: white;
+  text-decoration: underline;
+  margin-right: 8px;
 }
-.footer-links a:hoverhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-links a:hover {
+  color: #ccc;
 }
 
-.footer-linkshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-links {
+  left: 100px !important;
 }
 
-.soulignerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.souligner {
+  text-decoration: underline;
 }
 
-.emojihtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji {
+  text-decoration: none;
 }
 
-.soulignerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.souligner {
+  text-decoration: underline;
 }
 
-.emojihtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji {
+  text-decoration: none !important;
 }
 
 /* Espacement entre les sections principales */
 .intro,
 .soins,
 .citation,
-.footerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer {
+  margin-top: 60px;
 }
 
 /* Espacement affiné pour meilleure lisibilité */
-.introhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.intro {
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
-.intro h2html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.intro h2 {
+  margin-bottom: 20px;
 }
 
-.soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soins {
+  margin-top: 100px;
 }
 
-.soin-scrollhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soin-scroll {
+  margin-bottom: 45px;
 }
 
-h2 .soulignerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h2 .souligner {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
-h2#mes-soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h2#mes-soins {
+  margin-top: 80px;
 }
 
-#mes-soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+#mes-soins {
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 /* Ajustements haut de page */
 
-.intro h2html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.intro h2 {
+  font-size: 1.6em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Réduction des espacements et amélioration typographique */
 
-.introhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.intro {
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
 }
 
-.intro h2html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.intro h2 {
+  font-size: 1.5em !important;
+  margin: 10px 0 !important;
 }
 
-#mes-soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+#mes-soins {
+  margin-top: 40px !important;
+  margin-bottom: -5px !important;
 }
 
-.soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soins {
+  margin-top: 10px !important;
+  padding-top: 0px !important;
 }
 
-.soin-scroll:first-of-typehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soin-scroll:first-of-type {
+  margin-top: 10px !important;
 }
 
-.soins > .soin-scroll:first-childhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soins > .soin-scroll:first-child {
+  margin-top: 10px !important;
 }
 
-#mes-soinshtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+#mes-soins {
+  padding-bottom: 30px !important;
 }
 
-.emoji-linehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji-line {
+  display: block !important;
+  margin-top: 100px !important;
+  margin-bottom: 20px !important;
 }
 
-h1.titre-principalhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h1.titre-principal {
+  font-size: 2.2em !important;
+  margin-bottom: 5px !important;
+  padding-bottom: 15px !important;
+  line-height: 1.1 !important;
+  text-decoration: underline;
 }
 
-.emoji-linehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji-line {
+  display: block !important;
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
 }
 
-h1, h2html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h1, h2 {
+  font-family: 'Poppins', sans-serif !important;
 }
 
-h1html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h1 {
+  font-size: 2.6em !important;
 }
 
-h2html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+h2 {
+  font-size: 1.8em !important;
 }
 
-.emoji-linehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji-line {
+  font-size: 2.8em !important;
 }
 
-.emoji-linehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.emoji-line {
+  display: block !important;
+  font-size: 2.8em !important;
+  text-align: center;
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+  line-height: 1.2 !important;
 }
 
-.ligne-soinhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.ligne-soin {
+  font-size: 1.2em;
 }
 
-.soinhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soin {
+  font-size: 1.2em;
 }
 
-.accrochehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.accroche {
+  font-size: 1.8em;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  animation: fadeInUp 1.2s ease-out both;
 }
 
-@keyframes fadeInUphtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-  100%html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media screen and (max-width: 768px)html, body {
+@media screen and (max-width: 768px) {
+  body {
   margin: 0;
-  padding: 0;
-  width: 100%;
   overflow-x: hidden;
 }
 
   .intro,
   .soins,
   .citation,
-  .footerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+  .footer {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
-  *html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-}
-
-.single-line-titlehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.single-line-title {
+  white-space: nowrap;
+  font-size: 1.2em;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 768px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (max-width: 768px) {
+  .single-line-title {
+    font-size: 0.9em;
+    padding: 0 10px;
+    text-align: center;
+  }
 }
 
-.single-line-titlehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.single-line-title {
+  font-size: 20px !important; /* ou 22px si tu veux encore plus lisible */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: left;
+  padding: 0 15px;
+  font-weight: 600;
 }
 
 h2.single-line-title,
-.single-line-titlehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.single-line-title {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block !important;
+  text-align: left !important;
+  padding: 0 15px !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
 }
 
-.soin ahtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.soin a {
+  color: #7A1FA2 !important;
+  text-decoration: underline;
 }
 
-.social-icons imghtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.social-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
-.social-icons imghtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.social-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 8px;
 }
 
-@media screen and (max-width: 768px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (max-width: 768px) {
+  .social-icons img {
+    width: 30px;
+  }
 }
 
-.footer-bannerhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-banner {
+  position: relative;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
+  background-size: 1200px auto;
+  background-position: center;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-legalhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-legal {
+  text-align: center;
 }
 
-.footer-legal ahtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-legal a {
+  font-size: 1.2em;
+  font-style: italic;
+  color: white;
+  text-decoration: underline;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-.footer-legal a:hoverhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.footer-legal a:hover {
+  color: #ccc;
 }
 
-@media screen and (min-width: 769px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+@media screen and (min-width: 769px) {
+  .footer-banner {
+    display: block; /* plus de flex */
+    text-align: left;
+    position: relative;
+  }
+
+  .footer-legal {
+    position: absolute;
+    top: 50%;
+    left: 280px;
+    transform: translateY(-50%);
+    text-align: left;
+  }
 }
 
-  .footer-legalhtml, body {
-  margin: 0;
-  padding: 0;
+.banniere {
   width: 100%;
-  overflow-x: hidden;
-}
-}
-
-.bannierehtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+  height: auto;
 }
 
 /* Suppression des bannières HTML parasites */
-.bannierehtml, body {
-  margin: 0;
-  padding: 0;
+.banniere {
+  display: none !important;
+}
+
+@media screen and (min-width: 769px) {
+  .banniere {
+    display: none !important;
+  }
+}
+
+
+.banniere-soin {
+  position: relative;
   width: 100%;
-  overflow-x: hidden;
+  height: 320px;
+  background-image: url('banniere-soin.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (min-width: 769px)html, body {
-  margin: 0;
-  padding: 0;
+
+@media screen and (min-width: 769px) {
+  .banniere-soin {
+  position: relative;
   width: 100%;
-  overflow-x: hidden;
+  height: 320px;
+  background-image: url('banniere-soin.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 }
 
 
-.banniere-soinhtml, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-
-@media screen and (min-width: 769px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-}
-
-
-@media screen and (min-width: 769px)html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
+@media screen and (min-width: 769px) {
+  .banniere-soin {
+    background-size: 1100px auto;
+    background-position: 55% 40%;
+  }
 }
