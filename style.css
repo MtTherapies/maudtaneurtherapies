@@ -499,7 +499,7 @@ h2.single-line-title,
   height: 300px; /* ⇦ augmente ici selon ton goût */
   background-image: url('banniere-soins.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
   display: flex;
   align-items: center;     /* centré verticalement */
   justify-content: center; /* centré horizontalement */
