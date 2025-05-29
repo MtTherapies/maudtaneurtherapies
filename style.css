@@ -496,13 +496,13 @@ h2.single-line-title,
 .banniere-soin {
   position: relative;
   width: 100%;
-  height: 200px; /* ⇦ augmente ici selon ton goût */
+  height: 400px;
   background-image: url('banniere-soins.jpg');
   background-size: cover;
-  background-position: center 50%;
+  background-position: center 30%; /* ← recentre la zone utile */
   display: flex;
-  align-items: center;     /* centré verticalement */
-  justify-content: center; /* centré horizontalement */
+  align-items: center;
+  justify-content: center;
 }
 
 .titre-soin {
@@ -512,4 +512,11 @@ h2.single-line-title,
   font-weight: 400;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .banniere-soin {
+    height: 240px; /* ⇦ plus compact sur mobile */
+    background-position: center 20%; /* remonte encore l'image */
+  }
 }
