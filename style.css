@@ -463,6 +463,8 @@ h2.single-line-title,
   justify-content: center;
 }
 
+
+/* Suppression des bannières HTML parasites */
 .banniere {
   display: none !important;
 }
