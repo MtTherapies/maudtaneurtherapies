@@ -442,23 +442,37 @@ h2.single-line-title,
   height: auto;
 }
 
-.banniere-soin {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  background-image: url('banniere-soin.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 /* Suppression des bannières HTML parasites */
 
 
 @media screen and (min-width: 769px) {
+  
+}
+
+
+
+
+body:not(.home) .banniere {
+  display: none !important;
+}
+
+
+@media screen and (min-width: 769px) {
+  
+}
+
+
+/* Rendre le bouton blanc quand le menu est ouvert */
+.sidebar.open ~ .burger,
+.sidebar.open + .burger,
+body.menu-open .burger {
+  color: white !important;
+}
+
+/* Corriger le décalage de la bannière sur mobile */
+@media screen and (max-width: 768px) {
   
 }
 
@@ -475,12 +489,6 @@ h2.single-line-title,
   justify-content: center;
 }
 
-
-body:not(.home) .banniere {
-  display: none !important;
-}
-
-
 @media screen and (min-width: 769px) {
   .banniere-soin {
     background-size: cover;
@@ -488,15 +496,12 @@ body:not(.home) .banniere {
   }
 }
 
-
-/* Rendre le bouton blanc quand le menu est ouvert */
-.sidebar.open ~ .burger,
 .sidebar.open + .burger,
-body.menu-open .burger {
+.sidebar.open ~ .burger,
+.burger.open {
   color: white !important;
 }
 
-/* Corriger le décalage de la bannière sur mobile */
 @media screen and (max-width: 768px) {
   .banniere-soin {
     margin-top: 60px;
