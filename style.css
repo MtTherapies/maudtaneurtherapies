@@ -392,3 +392,15 @@ h2.single-line-title,
   margin: 0 10px;
   vertical-align: middle;
 }
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .social-icons img {
+    width: 30px;
+  }
+}
