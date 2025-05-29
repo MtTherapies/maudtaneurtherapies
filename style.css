@@ -93,13 +93,7 @@ a {
 }
 
 /* Forcer le menu fixe et cacher le burger sur PC */
-@media screen and (min-width: 769px) {
-  .burger {
-    display: none !important;
-  }
-
-  body {
-    margin-left: 15px;
+R0px;
   }
 }
 
