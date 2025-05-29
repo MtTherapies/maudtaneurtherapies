@@ -499,3 +499,18 @@ body:not(.home) .banniere {
 .sidebar {
   position: fixed;
 }
+
+
+/* Rendre le bouton blanc quand le menu est ouvert */
+.sidebar.open + .burger,
+.sidebar.open ~ .burger,
+.sidebar.open .burger {
+  color: white !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .banniere-soin {
+    margin-top: 60px;
+  }
+}
