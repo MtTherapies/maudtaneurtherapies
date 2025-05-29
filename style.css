@@ -469,8 +469,9 @@ h2.single-line-title,
   justify-content: center;
 }
 
+
 @media screen and (min-width: 769px) {
   .banniere-soin {
-    background-position: center 0%;
+    background-position: center 30%;
   }
 }
