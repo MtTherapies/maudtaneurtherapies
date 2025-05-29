@@ -438,3 +438,14 @@ h2.single-line-title,
     text-align: left;
   }
 }
+
+.banniere {
+  width: 100%;
+  height: auto;
+}
+
+.banniere img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
