@@ -433,7 +433,7 @@ h2.single-line-title,
   .footer-legal {
     position: absolute;
     top: 50%;
-    left: 240px;
+    left: 280px;
     transform: translateY(-50%);
     text-align: left;
   }
