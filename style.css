@@ -462,3 +462,7 @@ h2.single-line-title,
   align-items: center;
   justify-content: center;
 }
+
+.banniere {
+  display: none !important;
+}
