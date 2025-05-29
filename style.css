@@ -385,3 +385,10 @@ h2.single-line-title,
   color: #7A1FA2 !important;
   text-decoration: underline;
 }
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+  margin: 0 10px;
+  vertical-align: middle;
+}
