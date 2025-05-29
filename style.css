@@ -1,7 +1,10 @@
 /* Base */
 body {
   margin: 0;
-  overflow-x: hidden;
+  font-family: 'Comfortaa', Arial, sans-serif;
+  background-color: #fff;
+  text-align: center;
+  padding: 0;
 }
 
 img {
@@ -85,9 +88,8 @@ a {
   }
 
   body {
-  margin: 0;
-  overflow-x: hidden;
-}
+    margin-left: 0 !important;
+  }
 }
 
 /* Forcer le menu fixe et cacher le burger sur PC */
@@ -97,9 +99,8 @@ a {
   }
 
   body {
-  margin: 0;
-  overflow-x: hidden;
-}
+    margin-left: 15px;
+  }
 }
 
 /* Footer avec image de fond et texte superposé */
@@ -109,7 +110,7 @@ a {
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
   background-size: 1200px auto;
   background-position: center;
-  height: 320px;
+  height: 200px;
 }
 
 .footer-links {
@@ -310,9 +311,10 @@ h2 {
 
 @media screen and (max-width: 768px) {
   body {
-  margin: 0;
-  overflow-x: hidden;
-}
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden;
+  }
 
   .intro,
   .soins,
@@ -399,7 +401,7 @@ h2.single-line-title,
   background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/footer.png');
   background-size: 1200px auto;
   background-position: center;
-  height: 320px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -457,7 +459,7 @@ h2.single-line-title,
 .banniere-soin {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 260px;
   background-image: url('banniere-soin.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -472,7 +474,7 @@ h2.single-line-title,
   .banniere-soin {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 260px;
   background-image: url('banniere-soin.jpg');
   background-size: contain;
   background-repeat: no-repeat;
