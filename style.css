@@ -495,3 +495,7 @@ body:not(.home) .banniere {
 .sidebar.open ~ .burger {
   color: white;
 }
+
+.sidebar {
+  position: fixed;
+}
