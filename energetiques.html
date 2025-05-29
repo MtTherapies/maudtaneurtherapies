@@ -7,22 +7,6 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 
-<script>
-  const burger = document.querySelector('.burger');
-  const sidebar = document.querySelector('.sidebar');
-
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('open');
-    sidebar.classList.toggle('open');
-  });
-
-  document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      burger.classList.remove('open');
-    });
-  });
-</script>
 <body><button class="burger">☰</button>
 <nav class="sidebar">
 <div class="logo">
@@ -42,11 +26,21 @@
 </nav>
 <div class="banniere-soin"><h1 class="titre-soin" style="opacity: 0; pointer-events: none;">Soins énergétiques</h1></div>
 <script>
-const burger = document.querySelector('.burger');
-const sidebar = document.querySelector('.sidebar');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  sidebar.classList.toggle('open');
+document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.querySelector('.burger');
+  const sidebar = document.querySelector('.sidebar');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    sidebar.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
 });
 </script></body>
 </html>
