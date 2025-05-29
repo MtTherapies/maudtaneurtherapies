@@ -468,3 +468,9 @@ h2.single-line-title,
 .banniere {
   display: none !important;
 }
+
+@media screen and (min-width: 769px) {
+  .banniere {
+    display: none !important;
+  }
+}
