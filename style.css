@@ -450,3 +450,13 @@ h2.single-line-title,
   padding: 0 20px;
   text-align: center;
 }
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 0;
+}
+
+.social-icons {
+  font-size: 0;
+}
