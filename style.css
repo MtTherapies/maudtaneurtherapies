@@ -537,3 +537,18 @@ body.menu-open .burger {
     position: absolute;
   }
 }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  transition: left 0.3s ease;
+  z-index: 1500;
+}
+
+.sidebar.open {
+  left: 0;
+}
