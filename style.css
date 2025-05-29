@@ -502,8 +502,9 @@ body.menu-open .burger {
   color: white !important;
 }
 
-@media screen and (max-width: 768px) {
-  .banniere-soin {
-    margin-top: 60px;
-  }
+
+
+
+.burger.open {
+  color: white !important;
 }
