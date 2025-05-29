@@ -447,26 +447,45 @@ h2.single-line-title,
 .banniere-soin {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 320px;
   background-image: url('banniere-soin.jpg');
-  background-size: cover;
-  background-position: 47% -10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* Suppression des bannières HTML parasites */
-.banniere {
-  display: none !important;
-}
+
 
 @media screen and (min-width: 769px) {
-  .banniere {
-    display: none !important;
-  }
+  
 }
 
 .banniere-soin {
-  outline: 4px solid red;
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-image: url('banniere-soin.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body:not(.home) .banniere {
+  display: none !important;
+}
+
+
+@media screen and (min-width: 769px) {
+  .banniere-soin {
+    background-size: cover;
+    background-position: 55% 40%;
+  }
 }
