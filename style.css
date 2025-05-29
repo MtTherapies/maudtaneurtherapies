@@ -478,3 +478,10 @@ body:not(.home) .banniere {
   align-items: center;
   justify-content: center;
 }
+
+.burger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+}
