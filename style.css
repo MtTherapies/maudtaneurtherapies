@@ -444,13 +444,6 @@ h2.single-line-title,
   height: auto;
 }
 
-.banniere img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
 .banniere-soin {
   position: relative;
   width: 100%;
@@ -462,7 +455,6 @@ h2.single-line-title,
   align-items: center;
   justify-content: center;
 }
-
 
 /* Suppression des bannières HTML parasites */
 .banniere {
