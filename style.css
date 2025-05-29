@@ -496,7 +496,7 @@ h2.single-line-title,
 .banniere-soin {
   position: relative;
   width: 100%;
-  height: 400px; /* ⇦ augmente ici selon ton goût */
+  height: 300px; /* ⇦ augmente ici selon ton goût */
   background-image: url('banniere-soins.jpg');
   background-size: cover;
   background-position: center;
