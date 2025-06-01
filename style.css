@@ -586,12 +586,18 @@ html, body {
 @media screen and (min-width: 769px) {
   .contenu-central {
     margin-left: 220px;
-  }
+  
+    margin-left: 220px;
+    width: calc(100% - 220px);
 }
+}
+
+
+
 
 @media screen and (min-width: 769px) {
   .banniere {
-    margin-left: 220px;
-    width: calc(100% - 220px);
+    width: 100%;
+    margin: 0 auto;
   }
 }
