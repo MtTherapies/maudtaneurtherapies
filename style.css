@@ -528,7 +528,7 @@ body.menu-open
   .sidebar a {
     display: block;
     color: white;
-    margin: 10px 0;
+    margin: 6px 0;
     text-decoration: none;
   }
 
@@ -561,5 +561,15 @@ body.menu-open
 
   body {
     margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .sidebar img {
+    max-width: 90px;
+    height: auto;
+    display: block;
+    margin: 10px auto 5px auto;
   }
 }
