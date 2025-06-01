@@ -582,3 +582,9 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
+
+@media screen and (min-width: 769px) {
+  .contenu-central {
+    margin-left: 220px;
+  }
+}
