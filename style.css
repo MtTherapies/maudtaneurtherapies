@@ -586,12 +586,7 @@ html, body {
 
 
 
-@media screen and (min-width: 769px) {
-  .banniere {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
+
 
 
 @media screen and (min-width: 769px) {
@@ -615,4 +610,27 @@ html, body {
 
 * {
   outline: 1px solid red;
+}
+
+@media screen and (min-width: 769px) {
+  .banniere {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contenu-central {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
