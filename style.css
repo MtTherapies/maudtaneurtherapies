@@ -19,19 +19,7 @@ a {
 }
 
 /* Sidebar pour PC */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  padding: 20px 15px;
-  color: #fff;
-  text-align: left;
-  z-index: 1500;
-  transform: translateX(0);
-}
+
 .sidebar .logo {
   font-size: 1.2em;
   text-align: center;
@@ -74,10 +62,7 @@ a {
 
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
+  
 
   
 
@@ -524,13 +509,7 @@ body.menu-open .burger {
   color: white !important;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  height: 100%;
-}
+
 
 @media screen and (max-width: 768px) {
   .burger {
@@ -538,17 +517,61 @@ body.menu-open .burger {
   }
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: white;
-  transition: left 0.3s ease;
-  z-index: 1500;
+
+
+
+
+/* Menu mobile */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 1500;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  body {
+    margin: 0 !important;
+  }
 }
 
-.sidebar.open {
-  left: 0;
+/* Menu desktop */
+@media screen and (min-width: 769px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #111;
+    padding: 20px 15px;
+    color: #fff;
+    text-align: left;
+    z-index: 1500;
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: none !important;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .contenu-central {
+    max-width: 100%;
+  }
 }
