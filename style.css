@@ -573,3 +573,12 @@ body.menu-open
     margin: 5px auto;
   }
 }
+
+
+/* Supprimer les marges blanches à droite sur PC */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
