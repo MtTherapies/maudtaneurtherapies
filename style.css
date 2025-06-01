@@ -19,19 +19,7 @@ a {
 }
 
 /* Sidebar pour PC */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  padding: 20px 15px;
-  color: #fff;
-  text-align: left;
-  z-index: 1500;
-  transform: translateX(0);
-}
+
 .sidebar .logo {
   font-size: 1.2em;
   text-align: center;
@@ -60,30 +48,15 @@ a {
 }
 
 /* Bouton burger */
-.burger {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 2em;
-  background: none;
-  border: none;
-  color: white;
-  z-index: 2000;
-}
+
 
 /* Responsive mobile */
 @media screen and (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
+  
 
   
 
-  .burger {
-    display: block;
-  }
+  
 
   body {
     margin-left: 0 !important;
@@ -92,9 +65,7 @@ a {
 
 /* Forcer le menu fixe et cacher le burger sur PC */
 @media screen and (min-width: 769px) {
-  .burger {
-    display: none !important;
-  }
+  
 
   body {
     margin-left: 15px;
@@ -467,9 +438,7 @@ body:not(.home) .banniere {
 /* Rendre le bouton blanc quand le menu est ouvert */
 .sidebar.open ~ .burger,
 .sidebar.open + .burger,
-body.menu-open .burger {
-  color: white !important;
-}
+body.menu-open 
 
 /* Corriger le décalage de la bannière sur mobile */
 @media screen and (max-width: 768px) {
@@ -509,58 +478,29 @@ body.menu-open .burger {
   color: white !important;
 }
 
-.burger {
-  color: black;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 2000;
-  font-size: 2em;
-  background: none;
-  border: none;
-}
+
 
 .burger.open {
   color: white !important;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  height: 100%;
-}
+
 
 @media screen and (max-width: 768px) {
-  .burger {
-    position: absolute;
-  }
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: white;
-  transition: left 0.3s ease;
-  z-index: 1500;
-}
-
-.sidebar.open {
-  left: 0;
+  
 }
 
 
-/* Affiche le bouton burger en permanence sur mobile */
+
+
+
+/* === MENU MOBILE === */
 @media screen and (max-width: 768px) {
   .burger {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 2000;
+    z-index: 2001;
     background: none;
     border: none;
     font-size: 30px;
@@ -569,15 +509,57 @@ body.menu-open .burger {
   }
 
   .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
     background-color: #111;
     color: white;
+    transition: left 0.3s ease;
+    z-index: 2000;
+    padding: 20px;
+  }
+
+  .sidebar.open {
+    left: 0;
   }
 
   .sidebar a {
+    display: block;
     color: white;
+    margin: 15px 0;
+    text-decoration: none;
   }
 
   .sidebar a:hover {
     color: #ccc;
+  }
+}
+
+/* === MENU DESKTOP === */
+@media screen and (min-width: 769px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #111;
+    padding: 20px 15px;
+    color: white;
+    z-index: 1500;
+  }
+
+  .burger {
+    display: none !important;
+  }
+
+  .contenu-central {
+    max-width: 100%;
+  }
+
+  body {
+    margin: 0;
   }
 }
