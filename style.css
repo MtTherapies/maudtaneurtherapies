@@ -711,3 +711,7 @@ body.home {
   margin-right: auto;
   transform: translateX(30px); /* décalage vers la droite */
 }
+
+h1, h2 {
+  color: #7A1FA2 !important;
+}
