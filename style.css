@@ -659,17 +659,17 @@ html, body {
 }
 
 .banniere {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: -1;
 }
 
 .banniere img {
-  width: 100vw;
+  width: 100%;
   display: block;
 }
 
 body.home {
-  padding-top: 300px; /* adapte selon la hauteur de ta bannière */
+  padding-top: 0; /* adapte selon la hauteur de ta bannière */
 }
