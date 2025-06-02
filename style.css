@@ -702,3 +702,8 @@ body.home {
   display: inline-block;
   vertical-align: middle;
 }
+
+.social-icons {
+  position: relative;
+  z-index: 10;
+}
