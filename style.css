@@ -715,3 +715,8 @@ body.home h1,
 body.home h2 {
   color: #7A1FA2 !important;
 }
+
+body.home h1.titre-principal,
+body.home h2 {
+  color: #7A1FA2 !important;
+}
