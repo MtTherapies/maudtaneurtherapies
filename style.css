@@ -707,3 +707,9 @@ body.home {
   position: relative;
   z-index: 10;
 }
+
+.social-icons {
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 220px; /* même largeur que la sidebar */
+}
