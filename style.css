@@ -675,3 +675,11 @@ html, body {
 body.home {
   padding-top: 0; /* adapte selon la hauteur de ta bannière */
 }
+
+
+@media screen and (min-width: 769px) {
+  .banniere img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+}
