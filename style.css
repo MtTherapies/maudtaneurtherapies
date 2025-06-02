@@ -686,3 +686,19 @@ body.home {
     object-fit: cover;
   }
 }
+
+
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.social-icons img {
+  display: inline-block;
+  vertical-align: middle;
+}
