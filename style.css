@@ -657,3 +657,19 @@ html, body {
     overflow-x: hidden;
   }
 }
+
+.banniere {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banniere img {
+  width: 100vw;
+  display: block;
+}
+
+body.home {
+  padding-top: 300px; /* adapte selon la hauteur de ta bannière */
+}
