@@ -608,10 +608,6 @@ html, body {
 }
 
 
-* {
-  outline: 1px solid red;
-}
-
 @media screen and (min-width: 769px) {
   .banniere {
     width: 100%;
