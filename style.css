@@ -733,7 +733,8 @@ body.home h2 {
   text-align: center;
 }
 
-.banniere h1 {
+.banniere h1,
+.titre-banniere {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -744,4 +745,3 @@ body.home h2 {
   color: white !important;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   margin: 0;
-}
