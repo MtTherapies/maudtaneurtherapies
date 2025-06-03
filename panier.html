@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panier de Commande</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    #total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    form {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Panier de Commande</h1>
+
+  <table id="panier">
+    <thead>
+      <tr>
+        <th>Produit</th>
+        <th>Prix Unitaire (€)</th>
+        <th>Quantité</th>
+        <th>Sous-total (€)</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Produit A</td>
+        <td>10.00</td>
+        <td><input type="number" value="1" min="1" onchange="mettreAJourPanier()"></td>
+        <td class="sous-total">10.00</td>
+        <td><button type="button" onclick="supprimerLigne(this)">X</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="total">Total : 10.00 €</div>
+
+  <h2>Valider la commande</h2>
+
+  <form action="https://formspree.io/f/mvgkejqb" method="POST" onsubmit="ajouterContenuPanier()">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="email">E-mail :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="adresse">Adresse de livraison :</label>
+    <textarea id="adresse" name="adresse" required></textarea>
+
+    <label for="remarques">Remarques :</label>
+    <textarea id="remarques" name="remarques"></textarea>
+
+    <input type="hidden" name="_subject" value="Nouvelle commande via le site">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" id="contenu_panier" name="contenu_panier">
+
+    <button type="submit">Envoyer la commande</button>
+  </form>
+
+  <script>
+    function mettreAJourPanier() {
+      const lignes = document.querySelectorAll('#panier tbody tr');
+      let total = 0;
+
+      lignes.forEach(ligne => {
+        const prix = parseFloat(ligne.children[1].textContent);
+        const quantite = parseInt(ligne.children[2].querySelector('input').value);
+        const sousTotal = prix * quantite;
+        ligne.children[3].textContent = sousTotal.toFixed(2);
+        total += sousTotal;
+      });
+
+      document.getElementById('total').textContent = "Total : " + total.toFixed(2) + " €";
+    }
+
+    function supprimerLigne(bouton) {
+      const ligne = bouton.parentElement.parentElement;
+      ligne.remove();
+      mettreAJourPanier();
+    }
+
+    function ajouterContenuPanier() {
+      const lignes = document.querySelectorAll('#panier tbody tr');
+      let contenu = "";
+
+      lignes.forEach(ligne => {
+        const produit = ligne.children[0].textContent;
+        const prix = ligne.children[1].textContent;
+        const quantite = ligne.children[2].querySelector('input').value;
+        const sousTotal = ligne.children[3].textContent;
+        contenu += `${produit} - ${quantite} × ${prix}€ = ${sousTotal}€\n`;
+      });
+
+      contenu += document.getElementById('total').textContent;
+      document.getElementById('contenu_panier').value = contenu;
+    }
+  </script>
+
+</body>
+</html>
