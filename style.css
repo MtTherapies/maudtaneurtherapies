@@ -727,3 +727,16 @@ body.home h2 {
   display: block;
   margin: 0 auto 10px;
 }
+
+.banniere h1 {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 110px); /* corrige le décalage dû au menu */
+  transform: translate(-50%, -50%);
+  font-size: 2.4em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
