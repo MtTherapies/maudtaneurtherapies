@@ -720,3 +720,10 @@ body.home h1.titre-principal,
 body.home h2 {
   color: #7A1FA2 !important;
 }
+
+.sidebar .logo img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
