@@ -753,3 +753,19 @@ body.home h2 {
   overflow-y: auto !important;
   max-height: 100vh !important;
 }
+
+/* Patch CSS pour scroll menu */
+
+@media screen and (min-width: 769px) {
+  .sidebar {
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+  }
+}
