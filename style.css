@@ -745,3 +745,11 @@ body.home h2 {
   color: white !important;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   margin: 0;
+
+
+/* Ajout overflow pour corriger le menu masqué */
+
+.sidebar {
+  overflow-y: auto !important;
+  max-height: 100vh !important;
+}
