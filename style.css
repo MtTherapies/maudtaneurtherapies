@@ -731,10 +731,10 @@ body.home h2 {
 .banniere h1 {
   position: absolute;
   top: 50%;
-  left: calc(50% + 110px); /* corrige le décalage dû au menu */
+  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.4em;
   font-family: 'Poppins', sans-serif;
+  font-size: 2.4em;
   font-weight: normal;
   color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
