@@ -769,3 +769,21 @@ body.home h2 {
     max-height: 100vh !important;
   }
 }
+
+/* Patch CSS complet menu scrollable */
+
+/* Scroll pour menu desktop */
+@media screen and (min-width: 769px) {
+  .sidebar {
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+  }
+}
+
+/* Scroll pour menu mobile */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+  }
+}
