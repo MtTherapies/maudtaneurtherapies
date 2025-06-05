@@ -209,7 +209,7 @@ a:hover {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
