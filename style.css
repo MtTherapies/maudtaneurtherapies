@@ -204,3 +204,25 @@ a:hover {
   height: 36px;
   object-fit: contain;
 }
+
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  padding: 35px 0;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.footer-image a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.4);
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+.footer-image a:hover {
+  text-decoration: underline;
+}
