@@ -222,3 +222,8 @@ a:hover {
 .footer-banner .footer-legal a:hover {
   text-decoration: underline;
 }
+footer.footer-banner {
+  clear: both;
+  display: block;
+  width: 100%;
+}
