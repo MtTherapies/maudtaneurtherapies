@@ -206,3 +206,19 @@ a:hover {
   object-fit: contain;
   display: inline-block;
 }
+
+.footer-banner {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-banner .footer-legal a {
+  color: white;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+.footer-banner .footer-legal a:hover {
+  text-decoration: underline;
+}
