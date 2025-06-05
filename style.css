@@ -92,6 +92,11 @@
 
 .banniere {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 260px;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/banniere.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
