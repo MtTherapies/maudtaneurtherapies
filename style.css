@@ -269,3 +269,21 @@ a:hover {
 .intro, .citation, .footer, .soins {
   text-align: center;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenu-central {
+  margin: 0;
+  padding: 0;
+}
+
+.banniere {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+}
