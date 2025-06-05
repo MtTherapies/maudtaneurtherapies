@@ -1,4 +1,3 @@
-
 /* === RESET GLOBAL === */
 * {
   margin: 0;
@@ -191,16 +190,19 @@ a:hover {
   line-height: 1.9;
 }
 
+
+/* === SOCIAL ICONS FIX === */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 24px;
+  margin: 40px 0;
   flex-wrap: wrap;
 }
 
 .social-icons img {
-  width: 36px;
-  height: 36px;
+  width: 36px !important;
+  height: 36px !important;
   object-fit: contain;
+  display: inline-block;
 }
