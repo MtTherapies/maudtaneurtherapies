@@ -229,7 +229,8 @@ a:hover {
   gap: 24px;
   margin: 30px auto;
   flex-wrap: wrap;
-  max-width: 400px;
+  max-width: 600px;
+  width: 90%;
 }
 
 .social-icons img {
