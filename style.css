@@ -61,14 +61,19 @@ a:hover {
   list-style: none;
   padding-left: 0;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .sidebar ul li {
   margin: 20px 0;
+  width: fit-content;
 }
 .sidebar a {
-  display: inline-block;
+  display: block;
   color: white;
   font-size: 1rem;
+  text-align: center;
 }
 
 /* === BANNIÈRE === */
@@ -162,8 +167,4 @@ a:hover {
     margin-left: 0 !important;
     width: 100% !important;
   }
-}
-
-.sidebar {
-  background: red;
 }
