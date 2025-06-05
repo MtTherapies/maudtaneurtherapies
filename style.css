@@ -1,66 +1,9 @@
-/* === SCROLL MENU (desktop + mobile) === */
-@media screen and (min-width: 769px) {
-  
-}
 
-@media screen and (max-width: 768px) {
-  
-}
-
-/* === MENU MOBILE === */
-@media screen and (max-width: 768px) {
-  .burger {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2001;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-  }
-
-  
-
-  
-
-  .sidebar a {
-    display: block;
-    color: white;
-    margin: 2px 0;
-    text-decoration: none;
-  }
-
-  .sidebar a:hover {
-    color: #ccc;
-  }
-}
-
-/* === MENU DESKTOP === */
-@media screen and (min-width: 769px) {
-  
-
-  .burger {
-    display: none !important;
-  }
-
-  
-
-  body {
-    margin: 0;
-    overflow-x: hidden;
-  }
-}
-
-
-
-
-
-
-
-
-body {
+/* === BASE === */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -72,26 +15,11 @@ a {
   color: #3366cc;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* === CORRECTION LOGO ET NOM-SITE === */
-
-
-/* === CORRECTION LOGO ET NOM-SITE === */
+/* === LOGO === */
 .logo {
   text-align: center;
   margin-bottom: 15px;
@@ -102,14 +30,12 @@ a:hover {
   align-items: center;
   justify-content: flex-start;
 }
-
 .logo img {
   max-height: 90px;
   width: auto;
   display: block;
   margin: 0 auto;
 }
-
 .nom-site {
   font-size: 0.9em;
   color: white;
@@ -118,83 +44,48 @@ a:hover {
   margin-top: 8px;
 }
 
-
-/* === ESPACE CORRIGÉ POUR LE CONTENU === */
-@media screen and (min-width: 769px) {
-  
-}
-
-/* === ESPACEMENT LIENS MENU === */
+/* === MENU SIDEBAR === */
 .sidebar ul li {
   margin: 8px 0;
 }
-
 .sidebar a {
+  display: block;
+  color: white;
   padding: 4px 0;
 }
 
-/* === FIX MENU MOBILE QUI RESTE VISIBLE === */
-@media screen and (max-width: 768px) {
-  
-
-  
+/* === BANNIÈRE === */
+.banniere {
+  width: 100%;
+  height: 260px;
+  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/banniere.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  display: block;
 }
 
-
-/* === FIX FINAL DU MENU MOBILE === */
-@media screen and (max-width: 768px) {
-  
-
-  
+/* === CONTENU CENTRAL === */
+.contenu-central {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-
-/* === FIX bannière sans marges === */
-
-
-/* === Texte centré sur tout support === */
+/* === ZONES DE TEXTE === */
 .intro, .citation, .footer, .soins {
   text-align: center;
 }
 
-/* === Fix menu mobile fonctionnel === */
-@media screen and (max-width: 768px) {
-  
-
-  
-
-  
-}
-
-
-/* === CENTRAGE DU TEXTE VÉRITABLE === */
-.intro, .citation, .footer, .soins, 
-
-/* === SUPPRESSION MARGES BANNIÈRE ET PARENT === */
-
-
-
-
-/* === FIX MENU MOBILE FONCTIONNEL (transform + position) === */
-@media screen and (max-width: 768px) {
-  
-
-  
-
-  
-}
-
-/* === ÉLIMINATION DES MARGES LATÉRALES SUR PC ET MOBILE === */
-
-
-@media screen and (max-width: 768px) {
-  
-}
-
-
-/* === CORRECTION DÉFINITIVE === */
-
-/* Sidebar Desktop */
+/* === MENU DESKTOP === */
 @media screen and (min-width: 769px) {
   .sidebar {
     position: fixed;
@@ -218,13 +109,23 @@ a:hover {
     margin-left: 240px;
     width: calc(100% - 240px);
     padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
   }
 }
 
-/* Sidebar Mobile */
+/* === MENU MOBILE === */
 @media screen and (max-width: 768px) {
+  .burger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2001;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+
   .sidebar {
     position: fixed !important;
     top: 0;
@@ -247,43 +148,5 @@ a:hover {
     margin-left: 0 !important;
     width: 100% !important;
     padding: 20px;
-    text-align: center;
   }
-}
-
-/* Bannière sans marges */
-.banniere {
-  width: 100%;
-  height: 260px;
-  background-image: url('https://raw.githubusercontent.com/MtTherapies/maudtaneurtherapies/main/banniere.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Centrage du texte */
-.intro, .citation, .footer, .soins {
-  text-align: center;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.contenu-central {
-  margin: 0;
-  padding: 0;
-}
-
-.banniere {
-  margin: 0;
-  padding: 0;
-  border: none;
-  display: block;
 }
