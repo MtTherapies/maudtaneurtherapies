@@ -207,23 +207,24 @@ a:hover {
   display: inline-block;
 }
 
+
 .footer-banner {
   background-color: #111;
-  padding: 20px 0;
+  padding: 16px 0;
   text-align: center;
-  margin-top: 40px;
+  display: block;
+  clear: both;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .footer-banner .footer-legal a {
   color: white;
   font-size: 0.95em;
   text-decoration: none;
+  display: inline-block;
+  padding: 10px 16px;
 }
 .footer-banner .footer-legal a:hover {
   text-decoration: underline;
-}
-footer.footer-banner {
-  clear: both;
-  display: block;
-  width: 100%;
 }
