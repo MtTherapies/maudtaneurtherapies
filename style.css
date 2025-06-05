@@ -174,3 +174,11 @@ a:hover {
     width: 100% !important;
   }
 }
+
+.sidebar {
+  overflow-y: auto;
+  scrollbar-width: none;       /* Firefox */
+}
+.sidebar::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari */
+}
