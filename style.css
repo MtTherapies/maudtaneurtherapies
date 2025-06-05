@@ -290,3 +290,19 @@ a:hover {
     padding: 20px;
   }
 }
+
+/* === ÉLIMINATION DES MARGES LATÉRALES SUR PC ET MOBILE === */
+.contenu-central {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .contenu-central {
+    padding: 20px;
+    margin: 0;
+  }
+}
