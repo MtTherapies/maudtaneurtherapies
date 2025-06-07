@@ -274,39 +274,37 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .footer-image {
-    justify-content: center !important;
-    align-items: flex-end !important;
-    padding: 0 0 60px 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 180px !important;
     text-align: center !important;
   }
 
   .footer-image a {
-    margin-left: 0 !important;
+    margin: 0 auto !important;
     font-size: 1.2rem !important;
-    width: auto !important;
-    display: inline-block !important;
-    text-align: center !important;
-    padding: 0 !important;
+    display: block !important;
+    color: white !important;
     background: none !important;
+    text-decoration: none !important;
   }
 }
 
 
 @media screen and (max-width: 768px) {
   .footer-image {
-    justify-content: center !important;
-    align-items: flex-end !important;
-    padding: 0 0 60px 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 180px !important;
     text-align: center !important;
   }
 
   .footer-image a {
-    margin-left: 0 !important;
+    margin: 0 auto !important;
     font-size: 1.2rem !important;
-    width: auto !important;
-    display: inline-block !important;
-    text-align: center !important;
-    padding: 0 !important;
+    display: block !important;
+    color: white !important;
     background: none !important;
+    text-decoration: none !important;
   }
 }
