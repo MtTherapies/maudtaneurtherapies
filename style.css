@@ -211,12 +211,11 @@ a:hover {
   background-position: center;
   height: 300px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
   text-align: left;
-  margin-left: 300px;
-  padding-bottom: 20px;
-  width: calc(100% - 300px);
+  padding-left: 300px;
+  width: 100%;
 }
 
 .footer-image a {
