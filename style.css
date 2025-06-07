@@ -264,3 +264,18 @@ a:hover {
     text-align: center;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .footer-image a {
+    margin-left: 0 !important;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .footer-image {
+    justify-content: center;
+    align-items: center;
+  }
+}
