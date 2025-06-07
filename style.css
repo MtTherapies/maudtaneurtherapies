@@ -206,20 +206,20 @@ a:hover {
 }
 
 .footer-image {
-  background-image: url('banniere-basse.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  height: 300px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  text-align: left !important;
-  padding-left: 300px !important;
-  width: 100% !important;
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0;
+  width: 100%;
 }
 
-
 .footer-image a {
+  margin-left: 300px !important;
   color: white !important;
   font-size: 1.2rem !important;
   text-decoration: none !important;
