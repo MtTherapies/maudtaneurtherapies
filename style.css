@@ -214,9 +214,10 @@ a:hover {
   align-items: flex-end;
   justify-content: flex-start;
   text-align: left;
-  padding-left: 300px;
+  padding-left: 40px;
   padding-bottom: 20px;
-  width: 100%;
+  margin-left: 300px;
+  width: calc(100% - 300px);
 }
 
 .footer-image a {
