@@ -325,3 +325,11 @@ a:hover {
     max-width: 100% !important;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .footer-ligne {
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+}
