@@ -350,7 +350,7 @@ a:hover {
   .footer-image {
     justify-content: flex-start !important;
     align-items: flex-start !important;
-    padding-top: 60px !important;
+    padding-top: 110px !important;
     text-align: center !important;
   }
 
@@ -359,7 +359,9 @@ a:hover {
     font-size: 1.2rem !important;
     display: block !important;
     color: white !important;
-    background: none !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     overflow: hidden !important;
