@@ -327,9 +327,15 @@ a:hover {
 }
 
 
+
+
+
 @media screen and (max-width: 768px) {
-  .footer-ligne {
-    white-space: nowrap !important;
+  .footer .footer-ligne {
     display: inline-block !important;
+    white-space: nowrap !important;
+    font-size: 1.2rem !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 }
