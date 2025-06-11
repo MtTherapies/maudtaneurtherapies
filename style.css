@@ -382,9 +382,10 @@ a:hover {
 }
 
 .titre-banniere {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* non gras */
   color: white;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   text-align: center;
   text-shadow: 2px 2px 6px black;
   padding: 0 20px;
