@@ -1,66 +1,188 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie et avis</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photos et avis</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      color: #111;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    .sidebar {
+      background: #111;
+      color: white;
+      padding: 40px 20px 25px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 10;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-height: 90px;
+      display: block;
+      margin: 0 auto;
+    }
+    .nom-site {
+      font-size: 0.9em;
+      color: white;
+      text-align: center;
+      margin-top: 8px;
+      line-height: 1.2;
+    }
+    .burger {
+      display: none;
+    }
+    .banniere {
+      margin-left: 280px;
+      position: relative;
+      width: calc(100% - 280px);
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('Screenshot_8.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .titre-banniere {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      text-align: center;
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+      padding: 0 20px;
+    }
+    .contenu-central {
+      margin-left: 280px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .emoji-line {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .intro p {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+    .footer {
+      margin-top: 40px;
+    }
+    .footer p {
+      font-size: 1.2rem;
+    }
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        position: fixed;
+        z-index: 2000;
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .burger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2001;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+      }
+      .banniere {
+        margin-left: 0;
+        width: 100%;
+      }
+      .contenu-central {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
-<body class="home">
-
-  <nav class="sidebar">
+<body>
+  <button class="burger" id="menu-toggle">☰</button>
+  <nav class="sidebar" id="sidebar">
     <div class="logo">
-      <img alt="Logo Maud Taneur" src="logo.png"/>
-      <div class="nom-site">
-        maudtaneur<br/>thérapies
-      </div>
+      <img src="logo.png" alt="Logo Maud Taneur"/>
+      <div class="nom-site">maudtaneur<br/>thérapies</div>
     </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="energetiques.html">Soins énergétiques</a></li>
-      <li><a href="rebouteux.html">Soins rebouteux</a></li>
-      <li><a href="distance.html">Soins à distances</a></li>
-      <li><a href="massages.html">Massages</a></li>
-      <li><a href="avis.html">Photos et avis</a></li>
-      <li><a href="resa.html">Horaires et réservations</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-    </ul>
+    
+<ul>
+  <li><a href="index.html">Accueil</a></li>
+  <li><a href="energetiques.html">Soins énergétiques</a></li>
+  <li><a href="rebouteux.html">Soins rebouteux</a></li>
+  <li><a href="distance.html">Soins à distances</a></li>
+  <li><a href="massages.html">Massages</a></li>
+  <li><a href="avis.html">Photos et avis</a></li>
+  <li><a href="resa.html">Horaires et réservations</a></li>
+  <li><a href="tarifs.html">Tarifs</a></li>
+  <li><a href="panier.html">🛒 Mon Panier</a></li>
+</ul>
+
   </nav>
 
-  <button class="burger" id="menu-toggle">☰</button>
-
   <div class="banniere">
-    <img alt="Bannière" src="Screenshot_8.png" style="width: 100%; display: block;"/>
-    <h1>Galerie et avis</h1>
+    <h1 class="titre-banniere">Photos et avis</h1>
   </div>
 
   <div class="contenu-central">
     <div class="emoji-line">✨🌿🌸</div>
     <div class="intro">
-      <p style="font-size: 1.2em;">Contenu à venir pour le soin : <strong>Galerie et avis</strong>.</p>
-      <p style="font-size: 1.2em;">Revenez bientôt pour en savoir plus.</p>
+      <p>Contenu à venir pour le soin : <strong>4</strong>.</p>
+      <p>Revenez bientôt pour en savoir plus.</p>
     </div>
     <div class="footer">
-      <p class="accroche">🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
+      <p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
     </div>
   </div>
 
-  <footer class="footer-banner">
-    <div class="footer-legal">
-      <a href="cgv.html">CGV et Mentions légales</a>
-    </div>
-  </footer>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burger = document.getElementById("menu-toggle");
-      const sidebar = document.querySelector(".sidebar");
-      burger.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
+    const toggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
     });
   </script>
-
 </body>
 </html>
