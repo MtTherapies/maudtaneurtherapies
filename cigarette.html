@@ -138,7 +138,30 @@
         margin-left: 0;
       }
     }
-  </style>
+  
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 60px;
+  width: 100%;
+}
+.footer-image a {
+  margin-left: 300px !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+}
+.footer-image a:hover {
+  text-decoration: underline;
+}
+
+</style>
 </head>
 <body>
   <button class="burger" id="menu-toggle">☰</button>
@@ -184,5 +207,10 @@
       sidebar.classList.toggle("open");
     });
   </script>
+
+  <div class="footer-image">
+    <a href="cgv.html"><span style="white-space: nowrap;">🍀&nbsp;CGV et Mentions légales&nbsp;✨</span></a>
+  </div>
+
 </body>
 </html>
