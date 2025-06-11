@@ -75,7 +75,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('Screenshot_4.png');
+      background-image: url('Screenshot_7.png');
       background-size: cover;
       background-position: center;
     }
@@ -138,7 +138,30 @@
         margin-left: 0;
       }
     }
-  </style>
+  
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 60px;
+  width: 100%;
+}
+.footer-image a {
+  margin-left: 300px !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+}
+.footer-image a:hover {
+  text-decoration: underline;
+}
+
+</style>
 </head>
 <body>
   <button class="burger" id="menu-toggle">☰</button>
@@ -154,7 +177,7 @@
   <li><a href="rebouteux.html">Soins rebouteux</a></li>
   <li><a href="distance.html">Soins à distances</a></li>
   <li><a href="massages.html">Massages</a></li>
-  <li><a href="avis.html">Photos et avis</a></li>
+  <li><a href="avis.html">Galerie et avis</a></li>
   <li><a href="resa.html">Horaires et réservations</a></li>
   <li><a href="tarifs.html">Tarifs</a></li>
   <li><a href="panier.html">🛒 Mon Panier</a></li>
@@ -184,5 +207,10 @@
       sidebar.classList.toggle("open");
     });
   </script>
+
+  <div class="footer-image">
+    <a href="cgv.html"><span style="white-space: nowrap;">🍀&nbsp;CGV et Mentions légales&nbsp;✨</span></a>
+  </div>
+
 </body>
 </html>
