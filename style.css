@@ -405,3 +405,9 @@ a:hover {
   border-radius: 0 !important;
   text-shadow: 1px 1px 4px black !important;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-image a {
+    margin-top: 140px !important;
+  }
+}
