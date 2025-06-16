@@ -512,8 +512,7 @@ a:hover {
 }
 
 @media screen and (min-width: 769px) {
-  .banniere-presentation {
+  .banniere-presentation .titre-banniere {
     margin-left: 300px;
-    width: calc(100% - 300px);
   }
 }
