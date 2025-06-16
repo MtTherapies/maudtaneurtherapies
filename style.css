@@ -502,3 +502,7 @@ a:hover {
   justify-content: center !important;
   text-align: center !important;
 }
+
+.banniere {
+  display: flex !important;
+}
