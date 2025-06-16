@@ -511,8 +511,3 @@ a:hover {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 769px) {
-  .banniere-presentation .titre-banniere {
-    margin-left: 300px;
-  }
-}
