@@ -495,8 +495,10 @@ a:hover {
   background-image: url('screenshot_9.png') !important;
 }
 
+/* Centrage parfait du titre dans .banniere-presentation */
 .banniere-presentation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
 }
