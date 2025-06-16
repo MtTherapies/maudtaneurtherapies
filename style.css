@@ -411,3 +411,20 @@ a:hover {
     margin-top: 140px !important;
   }
 }
+
+
+/* === Harmonisation lien CGV === */
+@media screen and (min-width: 769px) {
+  .footer-image a {
+    margin-left: 300px !important;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-image a {
+    margin: 140px auto 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+}
