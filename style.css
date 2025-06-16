@@ -506,3 +506,12 @@ a:hover {
 .banniere {
   display: flex !important;
 }
+
+@media screen and (min-width: 769px) {
+  .banniere-presentation {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
