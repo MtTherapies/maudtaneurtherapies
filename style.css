@@ -377,3 +377,52 @@ a:hover {
     margin-top: 180px;
   }
 }
+
+/* === Style footer avec deux liens séparés + "et" === */
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 160px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-image a {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-decoration: none;
+  margin: 0 6px;
+  white-space: nowrap;
+}
+
+.footer-image a:hover {
+  text-decoration: underline;
+}
+
+.footer-image .separator {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  margin: 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    padding-top: 180px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
