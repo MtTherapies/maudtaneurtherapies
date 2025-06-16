@@ -426,3 +426,55 @@ a:hover {
     text-align: center;
   }
 }
+
+/* === Footer final avec structure <div class="footer-image-content"> === */
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 160px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.footer-image-content {
+  margin-left: 300px;
+  white-space: nowrap;
+}
+
+.footer-image a,
+.footer-image .separator {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 4px black;
+  margin: 0 6px;
+}
+
+.footer-image a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: flex-start;
+    padding-top: 180px;
+  }
+
+  .footer-image-content {
+    margin-left: 20px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
