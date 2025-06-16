@@ -506,3 +506,7 @@ a:hover {
 .banniere {
   display: flex !important;
 }
+
+.banniere-presentation {
+  margin-bottom: 40px;
+}
