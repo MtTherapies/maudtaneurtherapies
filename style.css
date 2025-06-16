@@ -204,30 +204,9 @@ a:hover {
   object-fit: contain;
 }
 
-.footer-image {
-  background-image: url('banniere-basse.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  padding-top: 60px;
-  width: 100%;
-}
 
-.footer-image a {
-  margin-left: 300px !important;
-  color: white !important;
-  font-size: 1.2rem !important;
-  text-decoration: none !important;
-  background: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
+
+
 .footer-image a:hover {
   text-decoration: underline;
 }
@@ -258,72 +237,27 @@ a:hover {
 
 
 @media screen and (max-width: 768px) {
-  .footer-image a {
-    margin-left: 0 !important;
-    text-align: center;
-    font-size: 1.2rem;
-    width: 100%;
-  }
+  
 
-  .footer-image {
-    justify-content: center;
-    align-items: center;
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding-top: 180px !important;
-    text-align: center !important;
-  }
+  
 
-  .footer-image a {
-    margin: 0 auto !important;
-    font-size: 1.2rem !important;
-    display: block !important;
-    color: white !important;
-    background: none !important;
-    text-decoration: none !important;
-  }
+  
 }
 
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding-top: 180px !important;
-    text-align: center !important;
-  }
+  
 
-  .footer-image a {
-    margin: 0 auto !important;
-    font-size: 1.2rem !important;
-    display: block !important;
-    color: white !important;
-    background: none !important;
-    text-decoration: none !important;
-  }
+  
 }
 
-@media screen and (max-width: 768px) {
-  .footer-image a {
-    font-size: 1rem !important;
-    white-space: nowrap !important;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .footer-image a {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    display: inline-block !important;
-    max-width: 100% !important;
-  }
-}
+
+
 
 
 
@@ -339,35 +273,12 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .footer-image a {
-    margin-top: 80px !important;
-    display: inline-block !important;
-  }
-}
+
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding-top: 110px !important;
-    text-align: center !important;
-  }
+  
 
-  .footer-image a {
-    margin: 0 auto !important;
-    font-size: 1.2rem !important;
-    display: block !important;
-    color: white !important;
-    background: rgba(0, 0, 0, 0.5) !important;
-    padding: 6px 12px !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
-  }
+  
 }
 
 .banniere {
@@ -396,62 +307,67 @@ a:hover {
 }
 
 /* === Corrections liens CGV et Mentions légales === */
-.footer-image a {
-  margin: 0 auto !important;
-  display: block !important;
-  text-align: center !important;
-  background: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  text-shadow: 1px 1px 4px black !important;
-}
 
-@media screen and (max-width: 768px) {
-  .footer-image a {
-    margin-top: 140px !important;
-  }
-}
+
+
 
 
 /* === Harmonisation lien CGV === */
-@media screen and (min-width: 769px) {
-  .footer-image a {
-    margin-left: 300px !important;
-    text-align: left !important;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .footer-image a {
-    margin: 140px auto 0 auto !important;
-    display: block !important;
-    text-align: center !important;
-  }
-}
+
+
 
 /* === Harmonisation finale du lien CGV === */
+
+
+@media screen and (max-width: 768px) {
+  
+
+  
+}
+
+/* === FOOTER IMAGE (corrigé proprement) === */
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  width: 100%;
+}
+
 @media screen and (min-width: 769px) {
+  .footer-image {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
   .footer-image a {
-    margin-left: 300px !important;
-    text-align: left !important;
+    margin-left: 300px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px black;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer-image {
-    justify-content: center !important;
-    align-items: flex-start !important;
-    padding-top: 140px !important;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 140px;
   }
 
   .footer-image a {
-    margin: 0 auto !important;
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-    font-size: 1.2rem !important;
-    color: white !important;
-    text-shadow: 1px 1px 4px black !important;
-    background: none !important;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    background: none;
+    text-decoration: none;
   }
 }
