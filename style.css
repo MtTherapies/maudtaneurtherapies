@@ -498,3 +498,18 @@ a:hover {
 .banniere-presentation {
   margin-bottom: 40px;
 }
+
+/* Centrage explicite de la bannière */
+.banniere,
+.banniere-presentation {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  width: 100% !important;
+  height: 260px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
