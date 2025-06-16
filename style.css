@@ -478,3 +478,14 @@ a:hover {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center;
+  }
+
+  .footer-image-content {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
