@@ -490,3 +490,7 @@ a:hover {
     padding-top: 260px !important;
   }
 }
+
+.banniere-presentation {
+  background-image: url('screenshot_9.png') !important;
+}
