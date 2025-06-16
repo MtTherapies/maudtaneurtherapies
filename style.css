@@ -428,3 +428,30 @@ a:hover {
     text-align: center !important;
   }
 }
+
+/* === Harmonisation finale du lien CGV === */
+@media screen and (min-width: 769px) {
+  .footer-image a {
+    margin-left: 300px !important;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding-top: 140px !important;
+  }
+
+  .footer-image a {
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 1.2rem !important;
+    color: white !important;
+    text-shadow: 1px 1px 4px black !important;
+    background: none !important;
+  }
+}
