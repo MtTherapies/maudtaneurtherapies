@@ -481,11 +481,6 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .footer-image {
-    justify-content: center;
-  }
-
-  .footer-image-content {
-    margin-left: 0;
-    justify-content: center;
+    padding-top: 220px !important;
   }
 }
