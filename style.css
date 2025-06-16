@@ -394,3 +394,14 @@ a:hover {
 .banniere-energetiques {
   background-image: url('Screenshot_4.png');
 }
+
+/* === Corrections liens CGV et Mentions légales === */
+.footer-image a {
+  margin: 0 auto !important;
+  display: block !important;
+  text-align: center !important;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  text-shadow: 1px 1px 4px black !important;
+}
