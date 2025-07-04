@@ -516,3 +516,26 @@ a:hover {
 .home .banniere {
   background-image: url('banniere.jpg');
 }
+
+/* === Correction visibilité liens CGV et Mentions légales sur toutes les pages === */
+.footer-image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  text-align: center;
+}
+
+.footer-image a,
+.footer-image .separator {
+  color: white !important;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px black;
+  white-space: nowrap;
+}
