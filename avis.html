@@ -151,17 +151,7 @@
 }
 
 
-.footer-image-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
+
 
 .footer-image a,
 .footer-image .separator {
@@ -179,26 +169,9 @@
 }
 
 
-.footer-image {
-  background-image: url('banniere-basse.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 
-.footer-image-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
+
+
 
 .footer-image a,
 .footer-image .separator {
@@ -216,11 +189,56 @@
 }
 
 @media screen and (max-width: 768px) {
+  
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-image-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.footer-image a,
+.footer-image .separator {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 4px black;
+  white-space: nowrap;
+}
+
+.footer-image a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
   .footer-image-content {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .footer-image a,
