@@ -1,168 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link href="style.css" rel="stylesheet"/>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coaching</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Comfortaa', sans-serif;
-      background: white;
-      color: #111;
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
-    .sidebar {
-      background: #111;
-      color: white;
-      padding: 40px 20px 25px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 280px;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 10;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .sidebar ul li {
-      margin: 10px 0;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-height: 90px;
-      display: block;
-      margin: 0 auto;
-    }
-    .nom-site {
-      font-size: 0.9em;
-      color: white;
-      text-align: center;
-      margin-top: 8px;
-      line-height: 1.2;
-    }
-    .burger {
-      display: none;
-    }
-    .banniere {
-      margin-left: 280px;
-      position: relative;
-      width: calc(100% - 280px);
-      height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url('Screenshot_7.png');
-      background-size: cover;
-      background-position: center;
-    }
-    .titre-banniere {
-      font-family: 'Comfortaa', sans-serif;
-      font-weight: 400;
-      text-align: center;
-      font-size: 2.5rem;
-      color: white;
-      text-shadow: 2px 2px 6px black;
-      padding: 0 20px;
-    }
-    .contenu-central {
-      margin-left: 280px;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .emoji-line {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
-    .intro p {
-      font-size: 1.2em;
-      margin-bottom: 1em;
-    }
-    .footer {
-      margin-top: 40px;
-    }
-    .footer p {
-      font-size: 1.2rem;
-    }
-    @media screen and (max-width: 768px) {
-      .sidebar {
-        width: 250px;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        position: fixed;
-        z-index: 2000;
-      }
-      .sidebar.open {
-        transform: translateX(0);
-      }
-      .burger {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 2001;
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: black;
-        cursor: pointer;
-      }
-      .banniere {
-        margin-left: 0;
-        width: 100%;
-      }
-      .contenu-central {
-        margin-left: 0;
-      }
-    }
   
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+<style>
 .footer-image {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
   height: 300px;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
-  text-align: left;
-  padding-top: 60px;
+  align-items: flex-end;
   width: 100%;
+  padding-left: 300px;
+  padding-bottom: 40px;
 }
-.footer-image a {
-  margin-left: 300px !important;
-  color: white !important;
-  font-size: 1.2rem !important;
-  text-decoration: none !important;
+
+.footer-image-content {
+  display: flex;
+  gap: 12px;
+  background: none;
 }
+
+.footer-image a,
+.footer-image .separator {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 4px black;
+  white-space: nowrap;
+  text-align: left;
+}
+
 .footer-image a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center !important;
+    align-items: flex-end !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  .footer-image-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
 </style>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <button class="burger" id="menu-toggle">☰</button>
@@ -171,36 +80,44 @@
       <img src="logo.png" alt="Logo Maud Taneur"/>
       <div class="nom-site">maudtaneur<br/>thérapies</div>
     </div>
-    
-<ul>
-  <li><a href="index.html">Accueil</a></li>
-  <li><a href="presentation.html">Présentation</a></li>
-  <li><a href="energetiques.html">Soins énergétiques</a></li>
-  <li><a href="rebouteux.html">Soins rebouteux</a></li>
-  <li><a href="distance.html">Soins à distances</a></li>
-  <li><a href="massages.html">Massages</a></li>
-  <li><a href="avis.html">Galerie et avis</a></li>
-  <li><a href="resa.html">Horaires et réservations</a></li>
-  <li><a href="tarifs.html">Tarifs</a></li>
-  <li><a href="panier.html">🛒 Mon Panier</a></li>
-</ul>
-
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="presentation.html">Présentation</a></li>
+      <li><a href="energetiques.html">Soins énergétiques</a></li>
+      <li><a href="rebouteux.html">Soins rebouteux</a></li>
+      <li><a href="distance.html">Soins à distances</a></li>
+      <li><a href="massages.html">Massages</a></li>
+      <li><a href="avis.html">Galerie et avis</a></li>
+      <li><a href="resa.html">Horaires et réservations</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="panier.html">🛒 Mon Panier</a></li>
+    </ul>
   </nav>
 
-  <div class="banniere">
-    <h1 class="titre-banniere">Coaching</h1>
-  </div>
+  
+<div class="banniere" style="background-image: url('Screenshot_7.png'); background-size: cover; background-position: center;">
+  <h1 class="titre-banniere">Coaching</h1>
+</div>
+
 
   <div class="contenu-central">
     <div class="emoji-line">✨🌿🌸</div>
     <div class="intro">
-      <p>Contenu à venir pour le soin : <strong>4</strong>.</p>
-      <p>Revenez bientôt pour en savoir plus.</p>
+      <p>Bienvenue sur mon site. Vous trouverez ici une présentation de mon approche, de mon parcours et de mes valeurs.</p>
+      <p>Explorez les autres pages pour découvrir tous les soins proposés.</p>
     </div>
     <div class="footer">
       <p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
     </div>
   </div>
+
+  <div class="footer-image">
+  <div class="footer-image-content">
+    <a href="cgv.html">CGV</a>
+    <span class="separator">et</span>
+    <a href="mentions.html">Mentions légales</a>
+  </div>
+</div>
 
   <script>
     const toggle = document.getElementById("menu-toggle");
@@ -209,10 +126,5 @@
       sidebar.classList.toggle("open");
     });
   </script>
-
-  <div class="footer-image">
-    <a href="cgv.html"><span style="white-space: nowrap;">&nbsp;CGV et Mentions légales&nbsp;</span></a>
-  </div>
-
 </body>
 </html>
