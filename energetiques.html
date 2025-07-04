@@ -133,19 +133,15 @@
     }
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-image a {
+  margin-left: 300px !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+}
+.footer-image a:hover {
+  text-decoration: underline;
+}
 
 
 .footer-image {
@@ -156,9 +152,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  width: 100%;
   padding-left: 300px;
   padding-bottom: 40px;
+  width: 100%;
 }
 
 .footer-image-content {
@@ -174,7 +170,6 @@
   text-decoration: none;
   text-shadow: 1px 1px 4px black;
   white-space: nowrap;
-  text-align: left;
 }
 
 .footer-image a:hover {
@@ -186,11 +181,11 @@
     justify-content: center !important;
     align-items: flex-end !important;
     padding: 0 !important;
-    position: relative !important;
+    position: relative;
   }
 
   .footer-image-content {
-    position: absolute !important;
+    position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -213,7 +208,7 @@
 </style>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
-<body class="energetiques">
+<body>
   <button class="burger" id="menu-toggle">☰</button>
   <nav class="sidebar" id="sidebar">
     <div class="logo">
@@ -259,13 +254,9 @@
     });
   </script>
 
-  
   <div class="footer-image">
-    <div class="footer-image-content">
-      <a href="cgv.html">CGV</a>
-      <span class="separator">et</span>
-      <a href="mentions.html">Mentions légales</a>
-    </div>
+    <a href="cgv.html"><span style="white-space: nowrap;">&nbsp;CGV et Mentions légales&nbsp;</span></a>
   </div>
+
 </body>
 </html>
