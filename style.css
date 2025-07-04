@@ -539,3 +539,33 @@ a:hover {
   text-shadow: 1px 1px 4px black;
   white-space: nowrap;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 180px !important;
+  }
+
+  .footer-image-content {
+    margin-left: 0 !important;
+    padding: 10px 20px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem !important;
+    color: white !important;
+    text-shadow: 1px 1px 4px black !important;
+    text-align: center !important;
+  }
+}
