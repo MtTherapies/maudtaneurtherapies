@@ -513,3 +513,6 @@ a:hover {
   margin: 0 !important;
   padding: 0 !important;
 }
+.home .banniere {
+  background-image: url('banniere.jpg');
+}
