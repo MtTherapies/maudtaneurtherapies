@@ -195,9 +195,7 @@ a:hover {
 
 
 
-.footer-image a:hover {
-  text-decoration: underline;
-}
+
 
 
 .footer {
@@ -314,169 +312,63 @@ a:hover {
   
 }
 
-/* === FOOTER IMAGE (corrigé proprement) === */
-.footer-image {
-  background-image: url('banniere-basse.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  width: 100%;
-}
+
+
 
 @media screen and (min-width: 769px) {
-  .footer-image {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 60px;
-  }
+  
 
-  .footer-image a {
-    margin-left: 300px;
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    text-shadow: 1px 1px 4px black;
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 140px;
-  }
+  
 
-  .footer-image a {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-size: 1.2rem;
-    color: white;
-    text-shadow: 1px 1px 4px black;
-    background: none;
-    text-decoration: none;
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
-  .footer-image a {
-    margin-top: 180px;
-  }
+  
 }
 
 /* === Style footer avec deux liens séparés + "et" === */
-.footer-image {
-  background-image: url('banniere-basse.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 160px;
-  gap: 8px;
-  flex-wrap: wrap;
-}
 
-.footer-image a {
-  font-size: 1.2rem;
-  color: white;
-  text-shadow: 1px 1px 4px black;
-  text-decoration: none;
-  margin: 0 6px;
-  white-space: nowrap;
-}
 
-.footer-image a:hover {
-  text-decoration: underline;
-}
 
-.footer-image .separator {
-  font-size: 1.2rem;
-  color: white;
-  text-shadow: 1px 1px 4px black;
-  margin: 0 4px;
-}
+
+
+
+
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    padding-top: 180px;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-  }
+  
 
-  .footer-image a,
-  .footer-image .separator {
-    font-size: 1.1rem;
-    text-align: center;
-  }
+  
 }
 
 /* === Footer final avec structure <div class="footer-image-content"> === */
-.footer-image {
-  background-image: url('banniere-basse.png');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 160px;
-  width: 100%;
-  justify-content: flex-start;
-}
 
-.footer-image-content {
-  margin-left: 300px;
-  white-space: nowrap;
-}
 
-.footer-image a,
-.footer-image .separator {
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  text-shadow: 1px 1px 4px black;
-  margin: 0 6px;
-}
 
-.footer-image a:hover {
-  text-decoration: underline;
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  
+
+  
+
+  
 }
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: flex-start;
-    padding-top: 180px;
-  }
-
-  .footer-image-content {
-    margin-left: 20px;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-  }
-
-  .footer-image a,
-  .footer-image .separator {
-    font-size: 1.1rem;
-    text-align: center;
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
-  .footer-image {
-    padding-top: 220px !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer-image {
-    padding-top: 260px !important;
-  }
+  
 }
 
 .banniere-presentation {
@@ -519,72 +411,75 @@ a:hover {
 
 /* === CORRECTION GÉNÉRALE VERSION MOBILE & PAGES SPÉCIALES === */
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: center !important;
-    align-items: center !important;
-    padding-top: 200px !important;
-  }
+  
 
-  .footer-image-content {
-    margin-left: 0 !important;
-    padding: 10px 20px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    text-align: center;
-  }
+  
 
-  .footer-image a,
-  .footer-image .separator {
-    font-size: 1.1rem !important;
-    color: white !important;
-    text-shadow: 1px 1px 4px black !important;
-    text-align: center !important;
-  }
+  
 }
 
 /* === AFFICHAGE ORDONNÉ SUR BUREAU POUR .presentation et .avis === */
-body.presentation .footer-image-content,
-body.avis .footer-image-content {
-  margin-left: 300px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-  background: rgba(0, 0, 0, 0.4);
-}
+body.presentation 
 
 /* === CORRECTION UNIFIÉE POUR CENTRAGE DU FOOTER SUR TOUTES LES PAGES === */
+
+.footer-image {
+  background-image: url('banniere-basse.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 300px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
 .footer-image-content {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 10px !important;
-  width: 100% !important;
-  padding: 20px !important;
-  background: rgba(0, 0, 0, 0.4) !important;
-  text-align: center !important;
-  flex-wrap: wrap !important;
-  margin-left: 0 !important;
+  display: flex;
+  gap: 10px;
 }
 
 .footer-image a,
 .footer-image .separator {
-  font-size: 1.2rem !important;
-  color: white !important;
-  text-decoration: none !important;
-  text-shadow: 1px 1px 4px black !important;
-  white-space: nowrap !important;
-  margin: 0 6px !important;
-  text-align: center !important;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0 6px;
 }
 
 .footer-image a:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center !important;
+    align-items: flex-end !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  .footer-image-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 8px;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
 }
