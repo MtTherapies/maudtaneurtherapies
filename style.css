@@ -517,34 +517,12 @@ a:hover {
   background-image: url('banniere.jpg');
 }
 
-/* === Correction visibilité liens CGV et Mentions légales sur toutes les pages === */
-.footer-image-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  text-align: center;
-}
-
-.footer-image a,
-.footer-image .separator {
-  color: white !important;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 4px black;
-  white-space: nowrap;
-}
-
+/* === CORRECTION GÉNÉRALE VERSION MOBILE & PAGES SPÉCIALES === */
 @media screen and (max-width: 768px) {
   .footer-image {
     justify-content: center !important;
     align-items: center !important;
-    padding-top: 180px !important;
+    padding-top: 200px !important;
   }
 
   .footer-image-content {
@@ -556,7 +534,7 @@ a:hover {
     justify-content: center !important;
     align-items: center !important;
     gap: 10px !important;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     width: 100%;
     text-align: center;
   }
@@ -568,4 +546,16 @@ a:hover {
     text-shadow: 1px 1px 4px black !important;
     text-align: center !important;
   }
+}
+
+/* === AFFICHAGE ORDONNÉ SUR BUREAU POUR .presentation et .avis === */
+body.presentation .footer-image-content,
+body.avis .footer-image-content {
+  margin-left: 300px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.4);
 }
