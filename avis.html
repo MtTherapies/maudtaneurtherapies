@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galerie et avis</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galerie et avis</title>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
     * {
       margin: 0;
@@ -273,114 +274,110 @@
   }
 }
 
+
+@media screen and (max-width: 768px) {
+  .bloc-avis .avis-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bloc-avis .avis-item img {
+    margin-bottom: 12px;
+  }
+}
+
 </style>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 </head>
 <body class="avis">
-  <button class="burger" id="menu-toggle">☰</button>
-  <nav class="sidebar" id="sidebar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Maud Taneur"/>
-      <div class="nom-site">maudtaneur<br/>thérapies</div>
-    </div>
-    
+<button class="burger" id="menu-toggle">☰</button>
+<nav class="sidebar" id="sidebar">
+<div class="logo">
+<img alt="Logo Maud Taneur" src="logo.png"/>
+<div class="nom-site">maudtaneur<br/>thérapies</div>
+</div>
 <ul>
-  <li><a href="index.html">Accueil</a></li>
-  <li><a href="presentation.html">Présentation</a></li>
-  <li><a href="energetiques.html">Soins énergétiques</a></li>
-  <li><a href="rebouteux.html">Soins rebouteux</a></li>
-  <li><a href="distance.html">Soins à distances</a></li>
-  <li><a href="massages.html">Massages</a></li>
-  <li><a href="avis.html">Galerie et avis</a></li>
-  <li><a href="resa.html">Horaires et réservations</a></li>
-  <li><a href="tarifs.html">Tarifs</a></li>
-  <li><a href="panier.html">🛒 Mon Panier</a></li>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="presentation.html">Présentation</a></li>
+<li><a href="energetiques.html">Soins énergétiques</a></li>
+<li><a href="rebouteux.html">Soins rebouteux</a></li>
+<li><a href="distance.html">Soins à distances</a></li>
+<li><a href="massages.html">Massages</a></li>
+<li><a href="avis.html">Galerie et avis</a></li>
+<li><a href="resa.html">Horaires et réservations</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="panier.html">🛒 Mon Panier</a></li>
 </ul>
-
-  </nav>
-
-  <div class="banniere">
-    <h1 class="titre-banniere">Galerie et avis</h1>
-  </div>
-
-  <div class="contenu-central">
-    <div class="galerie-photos" style="max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px;">
-      <h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
+</nav>
+<div class="banniere">
+<h1 class="titre-banniere">Galerie et avis</h1>
+</div>
+<div class="contenu-central">
+<div class="galerie-photos" style="max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px;">
+<h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
         Galerie photos
       </h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-        <div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
-          <img src="photo-soin-energetique.jpg" alt="Soin énergétique" style="width: 100%; border-radius: 8px;">
-          <p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin énergétique</p>
-        </div>
-        <div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
-          <img src="photo-soin-distance.jpg" alt="Soin à distance" style="width: 100%; border-radius: 8px;">
-          <p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin à distance</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="bloc-avis" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
-      <h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+<div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
+<img alt="Soin énergétique" src="photo-soin-energetique.jpg" style="width: 100%; border-radius: 8px;"/>
+<p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin énergétique</p>
+</div>
+<div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
+<img alt="Soin à distance" src="photo-soin-distance.jpg" style="width: 100%; border-radius: 8px;"/>
+<p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin à distance</p>
+</div>
+</div>
+</div>
+<div class="bloc-avis" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
+<h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
         Avis
       </h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
-
-        <div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-          <img src="fleur1.jpg" alt="Elodie" style="width: 120px; border-radius: 6px;">
-          <div>
-            <strong>Elodie</strong>
-            <p style="margin-top: 8px;">"Maud est une personne incroyable, douce, bienveillante, à l'écoute. Un vrai rayon de soleil qui a un don pour soigner vos maux et votre âme grâce à sa douceur et son intuition. Son soin m'a apporté beaucoup d'apaisement et a soigné mon eczéma sur les mains, je la recommande les yeux fermés 😊 "</p>
-          </div>
-        </div>
-
-        <div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-          <img src="fleur2.jpg" alt="Thomas" style="width: 120px; border-radius: 6px;">
-          <div>
-            <strong>Thomas</strong>
-            <p style="margin-top: 8px;">"Moment exceptionnel. Je recommande vivement Maud. J'ai pris un soin énergétique où à l'issue je me retrouve léger, bien et apaisé. Douce et à l'écoute c'était plus que ressourçant."</p>
-          </div>
-        </div>
-
-        <div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-          <img src="fleur3.jpg" alt="Melanie" style="width: 120px; border-radius: 6px;">
-          <div>
-            <strong>Melanie</strong>
-            <p style="margin-top: 8px;">"Super expérience pour ma nièce Lucie et moi même ! Nous avons bénéficié de deux soins énergétiques. Pour deux raisons différentes, nous sommes conquises et reviendrons dès que nous ressentirons le besoin. Je recommande vivement !!!! "</p>
-          </div>
-        </div>
-
-        <div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-          <img src="fleur4.jpg" alt="Charles" style="width: 120px; border-radius: 6px;">
-          <div>
-            <strong>Charles</strong>
-            <p style="margin-top: 8px;">"Soins à distance efficace qui m'ont fait un bien fou. Séance de magnétisme qui permet de recentrer ses énergies... au top"</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-      
-  </div>
-
-  <script>
+<div class="avis-item" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
+<img alt="Elodie" src="fleur1.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<strong>Elodie</strong>
+<p style="margin-top: 8px;">"Maud est une personne incroyable, douce, bienveillante, à l'écoute. Un vrai rayon de soleil qui a un don pour soigner vos maux et votre âme grâce à sa douceur et son intuition. Son soin m'a apporté beaucoup d'apaisement et a soigné mon eczéma sur les mains, je la recommande les yeux fermés 😊 "</p>
+</div>
+</div>
+<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
+<img alt="Thomas" src="fleur2.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<strong>Thomas</strong>
+<p style="margin-top: 8px;">"Moment exceptionnel. Je recommande vivement Maud. J'ai pris un soin énergétique où à l'issue je me retrouve léger, bien et apaisé. Douce et à l'écoute c'était plus que ressourçant."</p>
+</div>
+</div>
+<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
+<img alt="Melanie" src="fleur3.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<strong>Melanie</strong>
+<p style="margin-top: 8px;">"Super expérience pour ma nièce Lucie et moi même ! Nous avons bénéficié de deux soins énergétiques. Pour deux raisons différentes, nous sommes conquises et reviendrons dès que nous ressentirons le besoin. Je recommande vivement !!!! "</p>
+</div>
+</div>
+<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
+<img alt="Charles" src="fleur4.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<strong>Charles</strong>
+<p style="margin-top: 8px;">"Soins à distance efficace qui m'ont fait un bien fou. Séance de magnétisme qui permet de recentrer ses énergies... au top"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
     const toggle = document.getElementById("menu-toggle");
     const sidebar = document.getElementById("sidebar");
     toggle.addEventListener("click", () => {
       sidebar.classList.toggle("open");
     });
   </script>
-
-  
-
-
-
 <div class="footer-image">
-  <div class="footer-image-content">
-    <a href="cgv.html">CGV</a>
-    <span class="separator">et</span>
-    <a href="mentions.html">Mentions légales</a>
-  </div>
+<div class="footer-image-content">
+<a href="cgv.html">CGV</a>
+<span class="separator">et</span>
+<a href="mentions.html">Mentions légales</a>
+</div>
 </div>
 </body>
+</html>
