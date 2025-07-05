@@ -1,168 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link href="style.css" rel="stylesheet"/>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conditions Générales de Vente</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Comfortaa', sans-serif;
-      background: white;
-      color: #111;
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
-    .sidebar {
-      background: #111;
-      color: white;
-      padding: 40px 20px 25px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 280px;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 10;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .sidebar ul li {
-      margin: 10px 0;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-height: 90px;
-      display: block;
-      margin: 0 auto;
-    }
-    .nom-site {
-      font-size: 0.9em;
-      color: white;
-      text-align: center;
-      margin-top: 8px;
-      line-height: 1.2;
-    }
-    .burger {
-      display: none;
-    }
-    .banniere {
-      margin-left: 280px;
-      position: relative;
-      width: calc(100% - 280px);
-      height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url('Screenshot_10.png');
-      background-size: cover;
-      background-position: center;
-    }
-    .titre-banniere {
-      font-family: 'Comfortaa', sans-serif;
-      font-weight: 400;
-      text-align: center;
-      font-size: 2.5rem;
-      color: white;
-      text-shadow: 2px 2px 6px black;
-      padding: 0 20px;
-    }
-    .contenu-central {
-      margin-left: 280px;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .emoji-line {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
-    .intro p {
-      font-size: 1.2em;
-      margin-bottom: 1em;
-    }
-    .footer {
-      margin-top: 40px;
-    }
-    .footer p {
-      font-size: 1.2rem;
-    }
-    @media screen and (max-width: 768px) {
-      .sidebar {
-        width: 250px;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        position: fixed;
-        z-index: 2000;
-      }
-      .sidebar.open {
-        transform: translateX(0);
-      }
-      .burger {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 2001;
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: black;
-        cursor: pointer;
-      }
-      .banniere {
-        margin-left: 0;
-        width: 100%;
-      }
-      .contenu-central {
-        margin-left: 0;
-      }
-    }
   
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+<style>
 .footer-image {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
   height: 300px;
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
-  text-align: left;
-  padding-top: 60px;
+  align-items: flex-end;
   width: 100%;
+  padding-left: 300px;
+  padding-bottom: 40px;
 }
-.footer-image a {
-  margin-left: 300px !important;
-  color: white !important;
-  font-size: 1.2rem !important;
-  text-decoration: none !important;
+
+.footer-image-content {
+  display: flex;
+  gap: 12px;
+  background: none;
 }
+
+.footer-image a,
+.footer-image .separator {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 4px black;
+  white-space: nowrap;
+  text-align: left;
+}
+
 .footer-image a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .footer-image {
+    justify-content: center !important;
+    align-items: flex-end !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  .footer-image-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .footer-image a,
+  .footer-image .separator {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
 </style>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <button class="burger" id="menu-toggle">☰</button>
@@ -171,103 +80,107 @@
       <img src="logo.png" alt="Logo Maud Taneur"/>
       <div class="nom-site">maudtaneur<br/>thérapies</div>
     </div>
-    
-<ul>
-  <li><a href="index.html">Accueil</a></li>
-  <li><a href="presentation.html">Présentation</a></li>
-  <li><a href="energetiques.html">Soins énergétiques</a></li>
-  <li><a href="rebouteux.html">Soins rebouteux</a></li>
-  <li><a href="distance.html">Soins à distances</a></li>
-  <li><a href="massages.html">Massages</a></li>
-  <li><a href="avis.html">Galerie et avis</a></li>
-  <li><a href="resa.html">Horaires et réservations</a></li>
-  <li><a href="tarifs.html">Tarifs</a></li>
-  <li><a href="panier.html">🛒 Mon Panier</a></li>
-</ul>
-
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="presentation.html">Présentation</a></li>
+      <li><a href="energetiques.html">Soins énergétiques</a></li>
+      <li><a href="rebouteux.html">Soins rebouteux</a></li>
+      <li><a href="distance.html">Soins à distances</a></li>
+      <li><a href="massages.html">Massages</a></li>
+      <li><a href="avis.html">Galerie et avis</a></li>
+      <li><a href="resa.html">Horaires et réservations</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="panier.html">🛒 Mon Panier</a></li>
+    </ul>
   </nav>
 
-  <div class="banniere">
-    <h1 class="titre-banniere">Conditions Générales de Vente</h1>
-  </div>
+  
+<div class="banniere" style="background-image: url('cgv.jpg'); background-size: cover; background-position: center;">
+  <h1 class="titre-banniere">C G V</h1>
+</div>
+
 
   <div class="contenu-central">
-    <div class="contenu-cgv" style="max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: left; font-size: 1.05rem; line-height: 1.8;">
+    <div class="emoji-line">✨🌿🌸</div>
+
+<div class="conditions-vente">
   <h2>Conditions Générales de Vente (CGV)</h2>
+
   <p><strong>Maud Taneur – Soins énergétiques & bien-être</strong><br/>
   Adresse professionnelle : 01750 Replonges<br/>
   Statut juridique : Auto-entrepreneur<br/>
   SIRET : 754 078 970 00037<br/>
-  Site internet : <a href="https://maudtaneurtherapies.com/" target="_blank">https://maudtaneurtherapies.com/</a></p>
+  Site internet : <a href="https://maudtaneurtherapies.com">https://maudtaneurtherapies.com</a></p>
 
   <h3>1. Informations légales</h3>
   <p>Maud Taneur exerce son activité en tant que praticienne en soins énergétiques, bien-être et développement personnel.</p>
 
   <h3>2. Prestations proposées et tarifs</h3>
-  <p>Les prestations réalisées en présentiel sont :</p>
+  <p><strong>Les prestations réalisées en présentiel sont :</strong></p>
   <ul>
-    <li>Rééquilibrage énergétique : 70 EUR / 1H</li>
-    <li>Soins énergétiques ciblés : 50 EUR / 45 MIN</li>
-    <li>Soins guérisseurs rebouteux : 50 EUR / 45 MIN</li>
-    <li>Soins énergétiques enfants : 30 EUR / 1H</li>
+    <li>Rééquilibrage énergétique : 70 EUR / 50MIN</li>
+    <li>Soins énergétiques ciblés : 50 EUR / 30 MIN</li>
+    <li>Soins guérisseurs rebouteux : 50 EUR / 30 MIN</li>
+    <li>Soins énergétiques enfants : 30 EUR / 30 MIN</li>
     <li>Magnétisme coupeur de feu : 20 EUR / ENV 20 MIN</li>
-    <li>Séance de magnétisme (arrêt du tabac) : 40 EUR / 30 MIN</li>
+    <li>Séance magnétisme (arrêt tabac) : 40 EUR / 30 MIN</li>
     <li>Coaching bien-être : 40 EUR / 1H</li>
-    <li>Massages bien-être : à partir de 40 EUR (selon durée et type)</li>
-    <li>Massage énergétique ou détente : 70 EUR / 1H</li>
-    <li>Massage à la bougie : 80 EUR / 1H</li>
-    <li>Massage aux pierres chaudes : 90 EUR / 1H</li>
+    <li>Massages bien-être : à partir de 40 EUR</li>
+    <li>Massage énergétique ou détente : 70 EUR / 50 MIN</li>
+    <li>Massage à la bougie : 80 EUR / 50 MIN</li>
+    <li>Massage aux pierres chaudes : 90 EUR / 50 MIN</li>
     <li>Massage crânien : 40 EUR / 30 MIN</li>
-    <li>Massage ciblé dos, épaules, nuque : 40 EUR / 30 MIN</li>
+    <li>Massage ciblé dos/épaules/nuque : 40 EUR / 30 MIN</li>
     <li>Massage ciblé pieds : 40 EUR / 30 MIN</li>
   </ul>
-  <p>Les tarifs sont exprimés en euros, toutes taxes comprises (TVA non applicable, article 293B du CGI).</p>
+  <p>Tarifs exprimés TTC – TVA non applicable (article 293B du CGI).</p>
 
   <h3>3. Prise de rendez-vous et acompte</h3>
-  <p>Toute prise de rendez-vous nécessite le versement d’un acompte de 50 % du montant total de la prestation.<br/>
-  Le règlement de l’acompte peut être effectué via virement bancaire, PayPal, Wero ou CB.<br/>
-  Le solde est à régler le jour du rendez-vous, en espèces ou par les moyens de paiement acceptés sur place.</p>
+  <p>Un acompte de 50 % est requis pour réserver. Paiement par virement, PayPal, Wero ou CB. Le solde est dû le jour du rendez-vous.</p>
 
-  <h3>4. Conditions d’annulation et de remboursement</h3>
-  <p>Annulation plus de 24h à l’avance : l’acompte est remboursé ou reporté selon votre choix.<br/>
-  Annulation moins de 24h à l’avance : aucun remboursement de l’acompte.<br/>
-  Non-présentation : la prestation est due en totalité.</p>
+  <h3>4. Conditions d’annulation et remboursement</h3>
+  <p>• Annulation >24h : acompte remboursé ou reporté<br/>
+     • Annulation <24h : acompte non remboursé<br/>
+     • Absence : séance due en totalité</p>
 
   <h3>5. Retards</h3>
-  <p>Tout retard peut réduire la durée de la séance sans réduction de tarif.<br/>
-  Retard de plus de 15 min sans information préalable : la séance pourra être annulée avec conservation de l’acompte.</p>
+  <p>Un retard peut réduire la séance sans réduction de tarif. Retard >15 min non signalé = annulation avec conservation de l’acompte.</p>
 
-  <h3>6. Responsabilité et limites d’intervention</h3>
-  <p>Les soins sont complémentaires et ne remplacent pas un traitement médical.<br/>
-  Aucun diagnostic médical ne sera établi.<br/>
-  Le praticien se réserve le droit de refuser une séance si l’état du client ne le permet pas.</p>
+  <h3>6. Responsabilité</h3>
+  <p>Les soins ne remplacent aucun traitement médical. Aucun diagnostic n’est établi. Le praticien peut refuser une séance si nécessaire.</p>
 
   <h3>7. Confidentialité</h3>
-  <p>Toutes les informations sont strictement confidentielles et ne seront jamais partagées.</p>
+  <p>Toutes les informations sont strictement confidentielles.</p>
 
   <h3>8. Propriété intellectuelle</h3>
-  <p>Le contenu du site est protégé. Toute reproduction est interdite sans autorisation écrite.</p>
+  <p>Contenu protégé par droit d’auteur. Toute reproduction interdite sans autorisation écrite.</p>
 
   <h3>9. Acceptation des conditions</h3>
-  <p>Prendre rendez-vous implique l’acceptation pleine et entière des présentes CGV.</p>
+  <p>La prise de RDV implique l’acceptation totale des présentes CGV.</p>
 
   <h3>10. Droit de rétractation</h3>
-  <p>Le droit de rétractation ne s’applique pas aux prestations exécutées avec accord préalable.</p>
+  <p>Pas de droit de rétractation sur les prestations déjà exécutées (art. L221-28 Code conso).</p>
 
-  <h3>11. Médiation de la consommation</h3>
-  <p>En cas de litige non résolu à l’amiable, le client peut contacter :<br/>
-  <strong>ANM CONSO</strong><br/>
-  62, rue Tiquetonne – 75002 PARIS<br/>
-  Site : <a href="https://www.anm-conso.com" target="_blank">www.anm-conso.com</a></p>
+  <h3>11. Médiation</h3>
+  <p>Médiateur consommation : ANM CONSO – 62 rue Tiquetonne, 75002 PARIS – <a href="https://www.anm-conso.com">www.anm-conso.com</a></p>
 
-  <h3>12. Protection des données personnelles (RGPD)</h3>
-  <p>Les données collectées servent uniquement à la gestion des rendez-vous.<br/>
-  Elles ne sont ni vendues ni transmises à des tiers.</p>
+  <h3>12. Données personnelles (RGPD)</h3>
+  <p>Les données collectées servent uniquement à la gestion des rendez-vous. Elles ne sont ni revendues, ni transmises.</p>
 </div>
+
+    
     <div class="footer">
       <p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
     </div>
   </div>
+
+  <div class="footer-image">
+  <div class="footer-image-content">
+    <a href="cgv.html">CGV</a>
+    <span class="separator">et</span>
+    <a href="mentions.html">Mentions légales</a>
+  </div>
+</div>
 
   <script>
     const toggle = document.getElementById("menu-toggle");
@@ -276,10 +189,5 @@
       sidebar.classList.toggle("open");
     });
   </script>
-
-  <div class="footer-image">
-    <a href="cgv.html"><span style="white-space: nowrap;">&nbsp;CGV et Mentions légales&nbsp;</span></a>
-  </div>
-
 </body>
 </html>
