@@ -73,6 +73,53 @@
 }
 </style>
 
+
+<style>
+/* Cacher le menu latéral par défaut */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+
+/* Afficher le bouton burger */
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Forcer le centrage du contenu */
+.contenu-central {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+</style>
+
 </head>
 <body class="home">
 
