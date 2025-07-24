@@ -108,25 +108,7 @@ a:hover {
 }
 
 /* === MENU DESKTOP === */
-@media screen and (min-width: 769px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100vh;
-    overflow-y: auto;
-  }
 
-  .burger {
-    display: none !important;
-  }
-
-  .contenu-central {
-    margin-left: 300px;
-    width: calc(100% - 300px);
-  }
-}
 
 /* === MENU MOBILE === */
 @media screen and (max-width: 768px) {
