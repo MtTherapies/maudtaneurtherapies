@@ -235,13 +235,13 @@
     const sidebar = document.querySelector(".sidebar");
 
     burger.addEventListener("click", function (e) {
-      e.stopPropagation(); // ne ferme pas immédiatement
+      e.stopPropagation(); // empêche la fermeture immédiate
       sidebar.classList.toggle("open");
     });
 
-    // Fermer si clic en dehors
+    // Fermer si clic ailleurs que sur le menu
     document.addEventListener("click", function (e) {
-      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
+      if (!sidebar.contains(e.target)) {
         sidebar.classList.remove("open");
       }
     });
