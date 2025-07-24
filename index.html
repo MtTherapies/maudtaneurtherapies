@@ -228,14 +228,25 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burger = document.querySelector(".burger");
-      const sidebar = document.querySelector(".sidebar");
-      burger.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const sidebar = document.querySelector(".sidebar");
+
+    burger.addEventListener("click", function (e) {
+      e.stopPropagation(); // ne ferme pas immédiatement
+      sidebar.classList.toggle("open");
     });
-  </script>
+
+    // Fermer si clic en dehors
+    document.addEventListener("click", function (e) {
+      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
+        sidebar.classList.remove("open");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
