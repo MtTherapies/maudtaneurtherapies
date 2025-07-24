@@ -536,3 +536,32 @@ body.presentation
     transform: translateX(0) !important;
   }
 }
+
+
+@media screen and (min-width: 769px) {
+  .sidebar {
+    display: none !important;
+    transform: translateX(-100%) !important;
+  }
+
+  .sidebar.open {
+    display: flex !important;
+    transform: translateX(0%) !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #5d3a73;
+    padding: 40px 25px 25px;
+    z-index: 2000;
+  }
+
+  .contenu-central {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    text-align: center !important;
+  }
+}
