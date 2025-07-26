@@ -68,7 +68,7 @@
     .burger {
       display: none;
     }
-    .banniere {
+     {
       margin-left: 280px;
       position: relative;
       width: calc(100% - 280px);
@@ -89,7 +89,7 @@
       text-shadow: 2px 2px 6px black;
       padding: 0 20px;
     }
-    .contenu-central {
+     {
       margin-left: 280px;
       padding: 40px 20px;
       text-align: center;
@@ -131,11 +131,11 @@
         color: black;
         cursor: pointer;
       }
-      .banniere {
+       {
         margin-left: 0;
         width: 100%;
       }
-      .contenu-central {
+       {
         margin-left: 0;
       }
     }
@@ -289,7 +289,7 @@
 
 
 /* Recentrage du contenu */
-.contenu-central {
+ {
   font-size: 1.15em;
   line-height: 1.7em;
   max-width: 800px;
@@ -315,7 +315,7 @@
 }
 
 /* Texte */
-.contenu-central {
+ {
   font-size: 1.15em;
   line-height: 1.7em;
   max-width: 800px;
@@ -325,7 +325,7 @@
 }
 
 /* Titres */
-.contenu-central h2 {
+ h2 {
   font-size: 1.6em !important;
   margin-top: 2.2em !important;
   margin-bottom: 1.4em !important;
@@ -404,10 +404,10 @@
   .sidebar {
     width: 220px;
   }
-  .contenu-central {
+   {
     margin-left: 220px !important;
   }
-  .banniere {
+   {
     margin-left: 220px !important;
     width: calc(100% - 220px) !important;
   }
@@ -462,7 +462,7 @@
 }
 
 /* Banniere plein écran uniquement si voulu */
-.banniere {
+ {
   width: 100%;
   margin: 0;
 }
@@ -471,8 +471,8 @@
 .sidebar {
   width: 220px !important;
 }
-.contenu-central,
-.banniere {
+,
+ {
   margin-left: 220px !important;
   width: calc(100% - 220px) !important;
 }
@@ -523,7 +523,7 @@
 }
 
 /* Recentrage universel */
-.contenu-central {
+ {
   margin: 0 auto !important;
   padding: 20px;
   max-width: 800px;
@@ -533,17 +533,45 @@
 }
 
 /* Recentrage bannière */
-.banniere {
+ {
   margin-left: 0 !important;
   width: 100% !important;
 }
 
 /* Version desktop uniquement : décalage si sidebar visible */
 @media screen and (min-width: 1024px) {
-  .contenu-central,
-  .banniere {
+  ,
+   {
     margin-left: 220px !important;
     width: calc(100% - 220px) !important;
+  }
+}
+
+/* Contenu centré par défaut */
+.contenu-central {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  font-size: 1.15em;
+  line-height: 1.7em;
+  box-sizing: border-box;
+}
+
+/* Bannière pleine largeur par défaut */
+.banniere {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Version desktop : contenu décalé si menu visible */
+@media screen and (min-width: 1024px) {
+  .contenu-central {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+  .banniere {
+    margin-left: 220px;
+    width: calc(100% - 220px);
   }
 }
 </style>
