@@ -1,33 +1,149 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <link href="style.css" rel="stylesheet"/>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Présentation</title>
-  
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-
+<link href="style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Présentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 <style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: white;
+  color: #111;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* Menu burger */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: #5d3a73;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo img {
+  max-height: 90px;
+  margin: 0 auto;
+}
+.nom-site {
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 30px;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Banniere */
+.banniere {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('Screenshot_8.png');
+  background-size: cover;
+  background-position: center;
+}
+.titre-banniere {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.7rem;
+  color: white;
+  text-shadow: 2px 2px 6px black;
+  padding: 0 20px;
+}
+
+/* Contenu central */
+.contenu-central {
+  font-size: 1.15em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.intro h2 {
+  font-size: 2.2rem;
+  margin-top: 2.5em;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+.intro p {
+  margin-bottom: 1.3em;
+}
+.emoji-line {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+/* Footer image */
 .footer-image {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 180px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
-  padding-left: 300px;
-  padding-bottom: 40px;
+  padding-left: 150px;
+  padding-bottom: 30px;
 }
-
 .footer-image-content {
   display: flex;
   gap: 12px;
-  background: none;
 }
-
 .footer-image a,
 .footer-image .separator {
   font-size: 1.2rem;
@@ -37,33 +153,29 @@
   white-space: nowrap;
   text-align: left;
 }
-
 .footer-image a:hover {
   text-decoration: underline;
 }
 
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: center !important;
-    align-items: flex-end !important;
-    padding: 0 !important;
-    position: relative;
+  .sidebar {
+    width: 250px;
   }
-
+  .footer-image {
+    justify-content: center;
+    padding: 0;
+  }
   .footer-image-content {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.3);
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     padding: 10px 20px;
     border-radius: 8px;
   }
-
   .footer-image a,
   .footer-image .separator {
     font-size: 1.1rem;
@@ -71,80 +183,72 @@
   }
 }
 </style>
-
 </head>
 <body>
-  <button class="burger" id="menu-toggle">☰</button>
-  <nav class="sidebar" id="sidebar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Maud Taneur"/>
-      <div class="nom-site">maudtaneur<br/>thérapies</div>
-    </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="presentation.html">Présentation</a></li>
-      <li><a href="energetiques.html">Soins énergétiques</a></li>
-      <li><a href="rebouteux.html">Soins rebouteux</a></li>
-      <li><a href="distance.html">Soins à distances</a></li>
-      <li><a href="massages.html">Massages</a></li>
-      <li><a href="avis.html">Galerie et avis</a></li>
-      <li><a href="resa.html">Horaires et réservations</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-    </ul>
-  </nav>
-
-  <div class="banniere banniere-presentation">
-    <h1 class="titre-banniere">Présentation</h1>
-  </div>
-
-  <div class="contenu-central">
-    <div class="emoji-line">✨🌿🌸</div>
-
+<button class="burger" id="menu-toggle">☰</button>
+<nav class="sidebar" id="sidebar">
+<div class="logo">
+<img alt="Logo Maud Taneur" src="logo.png"/>
+<div class="nom-site">maudtaneur<br/>thérapies</div>
+</div>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="presentation.html">Présentation</a></li>
+<li><a href="energetiques.html">Soins énergétiques</a></li>
+<li><a href="rebouteux.html">Soins rebouteux</a></li>
+<li><a href="distance.html">Soins à distances</a></li>
+<li><a href="massages.html">Massages</a></li>
+<li><a href="avis.html">Galerie et avis</a></li>
+<li><a href="resa.html">Horaires et réservations</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+</ul>
+</nav>
+<div class="banniere banniere-presentation">
+<h1 class="titre-banniere">Présentation</h1>
+</div>
+<div class="contenu-central">
+<div class="emoji-line">✨🌿🌸</div>
 <div class="intro">
-  <h2>Maud Taneur</h2>
-  <p><strong>Praticienne en soins énergétiques - Maman, femme intuitive et engagée</strong></p>
-
-  <p>Je m'appelle Maud, j’ai 36 ans et je suis maman de trois enfants. Après de nombreuses années consacrées à l’aide à la personne, j’ai choisi de revenir à l’essentiel : le lien profond que j’entretiens depuis toujours avec les énergies.</p>
-
-  <p>Je suis issue d’une lignée de femmes intuitives et connectées. Ce savoir précieux, s’est aussi enrichi grâce à mon propre cheminement : je l’ai travaillé seule, avec des consœurs et des confrères passionnés. Ce parcours m’a permis de développer une pratique solide, sensible et respectueuse.</p>
-
-  <p>Aujourd’hui, j’unis ces pratiques ancestrales et intuitives pour soulager les douleurs, détendre le corps et accompagner chacun vers un mieux-être global - dans le respect, la douceur et l’écoute.</p>
-
-  <p>Depuis mon plus jeune âge, je baigne dans les médecines holistiques, les soins naturels et le magnétisme. Apaiser, soulager, écouter… c’est quelque chose que j’ai toujours fait spontanément.</p>
-
-  <p>Encouragée par Madame Michèle Ballorin en 2008, j’ai enrichi ma pratique auprès de Najia R., magnétiseuse réputée de Mâcon, qui m’a transmis des techniques précieuses venant compléter mes ressentis. J’ai également suivi des formations en ancrage, massages énergétiques.</p>
-
-  <p>Chaque accompagnement est pour moi un moment unique. Mon intention est toujours pure, centrée sur l’humain et le cœur. Je reçois chaque personne avec attention, bienveillance et respect, pour l’aider à retrouver équilibre, énergie et clarté.</p>
-
-  <p>On dit souvent de moi que je suis solaire, pétillante, à l’écoute et pleine de vie, que je trouve les mots justes et les solutions adaptées, même dans les situations délicates.</p>
-
-  <p>Comme tout praticien engagé, il m’arrive de me recentrer après une séance : c’est essentiel pour rester alignée. Même si je suis parfois discrète sur les réseaux, je reste disponible pour celles et ceux qui ressentent le besoin d’un soin.</p>
-
-  <p>Je suis facilement joignable par message (SMS, réseaux sociaux ou e-mail). Si je ne vous réponds pas immédiatement, c’est que je suis en soin : merci pour votre patience, je reviendrai vers vous avec bienveillance et attention.</p>
-
-  <p>Bienvenue dans mon univers 🌿</p>
+<h2>Maud Taneur</h2>
+<p><strong>Praticienne en soins énergétiques - Maman, femme intuitive et engagée</strong></p>
+<p>Je m'appelle Maud, j’ai 36 ans et je suis maman de trois enfants. Après de nombreuses années consacrées à l’aide à la personne, j’ai choisi de revenir à l’essentiel : le lien profond que j’entretiens depuis toujours avec les énergies.</p>
+<p>Je suis issue d’une lignée de femmes intuitives et connectées. Ce savoir précieux, s’est aussi enrichi grâce à mon propre cheminement : je l’ai travaillé seule, avec des consœurs et des confrères passionnés. Ce parcours m’a permis de développer une pratique solide, sensible et respectueuse.</p>
+<p>Aujourd’hui, j’unis ces pratiques ancestrales et intuitives pour soulager les douleurs, détendre le corps et accompagner chacun vers un mieux-être global - dans le respect, la douceur et l’écoute.</p>
+<p>Depuis mon plus jeune âge, je baigne dans les médecines holistiques, les soins naturels et le magnétisme. Apaiser, soulager, écouter… c’est quelque chose que j’ai toujours fait spontanément.</p>
+<p>Encouragée par Madame Michèle Ballorin en 2008, j’ai enrichi ma pratique auprès de Najia R., magnétiseuse réputée de Mâcon, qui m’a transmis des techniques précieuses venant compléter mes ressentis. J’ai également suivi des formations en ancrage, massages énergétiques.</p>
+<p>Chaque accompagnement est pour moi un moment unique. Mon intention est toujours pure, centrée sur l’humain et le cœur. Je reçois chaque personne avec attention, bienveillance et respect, pour l’aider à retrouver équilibre, énergie et clarté.</p>
+<p>On dit souvent de moi que je suis solaire, pétillante, à l’écoute et pleine de vie, que je trouve les mots justes et les solutions adaptées, même dans les situations délicates.</p>
+<p>Comme tout praticien engagé, il m’arrive de me recentrer après une séance : c’est essentiel pour rester alignée. Même si je suis parfois discrète sur les réseaux, je reste disponible pour celles et ceux qui ressentent le besoin d’un soin.</p>
+<p>Je suis facilement joignable par message (SMS, réseaux sociaux ou e-mail). Si je ne vous réponds pas immédiatement, c’est que je suis en soin : merci pour votre patience, je reviendrai vers vous avec bienveillance et attention.</p>
+<p>Bienvenue dans mon univers 🌿</p>
+</div>
+<div class="footer">
+<p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
+</div>
+</div>
+<div class="footer-image">
+<div class="footer-image-content">
+<a href="cgv.html">CGV</a>
+<span class="separator">et</span>
+<a href="mentions.html">Mentions légales</a>
+</div>
 </div>
 
-    
-    <div class="footer">
-      <p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
-    </div>
-  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const sidebar = document.querySelector(".sidebar");
 
-  <div class="footer-image">
-  <div class="footer-image-content">
-    <a href="cgv.html">CGV</a>
-    <span class="separator">et</span>
-    <a href="mentions.html">Mentions légales</a>
-  </div>
-</div>
-
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
-    toggle.addEventListener("click", () => {
+    burger.addEventListener("click", function (e) {
+      e.stopPropagation();
       sidebar.classList.toggle("open");
     });
-  </script>
-</body>
+
+    document.addEventListener("click", function (e) {
+      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
+        sidebar.classList.remove("open");
+      }
+    });
+  });
+</script></body>
 </html>
