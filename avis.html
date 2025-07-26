@@ -288,73 +288,14 @@
 }
 
 
-/* --- Harmonisation totale avec distance.html --- */
-
-/* Pied de page réduit */
-.footer-image {
-  height: 180px !important;
-  padding-left: 150px !important;
-  padding-bottom: 30px !important;
-}
-
-/* Agrandir les emojis */
-.emoji-line {
-  font-size: 2rem;
-  text-align: center;
-  margin: 1.5em 0;
-}
-
-/* Texte plus grand */
+/* Recentrage du contenu */
 .contenu-central {
   font-size: 1.15em;
   line-height: 1.7em;
-  margin-left: 0 !important;
-  padding: 20px;
   max-width: 800px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-/* Titres plus visibles */
-.contenu-central h2 {
-  font-size: 1.6em !important;
-  margin-top: 2.2em !important;
-  margin-bottom: 1.4em !important;
-}
-
-/* Menu burger identique à index */
-.sidebar {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #5d3a73;
-  z-index: 999;
-  width: 280px;
+  margin: 0 auto;
   padding: 20px;
-  flex-direction: column;
-  gap: 10px;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
-}
-
-.sidebar.open {
-  display: flex;
-  transform: translateX(0%);
-}
-
-.burger {
-  display: block;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background: none;
-  color: #5d3a73;
-  font-size: 30px;
-  border: none;
-  cursor: pointer;
+  box-sizing: border-box;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
@@ -433,7 +374,13 @@
 </div>
 </div>
 </div>
-
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  </script>
 <div class="footer-image">
 <div class="footer-image-content">
 <a href="cgv.html">CGV</a>
@@ -441,21 +388,5 @@
 <a href="mentions.html">Mentions légales</a>
 </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".burger");
-    const sidebar = document.querySelector(".sidebar");
-
-    burger.addEventListener("click", function (e) {
-      e.stopPropagation();
-      sidebar.classList.toggle("open");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
-        sidebar.classList.remove("open");
-      }
-    });
-  });
-</script></body>
+</body>
 </html>
