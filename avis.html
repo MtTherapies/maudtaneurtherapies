@@ -466,6 +466,61 @@
   width: 100%;
   margin: 0;
 }
+
+/* Sidebar réduite */
+.sidebar {
+  width: 220px !important;
+}
+.contenu-central,
+.banniere {
+  margin-left: 220px !important;
+  width: calc(100% - 220px) !important;
+}
+
+/* Galerie images */
+.galerie-photos > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+.galerie-photos > div > div {
+  flex: 1 1 48%;
+  max-width: 48%;
+  text-align: center;
+}
+.galerie-photos img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Bloc avis centré et harmonisé */
+.bloc-avis {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.bloc-avis .avis-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+.bloc-avis .avis-item > div {
+  display: flex;
+  flex: 1 1 48%;
+  gap: 20px;
+  align-items: flex-start;
+}
+.bloc-avis .avis-item img {
+  width: 100px;
+  border-radius: 6px;
+}
+.bloc-avis p {
+  font-size: 1.15em;
+  line-height: 1.7em;
+  text-align: left;
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 </head>
