@@ -114,6 +114,65 @@ p {
   text-align: center;
   font-family: 'Comfortaa', sans-serif;
 }
+
+/* Menu burger */
+.burger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #5d3a73;
+}
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #5d3a73;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo img {
+  max-height: 90px;
+  margin: 0 auto;
+}
+.nom-site {
+  font-size: 0.9em;
+  color: white;
+  margin-top: 8px;
+  line-height: 1.2;
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 30px;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
 </style>
 </head>
 <body>
@@ -163,9 +222,8 @@ p {
 <p><strong>SAUF EN CAS D'URGENCE SUR CE TYPE DE SOINS : 07 83 44 62 14</strong></p>
 <p>Le magnétisme est une approche naturelle et non invasive, qui repose sur une énergie invisible mais puissante.</p>
 </div>
-
 </div>
-<div class="footer-image">
+<p style="font-style: italic; text-align: center; font-size: 1.25em; margin-top: 2.5em;">Laissez votre énergie rayonner, votre lumière s’exprimer, votre âme respirer.</p><div class="footer-image">
 <div class="footer-image-content">
 <a href="cgv.html">CGV</a>
 <span class="separator">et</span>
