@@ -297,6 +297,72 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+/* Harmonisation complète avec distance.html */
+
+/* Pied de page réduit */
+.footer-image {
+  height: 180px !important;
+  padding-left: 150px !important;
+  padding-bottom: 30px !important;
+}
+
+/* Emojis (s'il y en a) */
+.emoji-line {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+/* Texte */
+.contenu-central {
+  font-size: 1.15em;
+  line-height: 1.7em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Titres */
+.contenu-central h2 {
+  font-size: 1.6em !important;
+  margin-top: 2.2em !important;
+  margin-bottom: 1.4em !important;
+}
+
+/* Menu burger */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: #5d3a73;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 </head>
@@ -323,64 +389,58 @@
 <h1 class="titre-banniere">Galerie et avis</h1>
 </div>
 <div class="contenu-central">
-<div class="galerie-photos" style="max-width: 1100px; margin: 60px auto 40px auto; padding: 0 20px;">
-<h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
+<div class="galerie-photos">
+<h2>
         Galerie photos
       </h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-<div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
-<img alt="Soin énergétique" src="photo-soin-energetique.jpg" style="width: 100%; border-radius: 8px;"/>
-<p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin énergétique</p>
+<div>
+<div>
+<img alt="Soin énergétique" src="photo-soin-energetique.jpg"/>
+<p>Soin énergétique</p>
 </div>
-<div style="flex: 1 1 48%; max-width: 48%; text-align: center;">
-<img alt="Soin à distance" src="photo-soin-distance.jpg" style="width: 100%; border-radius: 8px;"/>
-<p style="margin-top: 16px; font-weight: 500; color: purple; font-size: 1.1rem;">Soin à distance</p>
+<div>
+<img alt="Soin à distance" src="photo-soin-distance.jpg"/>
+<p>Soin à distance</p>
 </div>
 </div>
 </div>
-<div class="bloc-avis" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
-<h2 style="text-align: left; font-size: 2.3rem; font-weight: 300; font-family: Comfortaa, sans-serif; margin-bottom: 40px;">
+<div class="bloc-avis">
+<h2>
         Avis
       </h2>
-<div class="avis-item" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
-<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-<img alt="Elodie" src="fleur1.jpg" style="width: 120px; border-radius: 6px;"/>
+<div class="avis-item">
+<div>
+<img alt="Elodie" src="fleur1.jpg"/>
 <div>
 <strong>Elodie</strong>
-<p style="margin-top: 8px;">"Maud est une personne incroyable, douce, bienveillante, à l'écoute. Un vrai rayon de soleil qui a un don pour soigner vos maux et votre âme grâce à sa douceur et son intuition. Son soin m'a apporté beaucoup d'apaisement et a soigné mon eczéma sur les mains, je la recommande les yeux fermés 😊 "</p>
+<p>"Maud est une personne incroyable, douce, bienveillante, à l'écoute. Un vrai rayon de soleil qui a un don pour soigner vos maux et votre âme grâce à sa douceur et son intuition. Son soin m'a apporté beaucoup d'apaisement et a soigné mon eczéma sur les mains, je la recommande les yeux fermés 😊 "</p>
 </div>
 </div>
-<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-<img alt="Thomas" src="fleur2.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<img alt="Thomas" src="fleur2.jpg"/>
 <div>
 <strong>Thomas</strong>
-<p style="margin-top: 8px;">"Moment exceptionnel. Je recommande vivement Maud. J'ai pris un soin énergétique où à l'issue je me retrouve léger, bien et apaisé. Douce et à l'écoute c'était plus que ressourçant."</p>
+<p>"Moment exceptionnel. Je recommande vivement Maud. J'ai pris un soin énergétique où à l'issue je me retrouve léger, bien et apaisé. Douce et à l'écoute c'était plus que ressourçant."</p>
 </div>
 </div>
-<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-<img alt="Melanie" src="fleur3.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<img alt="Melanie" src="fleur3.jpg"/>
 <div>
 <strong>Melanie</strong>
-<p style="margin-top: 8px;">"Super expérience pour ma nièce Lucie et moi même ! Nous avons bénéficié de deux soins énergétiques. Pour deux raisons différentes, nous sommes conquises et reviendrons dès que nous ressentirons le besoin. Je recommande vivement !!!! "</p>
+<p>"Super expérience pour ma nièce Lucie et moi même ! Nous avons bénéficié de deux soins énergétiques. Pour deux raisons différentes, nous sommes conquises et reviendrons dès que nous ressentirons le besoin. Je recommande vivement !!!! "</p>
 </div>
 </div>
-<div style="display: flex; flex: 1 1 48%; gap: 20px; align-items: flex-start;">
-<img alt="Charles" src="fleur4.jpg" style="width: 120px; border-radius: 6px;"/>
+<div>
+<img alt="Charles" src="fleur4.jpg"/>
 <div>
 <strong>Charles</strong>
-<p style="margin-top: 8px;">"Soins à distance efficace qui m'ont fait un bien fou. Séance de magnétisme qui permet de recentrer ses énergies... au top"</p>
+<p>"Soins à distance efficace qui m'ont fait un bien fou. Séance de magnétisme qui permet de recentrer ses énergies... au top"</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<script>
-    const toggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
-    toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("open");
-    });
-  </script>
+
 <div class="footer-image">
 <div class="footer-image-content">
 <a href="cgv.html">CGV</a>
@@ -388,5 +448,21 @@
 <a href="mentions.html">Mentions légales</a>
 </div>
 </div>
-</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector(".burger");
+    const sidebar = document.querySelector(".sidebar");
+
+    burger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      sidebar.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
+        sidebar.classList.remove("open");
+      }
+    });
+  });
+</script></body>
 </html>
