@@ -1,34 +1,43 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Maud, énergéticienne</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maud, énergéticienne</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 <style>
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: white;
+  color: #111;
+  font-size: 1.15em;
+  line-height: 1.7em;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pied de page réduit */
 .footer-image {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 180px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
-  padding-left: 300px;
-  padding-bottom: 40px;
+  padding-left: 150px;
+  padding-bottom: 30px;
 }
-
 .footer-image-content {
   display: flex;
   gap: 12px;
-  background: none;
 }
-
 .footer-image a,
 .footer-image .separator {
   font-size: 1.2rem;
@@ -36,21 +45,17 @@
   text-decoration: none;
   text-shadow: 1px 1px 4px black;
   white-space: nowrap;
-  text-align: left;
 }
-
 .footer-image a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
   .footer-image {
-    justify-content: center !important;
-    align-items: flex-end !important;
-    padding: 0 !important;
+    justify-content: center;
+    padding: 0;
     position: relative;
   }
-
   .footer-image-content {
     position: absolute;
     bottom: 20px;
@@ -58,22 +63,70 @@
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.3);
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     padding: 10px 20px;
     border-radius: 8px;
   }
-
   .footer-image a,
   .footer-image .separator {
     font-size: 1.1rem;
     text-align: center;
   }
 }
+
+/* Menu burger */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: #5d3a73;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Centrage du contenu */
+.contenu-central {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Titres et textes */
+.intro p {
+  margin-bottom: 1.4em;
+  font-size: 1.15em;
+}
+h2 {
+  font-size: 2rem;
+  margin-top: 2.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
 </style>
-
-
 <style>
 /* Cacher le menu latéral par défaut */
 .sidebar {
@@ -119,115 +172,93 @@
   box-sizing: border-box;
 }
 </style>
-
 </head>
 <body class="home">
-
-  <nav class="sidebar">
-    <div class="logo">
-      <img alt="Logo Maud Taneur" src="logo.png"/>
-      <div class="nom-site">
+<nav class="sidebar">
+<div class="logo">
+<img alt="Logo Maud Taneur" src="logo.png"/>
+<div class="nom-site">
         maudtaneur<br/>thérapies
       </div>
-    </div>
-    <ul>
-      <li><a class="active" href="#accueil">Accueil</a></li>
-      <li><a href="presentation.html">Présentation</a></li>
-      <li><a href="energetiques.html">Soins énergétiques</a></li>
-      <li><a href="rebouteux.html">Soins rebouteux</a></li>
-      <li><a href="distance.html">Soins à distances</a></li>
-      <li><a href="massages.html">Massages</a></li>
-      <li><a href="avis.html">Galerie et avis</a></li>
-      <li><a href="resa.html">Horaires et réservations</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-    </ul>
-  </nav>
-
-  <button class="burger" id="menu-toggle">☰</button>
-
-  <div class="banniere"></div>
-
-  <div class="contenu-central">
-    <h1 class="titre-principal" id="accueil">Maud, énergéticienne</h1>
-
-    <div class="intro">
-      <p style="font-size: 1.2em;">
+</div>
+<ul>
+<li><a class="active" href="#accueil">Accueil</a></li>
+<li><a href="presentation.html">Présentation</a></li>
+<li><a href="energetiques.html">Soins énergétiques</a></li>
+<li><a href="rebouteux.html">Soins rebouteux</a></li>
+<li><a href="distance.html">Soins à distances</a></li>
+<li><a href="massages.html">Massages</a></li>
+<li><a href="avis.html">Galerie et avis</a></li>
+<li><a href="resa.html">Horaires et réservations</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+</ul>
+</nav>
+<button class="burger" id="menu-toggle">☰</button>
+<div class="banniere"></div>
+<div class="contenu-central">
+<h1 class="titre-principal" id="accueil">Maud, énergéticienne</h1>
+<div class="intro">
+<p style="font-size: 1.2em;">
         Je suis énergéticienne, spécialisée dans le soulagement des douleurs physiques :
         <br/>tensions musculaires, inflammations, douleurs chroniques (dos, articulations, migraines…).
       </p>
-
-      <p style="font-size: 1.2em;">
+<p style="font-size: 1.2em;">
         J’interviens aussi sur les blocages liés au stress et aux émotions.
       </p>
-
-      <p style="font-size: 1.2em;">
+<p style="font-size: 1.2em;">
         Grâce à une approche douce et intuitive, je vous aide à rétablir l’équilibre de votre énergie
         <br/>pour un mieux-être global et durable.
       </p>
-
-      <p style="font-size: 1.2em;">
-        <strong>
+<p style="font-size: 1.2em;">
+<strong>
           • Adultes, enfants<br/>
           • Séances sur place ou à distance<br/>
           • Bienveillance, écoute, soins personnalisés
         </strong>
-      </p>
-
-      <p style="font-size: 1.2em;">Prenez rendez-vous ou contactez-moi pour en discuter.</p>
-    </div>
-
-    <h2 id="mes-soins"><span class="emoji">🌟</span> <strong class="souligner">Mes soins :</strong></h2>
-
-    <div class="soins">
-      <div class="soin-scroll"><p class="soin">🤝 <a href="energetiques.html">Rééquilibrages et Soins énergétiques</a>, pour apaiser douleurs, stress ou troubles émotionnels.</p></div>
-      <div class="soin-scroll"><p class="soin">🍃 <a href="rebouteux.html">Soins guérisseurs rebouteux</a>, se faire manipuler en douceur..</p></div>
-      <div class="soin-scroll"><p class="soin">🌍 <a href="distance.html">Soins à distance</a>, pour recevoir les bienfaits du magnétisme, où que vous soyez.</p></div>
-      <div class="soin-scroll"><p class="soin">🔥 <a href="coupeur.html">Coupeur de feu</a>, pour vos brûlures ou rayons.</p></div>
-      <div class="soin-scroll"><p class="soin">🚭 <a href="cigarette.html">Séance arrêt de la cigarette</a>, pour en finir avec l'addiction.</p></div>
-      <div class="soin-scroll"><p class="soin">🧘 <a href="massages.html">Massages</a>, pour réveiller votre énergie et revitaliser votre corps.</p></div>
-      <div class="soin-scroll"><p class="soin">📜 <a href="coaching.html">Coaching</a>, pour vous aider dans vos difficultés.</p></div>
-    </div>
-
-    <div class="citation">
-      <p><em>Chaque séance est une parenthèse de douceur, un moment rien que pour vous.</em></p>
-      <p><em>Un espace sacré de reconnexion, de recentrage et de lumière intérieure </em></p>
-    </div>
-
-    <div class="footer">
-      <p class="accroche"><span class="footer-ligne">🍀 <strong>Laissez votre énergie rayonner</strong> ✨</span></p>
-    </div>
-  </div>
-
-  <div class="social-icons">
-    <a href="https://www.facebook.com/share/18yFHKP9Ac" rel="noopener" target="_blank">
-      <img alt="Facebook" src="https://cdn-icons-png.flaticon.com/512/733/733547.png"/>
-    </a>
-    <a href="https://www.instagram.com/maudtaneurtherapies" rel="noopener" target="_blank">
-      <img alt="Instagram" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"/>
-    </a>
-    <a href="https://www.linkedin.com/in/maud-taneur-68109b356" rel="noopener" target="_blank">
-      <img alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
-    </a>
-    <a href="https://g.co/kgs/7sytb9y" rel="noopener" target="_blank">
-      <img alt="Google" src="https://developers.google.com/identity/images/g-logo.png"/>
-    </a>
-  </div>
-
-  
-  <div class="footer-image">
-  <div class="footer-image-content">
-    <a href="cgv.html">CGV</a>
-    <span class="separator">et</span>
-    <a href="mentions.html">Mentions légales</a>
-  </div>
+</p>
+<p style="font-size: 1.2em;">Prenez rendez-vous ou contactez-moi pour en discuter.</p>
+</div>
+<h2 id="mes-soins"><span class="emoji">🌟</span> <strong class="souligner">Mes soins :</strong></h2>
+<div class="soins">
+<div class="soin-scroll"><p class="soin">🤝 <a href="energetiques.html">Rééquilibrages et Soins énergétiques</a>, pour apaiser douleurs, stress ou troubles émotionnels.</p></div>
+<div class="soin-scroll"><p class="soin">🍃 <a href="rebouteux.html">Soins guérisseurs rebouteux</a>, se faire manipuler en douceur..</p></div>
+<div class="soin-scroll"><p class="soin">🌍 <a href="distance.html">Soins à distance</a>, pour recevoir les bienfaits du magnétisme, où que vous soyez.</p></div>
+<div class="soin-scroll"><p class="soin">🔥 <a href="coupeur.html">Coupeur de feu</a>, pour vos brûlures ou rayons.</p></div>
+<div class="soin-scroll"><p class="soin">🚭 <a href="cigarette.html">Séance arrêt de la cigarette</a>, pour en finir avec l'addiction.</p></div>
+<div class="soin-scroll"><p class="soin">🧘 <a href="massages.html">Massages</a>, pour réveiller votre énergie et revitaliser votre corps.</p></div>
+<div class="soin-scroll"><p class="soin">📜 <a href="coaching.html">Coaching</a>, pour vous aider dans vos difficultés.</p></div>
+</div>
+<div class="citation">
+<p><em>Chaque séance est une parenthèse de douceur, un moment rien que pour vous.</em></p>
+<p><em>Un espace sacré de reconnexion, de recentrage et de lumière intérieure </em></p>
 </div>
 
-  <footer class="footer-banner">
-    <div class="footer-legal">
-    </div>
-  </footer>
-
-  
+</div>
+<div class="social-icons">
+<a href="https://www.facebook.com/share/18yFHKP9Ac" rel="noopener" target="_blank">
+<img alt="Facebook" src="https://cdn-icons-png.flaticon.com/512/733/733547.png"/>
+</a>
+<a href="https://www.instagram.com/maudtaneurtherapies" rel="noopener" target="_blank">
+<img alt="Instagram" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"/>
+</a>
+<a href="https://www.linkedin.com/in/maud-taneur-68109b356" rel="noopener" target="_blank">
+<img alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
+</a>
+<a href="https://g.co/kgs/7sytb9y" rel="noopener" target="_blank">
+<img alt="Google" src="https://developers.google.com/identity/images/g-logo.png"/>
+</a>
+</div>
+<div class="footer-image">
+<div class="footer-image-content">
+<a href="cgv.html">CGV</a>
+<span class="separator">et</span>
+<a href="mentions.html">Mentions légales</a>
+</div>
+</div>
+<footer class="footer-banner">
+<div class="footer-legal">
+</div>
+</footer>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".burger");
@@ -246,6 +277,5 @@
     });
   });
 </script>
-
 </body>
 </html>
