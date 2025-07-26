@@ -233,6 +233,23 @@ h2, .contenu-central h2 {
   margin-bottom: 1.6em;
   text-align: center;
 }
+
+/* Galerie : forcer côte à côte et augmenter taille des intitulés */
+.galerie-photos > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+.galerie-photos > div > div {
+  flex: 0 1 45%;
+  max-width: 45%;
+  text-align: center;
+}
+.galerie-photos p {
+  font-size: 1.2rem;
+  margin-top: 12px;
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 </head>
