@@ -8,25 +8,139 @@
 <title>resa</title>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 <style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background: white;
+  color: #111;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* Menu burger */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: #5d3a73;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo img {
+  max-height: 90px;
+  margin: 0 auto;
+}
+.nom-site {
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+.sidebar ul {
+  list-style: none;
+  margin-top: 30px;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Banniere */
+.banniere {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('Screenshot_11.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contenu */
+.contenu-central {
+  font-size: 1.15em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.intro h2 {
+  font-size: 2.2rem;
+  margin-top: 2.5em;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+.intro h3 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.intro p {
+  margin-bottom: 1.3em;
+  text-align: center;
+}
+.emoji-line {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+/* Footer */
 .footer-image {
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 180px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
-  padding-left: 300px;
-  padding-bottom: 40px;
+  padding-left: 150px;
+  padding-bottom: 30px;
 }
-
 .footer-image-content {
   display: flex;
   gap: 12px;
-  background: none;
 }
-
 .footer-image a,
 .footer-image .separator {
   font-size: 1.2rem;
@@ -36,33 +150,46 @@
   white-space: nowrap;
   text-align: left;
 }
-
 .footer-image a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
-  .footer-image {
-    justify-content: center !important;
-    align-items: flex-end !important;
-    padding: 0 !important;
-    position: relative;
-  }
+/* Réservations */
+details summary {
+  font-size: 1.3em;
+  color: #6a1b9a;
+  cursor: pointer;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+details[open] summary {
+  background: #f2f2f2;
+}
+details p {
+  padding: 0.5em 1em;
+  margin: 0;
+  color: #333;
+}
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+  }
+  .footer-image {
+    justify-content: center;
+    padding: 0;
+  }
   .footer-image-content {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.3);
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     padding: 10px 20px;
     border-radius: 8px;
   }
-
   .footer-image a,
   .footer-image .separator {
     font-size: 1.1rem;
@@ -94,64 +221,42 @@
 </div>
 <div class="contenu-central">
 <div class="emoji-line">✨🌿🌸</div>
-
 <div class="intro">
-  <h2 style="color: #944f6c;">Horaires et réservations</h2>
-
-  <h3>Horaire d'ouverture</h3>
-  <p>Du lundi au samedi<br/>
+<h2 style="color: #944f6c;">Horaires et réservations</h2>
+<h3>Horaire d'ouverture</h3>
+<p>Du lundi au samedi<br/>
   de 9 h à 22 h<br/>
   Fermé le dimanche</p>
-
-  <p style="text-align: center;">🌟🌟🌟🌟🌟🌟</p>
-
-  <h3>Réservations</h3>
-  <p>Pour réserver votre séance, vous pouvez prendre rendez-vous directement via mon agenda en ligne ou bien m’envoyer un message via mes réseaux sociaux.</p>
-
-  <p style="font-size: 1.3rem; font-weight: bold;">07.83.44.62.14</p>
-  <p>(Sms / Facebook / Instagram / WhatsApp)</p>
+<p style="text-align: center;">🌟🌟🌟🌟🌟🌟</p>
+<h3>Réservations</h3>
+<p>Pour réserver votre séance, vous pouvez prendre rendez-vous directement via mon agenda en ligne ou bien m’envoyer un message via mes réseaux sociaux.</p>
+<p style="font-size: 1.3rem; font-weight: bold;">07.83.44.62.14</p>
+<p>(Sms / Facebook / Instagram / WhatsApp)</p>
 </div>
-
-
-<div class="google-agenda-card" style="max-width:400px;margin:40px auto;padding:30px;border:1px solid #e0e0e0;border-radius:10px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-  <h2 style="margin-bottom:10px;">Agenda soins énergétiques</h2>
-  <p style="margin:5px 0;">⏱️ 60 min</p>
-  <p style="margin:5px 0;">📍 Réunion en présentiel</p>
-  <p style="margin-top:10px;font-size:0.95rem;">Bonjour et bienvenue sur mon planning de réservation en ligne. Chaque séance est personnalisée selon vos besoins...</p>
-  <a href="https://calendar.app.google/SzmCyBZgDMgeksM48" target="_blank"
-     style="display:inline-block;margin-top:15px;padding:10px 20px;background-color:#4285F4;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;">
-    Réserver via Google Agenda
-  </a>
-</div>
-
-
 
 <details>
-  <summary>Modalités de réservations 🧾</summary>
-  <p>Merci de respecter vos réservations et consulter les modalités CGV</p>
+<summary>Modalités de réservations 🧾</summary>
+<p>Merci de respecter vos réservations et consulter les modalités CGV</p>
 </details>
-
 <details>
-  <summary>Acomptes et paiements en ligne</summary>
-  <p>Prise de rendez-vous et acomptes :<br><br>
-  Toute prise de rendez-vous nécessite le versement d’un acompte de 50 % du montant total de la prestation.<br><br>
-  Le règlement de l’acompte peut être effectué via virement bancaire, PayPal ou Wero, lien crédit agricole ou CB.<br><br>
-  Le solde est à régler le jour du rendez-vous, en espèces ou par les moyens de paiement acceptés sur place.<br><br>
-  <strong>Conditions d’annulations et de remboursements :</strong><br>
-  Annulation plus de 24 heures à l’avance : l’acompte est remboursé ou reporté selon votre choix.<br>
-  Annulation moins de 24 heures à l’avance : aucun remboursement de l’acompte ne sera effectué.<br>
-  Non-présentation à la séance : la prestation est considérée comme due en totalité.<br><br>
-  <strong>Retards :</strong><br>
-  En cas de retard du client, la durée de la séance pourra être réduite en conséquence, sans réduction de tarif.<br>
+<summary>Acomptes et paiements en ligne</summary>
+<p>Prise de rendez-vous et acomptes :<br/><br/>
+  Toute prise de rendez-vous nécessite le versement d’un acompte de 50 % du montant total de la prestation.<br/><br/>
+  Le règlement de l’acompte peut être effectué via virement bancaire, PayPal ou Wero, lien crédit agricole ou CB.<br/><br/>
+  Le solde est à régler le jour du rendez-vous, en espèces ou par les moyens de paiement acceptés sur place.<br/><br/>
+<strong>Conditions d’annulations et de remboursements :</strong><br/>
+  Annulation plus de 24 heures à l’avance : l’acompte est remboursé ou reporté selon votre choix.<br/>
+  Annulation moins de 24 heures à l’avance : aucun remboursement de l’acompte ne sera effectué.<br/>
+  Non-présentation à la séance : la prestation est considérée comme due en totalité.<br/><br/>
+<strong>Retards :</strong><br/>
+  En cas de retard du client, la durée de la séance pourra être réduite en conséquence, sans réduction de tarif.<br/>
   Tout retard de plus de 15 minutes sans information préalable pourra entraîner l’annulation de la séance, avec conservation de l’acompte versé.
   </p>
 </details>
-
 <div class="footer">
 <p>🍀 <strong>Laissez votre énergie rayonner</strong> ✨</p>
 </div>
 </div>
-
 <style>
 details summary {
   font-size: 1.3em;
@@ -169,11 +274,6 @@ details p {
   color: #333;
 }
 </style>
-
-
-
-
-
 <div class="footer-image">
 <div class="footer-image-content">
 <a href="cgv.html">CGV</a>
@@ -207,8 +307,3 @@ details p {
   color: #333;
 }
 </style>
-
-
-
-
-
