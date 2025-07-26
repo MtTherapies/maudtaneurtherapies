@@ -223,7 +223,7 @@ p {
 <p>Le magnétisme est une approche naturelle et non invasive, qui repose sur une énergie invisible mais puissante.</p>
 </div>
 </div>
-<p style="font-style: italic; text-align: center; font-size: 1.25em; margin-top: 2.5em;">Laissez votre énergie rayonner, votre lumière s’exprimer, votre âme respirer.</p><div class="footer-image">
+<p style="font-style: italic; text-align: center; font-size: 1.25em; margin-top: 2.5em;">✨🌿🌸 Laissez votre énergie rayonner, votre lumière s’exprimer, votre âme respirer. ✨🌿🌸</p><div class="footer-image">
 <div class="footer-image-content">
 <a href="cgv.html">CGV</a>
 <span class="separator">et</span>
@@ -236,6 +236,16 @@ p {
     toggle.addEventListener("click", () => {
       sidebar.classList.toggle("open");
     });
-  </script>
+  
+
+document.addEventListener('click', function(event) {
+  const sidebar = document.getElementById('sidebar');
+  const burger = document.getElementById('menu-toggle');
+  const isClickInside = sidebar.contains(event.target) || burger.contains(event.target);
+  if (!isClickInside && sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>
