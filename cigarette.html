@@ -69,6 +69,75 @@
     text-align: center;
   }
 }
+
+/* Menu burger complet */
+.burger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #5d3a73;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #5d3a73;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+
+.nom-site {
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.2;
+}
 </style>
 </head>
 <body>
@@ -118,7 +187,6 @@
 <p>Vous êtes prêt à vous libérer de la cigarette ? Je suis là pour vous accompagner.</p>
 <p><strong>Pour réserver votre séance</strong>, vous pouvez prendre rendez-vous directement via mon agenda en ligne ou bien m’envoyer un message via mes réseaux sociaux (Facebook / Instagram / WhatsApp) ou sms.</p>
 </div>
-
 </div>
 <p style="font-style: italic; text-align: center; font-size: 1.25em; margin-top: 2.5em;">✨🌿🌸 Laissez votre énergie rayonner, votre lumière s’exprimer, votre âme respirer. ✨🌿🌸</p><div class="footer-image">
 <div class="footer-image-content">
