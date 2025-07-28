@@ -573,3 +573,19 @@ body.presentation
 .sidebar a:active {
   color: #333333 !important;
 }
+
+/* === Style noir avec texte blanc pour le menu === */
+.sidebar {
+  background-color: #111 !important; /* noir */
+}
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  color: white !important; /* texte blanc */
+}
+
+.nom-site {
+  color: white !important; /* nom du site en blanc */
+}
