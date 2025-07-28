@@ -12,7 +12,7 @@
   background-image: url('banniere-basse.png');
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 180px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -78,7 +78,7 @@
 <img alt="Logo Maud Taneur" src="logo.png"/>
 <div class="nom-site">maudtaneur<br/>thérapies</div>
 </div>
-<ul>
+<ul style="list-style-type: none; padding-left: 0;">
 <li><a href="index.html">Accueil</a></li>
 <li><a href="presentation.html">Présentation</a></li>
 <li><a href="energetiques.html">Soins énergétiques</a></li>
@@ -100,12 +100,12 @@
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">En tant que magnétiseuse et coach de vie spécialisée en développement personnel, je vous offre un espace d'écoute et d'analyse approfondie lors de séances individuelles.</p>
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">Que vos blocages soient physiques, émotionnels ou liés à votre carrière, nous travaillerons ensemble pour identifier les solutions et mettre en place des stratégies concrètes et rapides pour un changement positif durable. Je m'engage à vous accompagner avec professionnalisme, empathie et une écoute attentive.</p>
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">Grâce à des stratégies concrètes et un suivi régulier, je vous aide à surmonter vos blocages et à exploiter pleinement votre potentiel.</p>
-<ul>
+<ul style="list-style-type: none; padding-left: 0;">
 <li><strong>Clarification des objectifs :</strong> définir vos aspirations et mettre en place un plan d'action réaliste.</li>
 <li><strong>Développement personnel :</strong> renforcer la confiance en soi et améliorer la gestion du stress.</li>
 <li><strong>Accompagnement dans le changement :</strong> proposer des outils pratiques pour gérer efficacement les transitions de vie.</li>
 </ul>
-<p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;"><strong>Pour réserver votre séance</strong>
+<h2 style="font-size: 1.6em; text-align: center; margin-top: 2.5em; margin-bottom: 1em;">Pour réserver votre séance</h2>
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">vous pouvez prendre rendez-vous directement via mes réseaux sociaux.</p>
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">(Sms / Facebook / Instagram / WhatsApp)</p>
 <p style="font-size: 1.15em; margin-bottom: 1.4em; text-align: center;">Si vous avez des questions avant de réserver, n’hésitez pas à me contacter par message. Je serai ravie de vous guider et de vous aider à choisir le moment qui vous conviendra le mieux.</p>
@@ -125,6 +125,23 @@
     toggle.addEventListener("click", () => {
       sidebar.classList.toggle("open");
     });
-  </script>
+  
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    toggle.addEventListener("click", (e) => {
+      sidebar.classList.toggle("open");
+      e.stopPropagation();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+        sidebar.classList.remove("open");
+      }
+    });
+</script>
+
 </body>
 </html>
