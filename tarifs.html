@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 
 <html lang="fr">
 <head>
+<link href="style.css" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Galerie et avis</title>
+<title>tarifs</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
 <style>
 /* RESET */
 * {
@@ -81,7 +82,7 @@ body {
   font-size: 1rem;
 }
 
-/* Banniere */
+/* Bannière */
 .banniere {
   position: relative;
   width: 100%;
@@ -89,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('Screenshot_8.png');
+  background-image: url('Screenshot_10.png');
   background-size: cover;
   background-position: center;
 }
@@ -97,7 +98,7 @@ body {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 400;
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 2.7rem;
   color: white;
   text-shadow: 2px 2px 6px black;
   padding: 0 20px;
@@ -111,54 +112,24 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
-/* Titres */
-h2 {
-  font-size: 2rem;
+.intro h2 {
+  font-size: 2.2rem;
   margin-top: 2.5em;
-  margin-bottom: 1.5em;
-}
-
-/* Galerie */
-.galerie-photos > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-}
-.galerie-photos > div > div {
-  flex: 1 1 48%;
-  max-width: 48%;
+  margin-bottom: 1.4em;
   text-align: center;
 }
-.galerie-photos img {
-  width: 100%;
-  border-radius: 8px;
+.intro h3 {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
-
-/* Bloc avis */
-.bloc-avis .avis-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+.intro p {
+  margin-bottom: 1.2em;
 }
-.bloc-avis .avis-item > div {
-  display: flex;
-  flex: 1 1 48%;
-  gap: 20px;
-  align-items: flex-start;
-}
-.bloc-avis .avis-item img {
-  width: 100px;
-  border-radius: 6px;
-}
-.bloc-avis p {
-  font-size: 1.15em;
-  text-align: left;
-}
-.bloc-avis strong {
-  font-size: 1.2em;
+.emoji-line {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5em 0;
 }
 
 /* Footer image */
@@ -217,47 +188,29 @@ h2 {
   }
 }
 
-/* Renforcement du centrage général */
-.galerie-photos,
-.bloc-avis {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Titres plus gros et centrés */
-h2, .contenu-central h2 {
-  font-size: 2.2rem;
-  margin-top: 2.8em;
-  margin-bottom: 1.6em;
-  text-align: center;
-}
-
-/* Galerie : forcer côte à côte et augmenter taille des intitulés */
-.galerie-photos > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-}
-.galerie-photos > div > div {
-  flex: 0 1 45%;
-  max-width: 45%;
-  text-align: center;
-}
-.galerie-photos p {
-  font-size: 1.2rem;
-  margin-top: 12px;
-}
-
-.bloc-avis .avis-item {
-  margin-bottom: 50px;
+/* Espacement plus marqué après les titres */
+.intro h2 + p,
+.intro h3 + p {
+  margin-top: 1.2em;
 }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap" rel="stylesheet"/>
+<style>
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.intro h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.intro p {
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+</style>
 </head>
-<body class="avis">
+<body>
 <button class="burger" id="menu-toggle">☰</button>
 <nav class="sidebar" id="sidebar">
 <div class="logo">
@@ -276,60 +229,38 @@ h2, .contenu-central h2 {
 <li><a href="tarifs.html">Tarifs</a></li>
 </ul>
 </nav>
-<div class="banniere">
-<h1 class="titre-banniere">Galerie et avis</h1>
+<div class="banniere" style="background-image: url('Screenshot_10.png'); background-size: cover; background-position: center;">
+<h1 class="titre-banniere">Tarifs</h1>
 </div>
 <div class="contenu-central">
-<div class="galerie-photos">
-<h2>
-        Galerie photos
-      </h2>
-<div>
-<div>
-<img alt="Soin énergétique" src="photo-soin-energetique.jpg"/>
-<p><a href="energetiques.html" style="text-decoration: none; color: inherit;">Soin énergétique</a></p>
+<div class="emoji-line">✨🌿🌸</div>
+<div class="intro">
+<h2>🌟 Soins &amp; Massages Énergétiques 🌟</h2>
+<h3>✨ Soins énergétiques</h3>
+<p>Rééquilibrage énergétique (soin complet)<br/>🔹 70 € / 50 min</p>
+<p>Soin énergétique ciblé<br/>🔹 50 € / 30 min</p>
+<p>Soin guérisseur rebouteux<br/>🔹 50 € / 30 à 45 min</p>
+<p>Soin énergétique enfants<br/>🔹 30 € / 30 min</p>
+<p>Rééquilibrage énergétique à distance (soin complet)<br/>🔹 50 € / 45 min</p>
+<h3>⭐ Séances spécifiques en magnétisme</h3>
+<p>Accompagnement pour l'arrêt du tabac<br/>🔹 50 € / 30 min</p>
+<p>Coupeur de feu<br/>🔹 10 € (à distance) / 20 € (en présentiel)</p>
+<h3>🌺 Massages</h3>
+<p>🌸 Massage énergétique<br/>
+  🔹 70 € / 50 min<br/>
+  🔹 120 € / 90 min<br/>
+  🔹 150 € / 120 min<br/>
+<em>corps complet</em></p>
+<p>🌸 Massage à la bougie<br/>🔹 80 € / 50 min<br/><em>corps complet</em></p>
+<p>🌸 Massage aux pierres chaudes<br/>🔹 90 € / 50 min<br/><em>corps complet</em></p>
+<p>🌸 Massage ciblé dos / épaules / nuque<br/>🔹 40 € / 30 min</p>
+<p>🌸 Massage ciblé jambes, pieds<br/>🔹 40 € / 30 min</p>
+<p>🌸 Massage crânien<br/>🔹 40 € / 30 min</p>
+<h3>🕰️ Organisation des séances</h3>
+<p>Arriver en avance peut gêner l’accueil des autres séances.<br/>
+  Merci de respecter avec attention les horaires convenus pour garantir une expérience optimale pour tous.</p>
 </div>
-<div>
-<img alt="Soin à distance" src="photo-soin-distance.jpg"/>
-<p><a href="distance.html" style="text-decoration: none; color: inherit;">Soin à distance</a></p>
-</div>
-</div>
-</div>
-<div class="bloc-avis">
-<h2>
-        Avis
-      </h2>
-<div class="avis-item">
-<div>
-<img alt="Elodie" src="fleur1.jpg"/>
-<div>
-<strong>Elodie</strong>
-<p>"Maud est une personne incroyable, douce, bienveillante, à l'écoute. Un vrai rayon de soleil qui a un don pour soigner vos maux et votre âme grâce à sa douceur et son intuition. Son soin m'a apporté beaucoup d'apaisement et a soigné mon eczéma sur les mains, je la recommande les yeux fermés 😊 "</p>
-</div>
-</div>
-<div>
-<img alt="Thomas" src="fleur2.jpg"/>
-<div>
-<strong>Thomas</strong>
-<p>"Moment exceptionnel. Je recommande vivement Maud. J'ai pris un soin énergétique où à l'issue je me retrouve léger, bien et apaisé. Douce et à l'écoute c'était plus que ressourçant."</p>
-</div>
-</div>
-<div>
-<img alt="Melanie" src="fleur3.jpg"/>
-<div>
-<strong>Melanie</strong>
-<p>"Super expérience pour ma nièce Lucie et moi même ! Nous avons bénéficié de deux soins énergétiques. Pour deux raisons différentes, nous sommes conquises et reviendrons dès que nous ressentirons le besoin. Je recommande vivement !!!! "</p>
-</div>
-</div>
-<div>
-<img alt="Charles" src="fleur4.jpg"/>
-<div>
-<strong>Charles</strong>
-<p>"Soins à distance efficace qui m'ont fait un bien fou. Séance de magnétisme qui permet de recentrer ses énergies... au top"</p>
-</div>
-</div>
-</div>
-</div>
+
 </div>
 <div class="footer-image">
 <div class="footer-image-content">
@@ -339,20 +270,11 @@ h2, .contenu-central h2 {
 </div>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".burger");
-    const sidebar = document.querySelector(".sidebar");
-
-    burger.addEventListener("click", function (e) {
-      e.stopPropagation();
-      sidebar.classList.toggle("open");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
-        sidebar.classList.remove("open");
-      }
-    });
+  const toggle = document.getElementById("menu-toggle");
+  const sidebar = document.getElementById("sidebar");
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
   });
-</script></body>
+</script>
+</body>
 </html>
