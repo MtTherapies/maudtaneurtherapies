@@ -69,6 +69,85 @@
     text-align: center;
   }
 }
+
+/* Réduction du pied de page */
+.footer-image {
+  height: 180px;
+  padding-left: 150px;
+  padding-bottom: 30px;
+}
+
+/* Agrandir les emojis */
+.emoji-line {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.2em 0 0.6em;
+}
+
+/* Mise en forme globale du texte */
+.intro {
+  font-size: 1.15em;
+  line-height: 1.7em;
+}
+
+/* Titres plus visibles et espacés */
+.intro h2, .intro h3 {
+  font-size: 1.6em;
+  margin-top: 2.2em;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+
+/* Supprimer les puces */
+.intro ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5em;
+}
+
+/* Cacher le menu latéral par défaut */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5d3a73;
+  z-index: 999;
+  width: 280px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  display: flex;
+  transform: translateX(0%);
+}
+
+/* Afficher le bouton burger */
+.burger {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: none;
+  color: #5d3a73;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Forcer le centrage du contenu */
+.contenu-central {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 </style>
 </head>
 <body>
@@ -118,28 +197,22 @@
 <a href="mentions.html">Mentions légales</a>
 </div>
 </div>
-<script>
-    const toggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
-    toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("open");
-    });
-  
 
 <script>
-    const toggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger");
+  const sidebar = document.querySelector(".sidebar");
 
-    toggle.addEventListener("click", (e) => {
-      sidebar.classList.toggle("open");
-      e.stopPropagation();
-    });
+  burger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    sidebar.classList.toggle("open");
+  });
 
-    document.addEventListener("click", (e) => {
-      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
-        sidebar.classList.remove("open");
-      }
-    });
-</script>
-</body>
+  document.addEventListener("click", function (e) {
+    if (!sidebar.contains(e.target) && !burger.contains(e.target)) {
+      sidebar.classList.remove("open");
+    }
+  });
+});
+</script></body>
 </html>
