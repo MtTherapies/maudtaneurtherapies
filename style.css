@@ -565,3 +565,11 @@ body.presentation
     text-align: center !important;
   }
 }
+
+
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  color: #333333 !important;
+}
