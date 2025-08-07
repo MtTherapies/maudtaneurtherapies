@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceuil</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acceuil</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&amp;display=swap" rel="stylesheet"/>
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -152,47 +153,62 @@
 </style>
 </head>
 <body>
-  <canvas id="bg"></canvas>
+<canvas id="bg"></canvas>
+<div class="logo-container-old" style="display:none">
+<img alt="Logo tournant" src="logo.png"/>
+</div>
+<nav>
+<a href="/accueil">Accueil</a>
+<a href="/a-propos">À propos</a>
+<a href="/projets">Projets</a>
+<a href="/contact">Contact</a>
+</nav>
+<section id="accueil">
 
-  <div class="logo-container-old" style="display:none">
-    <img src="logo.png" alt="Logo tournant">
-  </div>
+<h1>Bienvenue dans mon univers</h1>
 
-  <nav>
-    <a href="/accueil">Accueil</a>
-    <a href="/a-propos">À propos</a>
-    <a href="/projets">Projets</a>
-    <a href="/contact">Contact</a>
-  </nav>
-
-  <section id="accueil">
-
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo tournant">
-    </div>
-
-    <h1>Bienvenue dans mon univers</h1>
-  </section>
-
-  <section id="a-propos">
-    <h2>À propos</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
-
-  <section id="projets">
-    <h2>Projets</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 - Tous droits réservés.
+<div class="presentation-text" style="margin-top: 3rem; max-width: 900px; text-align: center; line-height: 1.6; font-size: 1.2rem;">
+<p><strong>Je suis Maud Taneur</strong>, énergéticienne, rebouteuse, praticienne en hypnose.<br/>
+  J’accompagne adultes et enfants vers un mieux-être global : physique, émotionnel et énergétique, grâce à une approche naturelle, intuitive et personnalisée.</p>
+<h3 style="color: #00ffff; margin-top: 2rem;">Mes prestations principales</h3>
+<ul style="text-align: left; margin: 1rem auto; display: inline-block; text-align: left;">
+<li><strong>Soins énergétiques</strong> – Pour soulager les douleurs, le stress, la fatigue, les addictions et les angoisses.</li>
+<li><strong>Soins guérisseurs rebouteux</strong> – Libèrent les tensions et traitent efficacement les douleurs du dos, de la nuque, des épaules, des genoux, ainsi que les hernies discales.</li>
+<li><strong>Hypnose &amp; magnétisme</strong> – Pour l’arrêt du tabac, la perte de poids, les addictions, la gestion du stress, des peurs ou des troubles du sommeil.</li>
+<li><strong>Coaching de vie</strong> – Pour accompagner la gestion des émotions, les problématiques familiales ou personnelles, avec des solutions concrètes.</li>
+<li><strong>Massages énergétiques</strong> – Ciblés ou corps entier, pour une détente profonde et un rééquilibrage complet.</li>
+<li><strong>Prestations à distance</strong> – Soins énergétiques et hypnose en ligne pour les troubles psychiques ou émotionnels.</li>
+<li><strong>Galerie et avis</strong> – Repartez avec une création maison ou une pierre choisie pour prolonger les bienfaits du soin.</li>
+</ul>
+<p style="margin-top: 1rem;">💚 <strong>Bienveillance, écoute et soin sur-mesure.</strong></p>
+<blockquote style="font-style: italic; margin-top: 2rem;">
+    🌿 Une séance avec moi<br/>
+    Chaque séance est une parenthèse de douceur, un moment rien que pour vous,<br/>
+    un espace sacré de reconnexion, de recentrage et de lumière intérieure.
+  </blockquote>
+<h3 style="margin-top: 2rem;"><a href="#contact" style="color: #ff0;">📞 Me contacter / Réserver</a></h3>
+<p>Prenez rendez-vous ou contactez-moi pour échanger sur vos besoins.<br/>
+  ✨ <strong>Laissez votre énergie rayonner</strong></p>
+<p><strong>SMS :</strong> <a href="sms:+33783446214" style="color: #0ff;">07 83 44 62 14</a><br/>
+<strong>Réseaux :</strong> <a href="#" style="color: #0ff;">Facebook</a> / <a href="#" style="color: #0ff;">Instagram</a> / <a href="#" style="color: #0ff;">WhatsApp</a></p>
+<p><small><strong>SIRET</strong> 754 078 970</small></p>
+</div>
+</section>
+<section id="a-propos">
+<h2>À propos</h2>
+<p>Texte à ajouter ici.</p>
+</section>
+<section id="projets">
+<h2>Projets</h2>
+<p>Texte à ajouter ici.</p>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Texte à ajouter ici.</p>
+</section>
+<footer>
+    © 2025 - Tous droits réservés.
   </footer>
-
 <script>
   // Scroll fluide et URL clean sans hash
   const routes = {
@@ -223,14 +239,10 @@
     }
   });
 </script>
-
-
-<audio id="zenPlayer" loop>
-  <source src="zen_audio.mp3" type="audio/mp3">
+<audio id="zenPlayer" loop="">
+<source src="zen_audio.mp3" type="audio/mp3"/>
 </audio>
-
 <button id="audio-control" onclick="toggleAudio()">🔈 Play/Pause</button>
-
 <script>
   const player = document.getElementById('zenPlayer');
   function toggleAudio() {
@@ -241,6 +253,5 @@
     }
   }
 </script>
-
 </body>
 </html>
