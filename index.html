@@ -16,9 +16,9 @@
       min-height: 100%;
       height: auto;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #6f00ff, #00f0ff);
+      background: linear-gradient(135deg, #6f00ff, #00f0ff, #ff00ff, #00ff88, #ff9900);
       background-size: 400% 400%;
-      animation: gradientFlow 15s ease infinite;
+      animation: gradientFlow 6s ease infinite;
       color: #fff;
       scroll-behavior: smooth;
     }
@@ -118,17 +118,22 @@
       100% { background-position: 0% 50%; }
     }
 
-    @media (max-width: 768px) {
-      nav a {
-        font-size: 0.9rem;
-        margin-left: 10px;
-      }
-      section h1, section h2 {
-        font-size: 2rem;
-      }
-      section p {
-        font-size: 1rem;
-      }
+    #audio-control {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      z-index: 20;
+    }
+
+    #audio-control:hover {
+      background: rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
@@ -141,7 +146,7 @@
 </audio>
 
 <!-- 🎧 Audio contrôlable -->
-<button onclick="toggleAudio()">🔈 Play/Pause</button>
+<button id="audio-control" onclick="toggleAudio()">🔈 Play/Pause</button>
 <audio id="zenPlayer" loop>
   <source src="zen_audio.mp3" type="audio/mp3">
 </audio>
@@ -157,45 +162,41 @@
   }
 </script>
 
-  <canvas id="bg"></canvas>
+<canvas id="bg"></canvas>
 
-  <div class="logo-container-old" style="display:none">
-    <img src="logo.png" alt="Logo tournant">
-  </div>
+<div class="logo-container">
+  <img src="logo.png" alt="Logo tournant">
+</div>
 
-  <nav>
-    <a href="accueil">Accueil</a>
-    <a href="a-propos">À propos</a>
-    <a href="projets">Projets</a>
-    <a href="contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#a-propos">À propos</a>
+  <a href="#projets">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="accueil">
+<section id="accueil">
+  <h1>Bienvenue dans mon univers</h1>
+</section>
 
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo tournant">
-    </div>
+<section id="a-propos">
+  <h2>À propos</h2>
+  <p>Texte à ajouter ici.</p>
+</section>
 
-    <h1>Bienvenue dans mon univers</h1>
-  </section>
+<section id="projets">
+  <h2>Projets</h2>
+  <p>Texte à ajouter ici.</p>
+</section>
 
-  <section id="a-propos">
-    <h2>À propos</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Texte à ajouter ici.</p>
+</section>
 
-  <section id="projets">
-    <h2>Projets</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
+<footer>
+  &copy; 2025 - Tous droits réservés.
+</footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Texte à ajouter ici.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 - Tous droits réservés.
-  </footer>
 </body>
 </html>
