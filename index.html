@@ -2,18 +2,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Debug bouton audio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceuil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      min-height: 100%;
+      height: auto;
+      font-family: 'Orbitron', sans-serif;
       background: linear-gradient(135deg, #6f00ff, #00f0ff, #ff00ff, #00ff88, #ff9900);
       background-size: 400% 400%;
       animation: gradientFlow 6s ease infinite;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
       height: 100vh;
-      font-family: sans-serif;
+      z-index: -2;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotateLogo 20s linear infinite;
+      width: 350px;
+      height: 350px;
+      z-index: -1;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #0ff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      background-color: transparent;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section h1, section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    section p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      line-height: 1.6;
+      animation: fadeIn 3s ease-out;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes rotateLogo {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes gradientFlow {
@@ -22,24 +118,56 @@
       100% { background-position: 0% 50%; }
     }
 
-    #audio-control {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(255, 0, 255, 0.7); /* TEMP: rose flashy */
-      color: #fff;
-      border: 2px solid yellow;
-      padding: 12px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1.1rem;
-      z-index: 999999 !important;
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9rem;
+        margin-left: 10px;
+      }
+      section h1, section h2 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
     }
+  
+#audio-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 9999;
+}
 
-    #audio-control:hover {
-      background: rgba(255,255,255,0.5);
-    }
-  </style>
+#audio-control:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+
+#audio-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 9999;
+}
+#audio-control:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+</style>
 </head>
 <body>
 
@@ -59,6 +187,85 @@
     }
   }
 </script>
+
+  <canvas id="bg"></canvas>
+
+  <div class="logo-container-old" style="display:none">
+    <img src="logo.png" alt="Logo tournant">
+  </div>
+
+  <nav>
+    <a href="/accueil">Accueil</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/projets">Projets</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <section id="accueil">
+
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo tournant">
+    </div>
+
+    <h1>Bienvenue dans mon univers</h1>
+  </section>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <section id="projets">
+    <h2>Projets</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 - Tous droits réservés.
+  </footer>
+
+<script>
+  // Scroll fluide et URL clean sans hash
+  const routes = {
+    '/accueil': '#accueil',
+    '/a-propos': '#a-propos',
+    '/projets': '#projets',
+    '/contact': '#contact'
+  };
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const path = this.getAttribute('href');
+      const target = routes[path];
+      if (target) {
+        history.pushState({}, '', path);
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Au chargement, si on vient de /projets, /contact, etc.
+  window.addEventListener('load', () => {
+    const currentPath = window.location.pathname;
+    const target = routes[currentPath];
+    if (target) {
+      document.querySelector(target).scrollIntoView();
+    }
+  });
+</script>
+
+
+
+
+
+
+
 
 </body>
 </html>
