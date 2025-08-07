@@ -118,38 +118,118 @@
       100% { background-position: 0% 50%; }
     }
 
-    #audio-control {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      z-index: 20;
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9rem;
+        margin-left: 10px;
+      }
+      section h1, section h2 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
     }
+  
+#audio-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 9999;
+}
 
-    #audio-control:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-  </style>
+#audio-control:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+</style>
 </head>
 <body>
+  <canvas id="bg"></canvas>
 
-<!-- 🎧 Audio automatique -->
-<audio autoplay loop>
-  <source src="zen_audio.mp3" type="audio/mp3">
-  Votre navigateur ne supporte pas l'audio HTML5.
-</audio>
+  <div class="logo-container-old" style="display:none">
+    <img src="logo.png" alt="Logo tournant">
+  </div>
 
-<!-- 🎧 Audio contrôlable -->
-<button id="audio-control" onclick="toggleAudio()">🔈 Play/Pause</button>
+  <nav>
+    <a href="/accueil">Accueil</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/projets">Projets</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <section id="accueil">
+
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo tournant">
+    </div>
+
+    <h1>Bienvenue dans mon univers</h1>
+  </section>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <section id="projets">
+    <h2>Projets</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 - Tous droits réservés.
+  </footer>
+
+<script>
+  // Scroll fluide et URL clean sans hash
+  const routes = {
+    '/accueil': '#accueil',
+    '/a-propos': '#a-propos',
+    '/projets': '#projets',
+    '/contact': '#contact'
+  };
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const path = this.getAttribute('href');
+      const target = routes[path];
+      if (target) {
+        history.pushState({}, '', path);
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Au chargement, si on vient de /projets, /contact, etc.
+  window.addEventListener('load', () => {
+    const currentPath = window.location.pathname;
+    const target = routes[currentPath];
+    if (target) {
+      document.querySelector(target).scrollIntoView();
+    }
+  });
+</script>
+
+
 <audio id="zenPlayer" loop>
   <source src="zen_audio.mp3" type="audio/mp3">
 </audio>
+
+<button id="audio-control" onclick="toggleAudio()">🔈 Play/Pause</button>
 
 <script>
   const player = document.getElementById('zenPlayer');
@@ -161,42 +241,6 @@
     }
   }
 </script>
-
-<canvas id="bg"></canvas>
-
-<div class="logo-container">
-  <img src="logo.png" alt="Logo tournant">
-</div>
-
-<nav>
-  <a href="#accueil">Accueil</a>
-  <a href="#a-propos">À propos</a>
-  <a href="#projets">Projets</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="accueil">
-  <h1>Bienvenue dans mon univers</h1>
-</section>
-
-<section id="a-propos">
-  <h2>À propos</h2>
-  <p>Texte à ajouter ici.</p>
-</section>
-
-<section id="projets">
-  <h2>Projets</h2>
-  <p>Texte à ajouter ici.</p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Texte à ajouter ici.</p>
-</section>
-
-<footer>
-  &copy; 2025 - Tous droits réservés.
-</footer>
 
 </body>
 </html>
