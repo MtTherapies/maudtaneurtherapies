@@ -37,7 +37,7 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(0deg);
+      
       animation: rotateLogo 20s linear infinite;
       width: 350px;
       height: 350px;
@@ -168,6 +168,27 @@
   background: rgba(255,255,255,0.3);
 }
 
+
+
+.logo-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  
+  z-index: -1;
+}
+
+.logo-container {
+  animation: rotateLogo 20s linear infinite;
+  width: 350px;
+  height: 350px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 </style>
 </head>
 <body>
@@ -186,9 +207,9 @@
   }
 </script>
 <canvas id="bg"></canvas>
-<div class="logo-container">
+<div class="logo-wrapper"><div class="logo-container">
 <img alt="Logo tournant" src="logo.png"/>
-</div>
+</div></div>
 <nav>
 <a href="/accueil">Accueil</a>
 <a href="/a-propos">À propos</a>
