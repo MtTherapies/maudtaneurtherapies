@@ -13,7 +13,8 @@
       box-sizing: border-box;
     }
     html, body {
-      height: 100%;
+      min-height: 100%;
+      height: auto;
       font-family: 'Orbitron', sans-serif;
       background: linear-gradient(135deg, #6f00ff, #00f0ff);
       background-size: 400% 400%;
@@ -32,10 +33,14 @@
     }
 
     .logo-container {
-      margin-bottom: 2rem;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       animation: rotateLogo 20s linear infinite;
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 350px;
+      z-index: -1;
     }
 
     .logo-container img {
