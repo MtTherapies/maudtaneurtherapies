@@ -2,19 +2,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maud Taneur - Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceuil</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      min-height: 100%;
+      height: auto;
       font-family: 'Orbitron', sans-serif;
       background: linear-gradient(135deg, #6f00ff, #00f0ff, #ff00ff, #00ff88, #ff9900);
       background-size: 400% 400%;
-      animation: gradientFlow 8s ease infinite;
+      animation: gradientFlow 6s ease infinite;
       color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotateLogo 20s linear infinite;
+      width: 350px;
+      height: 350px;
+      z-index: -1;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #0ff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      background-color: transparent;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section h1, section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    section p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      line-height: 1.6;
+      animation: fadeIn 3s ease-out;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @keyframes rotateLogo {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes gradientFlow {
@@ -23,87 +118,178 @@
       100% { background-position: 0% 50%; }
     }
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9rem;
+        margin-left: 10px;
+      }
+      section h1, section h2 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
     }
+  
+#audio-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 9999;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+#audio-control:hover {
+  background: rgba(255,255,255,0.3);
+}
 
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #00ffee;
-    }
 
-    p, li {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
+#audio-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 9999;
+}
+#audio-control:hover {
+  background: rgba(255,255,255,0.3);
+}
 
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    blockquote {
-      font-style: italic;
-      font-size: 1.2rem;
-      background: rgba(255,255,255,0.1);
-      border-left: 4px solid #00ffee;
-      padding: 1rem;
-      margin: 2rem 0;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #ccc;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <main>
-    <h1>Je suis Maud Taneur</h1>
-    <p>Énergéticienne, rebouteuse, praticienne en hypnose.</p>
-    <p>J’accompagne adultes et enfants vers un mieux-être global : physique, émotionnel et énergétique, grâce à une approche naturelle, intuitive et personnalisée.</p>
 
-    <h2>Mes prestations principales</h2>
-    <ul>
-      <li><strong>Soins énergétiques</strong><br>Pour soulager les douleurs, le stress, la fatigue, les addictions et les angoisses.</li>
-      <li><strong>Soins guérisseurs rebouteux</strong><br>Libèrent les tensions et traitent efficacement les douleurs du dos, de la nuque, des épaules, des genoux, ainsi que les hernies discales.</li>
-      <li><strong>Hypnose & magnétisme</strong><br>Pour l’arrêt du tabac, la perte de poids, les addictions, la gestion du stress, des peurs ou des troubles du sommeil.</li>
-      <li><strong>Coaching de vie</strong><br>Pour accompagner la gestion des émotions, les problématiques familiales ou personnelles, avec des solutions concrètes.</li>
-      <li><strong>Massages énergétiques</strong><br>Ciblés ou corps entier, pour une détente profonde et un rééquilibrage complet.</li>
-      <li><strong>Prestations à distance</strong><br>Certains soins énergétiques et séances d’hypnose peuvent être réalisés en ligne pour répondre aux troubles psychiques ou émotionnels.</li>
-      <li><strong>Galerie et avis</strong><br>Repartez avec une création maison ou une pierre choisie pour prolonger les bienfaits du soin.</li>
-    </ul>
+<audio id="zenPlayer" loop>
+  <source src="zen_audio.mp3" type="audio/mp3">
+</audio>
 
-    <p style="font-weight: bold; font-size: 1.2rem;">💚 Bienveillance, écoute et soin sur-mesure.</p>
+<button id="audio-control" onclick="toggleAudio()">🔈 Play/Pause</button>
 
-    <blockquote>
-      🌿 Une séance avec moi<br>
-      Chaque séance est une parenthèse de douceur,<br>
-      un moment rien que pour vous,<br>
-      un espace sacré de reconnexion, de recentrage et de lumière intérieure.
-    </blockquote>
+<script>
+  const player = document.getElementById('zenPlayer');
+  function toggleAudio() {
+    if (player.paused) {
+      player.play();
+    } else {
+      player.pause();
+    }
+  }
+</script>
 
-    <h2>Me contacter / Réserver</h2>
-    <p>Prenez rendez-vous ou contactez-moi pour échanger sur vos besoins.<br>
-    Laissez votre énergie rayonner ✨</p>
-    <p>📱 SMS : 07 83 44 62 14<br>
-    🔗 Réseaux sociaux : Facebook / Instagram / WhatsApp</p>
+  <canvas id="bg"></canvas>
 
-    <footer>
-      SIRET 754 078 970 — &copy; 2025 Maud Taneur
-    </footer>
-  </main>
+  <div class="logo-container-old" style="display:none">
+    <img src="logo.png" alt="Logo tournant">
+  </div>
+
+  <nav>
+    <a href="/accueil">Accueil</a>
+    <a href="/a-propos">À propos</a>
+    <a href="/projets">Projets</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <section id="accueil">
+
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo tournant">
+    </div>
+
+    <h1>Bienvenue dans mon univers</h1>
+  </section>
+
+  <section id="a-propos">
+  <h2>À propos</h2>
+  <p>Je suis Maud Taneur, énergéticienne, rebouteuse, praticienne en hypnose.</p>
+  <p>J’accompagne adultes et enfants vers un mieux-être global : physique, émotionnel et énergétique, grâce à une approche naturelle, intuitive et personnalisée.</p>
+
+  <h3>Mes prestations principales</h3>
+  <ul style="text-align:left; max-width:800px; margin:auto;">
+    <li><strong>Soins énergétiques</strong> – Pour soulager les douleurs, le stress, la fatigue, les addictions et les angoisses.</li>
+    <li><strong>Soins guérisseurs rebouteux</strong> – Libèrent les tensions et traitent efficacement les douleurs du dos, de la nuque, des épaules, des genoux, ainsi que les hernies discales.</li>
+    <li><strong>Hypnose & magnétisme</strong> – Pour l’arrêt du tabac, la perte de poids, les addictions, la gestion du stress, des peurs ou des troubles du sommeil.</li>
+    <li><strong>Coaching de vie</strong> – Pour accompagner la gestion des émotions, les problématiques familiales ou personnelles, avec des solutions concrètes.</li>
+    <li><strong>Massages énergétiques</strong> – Ciblés ou corps entier, pour une détente profonde et un rééquilibrage complet.</li>
+    <li><strong>Prestations à distance</strong> – Certains soins énergétiques et séances d’hypnose peuvent être réalisés en ligne pour répondre aux troubles psychiques ou émotionnels.</li>
+    <li><strong>Galerie et avis</strong> – Repartez avec une création maison ou une pierre choisie pour prolonger les bienfaits du soin.</li>
+  </ul>
+
+  <p style="font-weight: bold; font-size: 1.2rem;">💚 Bienveillance, écoute et soin sur-mesure.</p>
+
+  <blockquote style="max-width:800px; margin:auto; font-style:italic;">
+    🌿 Une séance avec moi<br>
+    Chaque séance est une parenthèse de douceur,<br>
+    un moment rien que pour vous,<br>
+    un espace sacré de reconnexion, de recentrage et de lumière intérieure.
+  </blockquote>
+
+  <h3>Me contacter / Réserver</h3>
+  <p>Prenez rendez-vous ou contactez-moi pour échanger sur vos besoins.<br>
+  Laissez votre énergie rayonner ✨</p>
+  <p>📱 SMS : 07 83 44 62 14<br>
+  🔗 Réseaux sociaux : Facebook / Instagram / WhatsApp</p>
+</section>
+
+  
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Texte à ajouter ici.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 - Tous droits réservés.
+  </footer>
+
+<script>
+  // Scroll fluide et URL clean sans hash
+  const routes = {
+    '/accueil': '#accueil',
+    '/a-propos': '#a-propos',
+    '/projets': '#projets',
+    '/contact': '#contact'
+  };
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const path = this.getAttribute('href');
+      const target = routes[path];
+      if (target) {
+        history.pushState({}, '', path);
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Au chargement, si on vient de /projets, /contact, etc.
+  window.addEventListener('load', () => {
+    const currentPath = window.location.pathname;
+    const target = routes[currentPath];
+    if (target) {
+      document.querySelector(target).scrollIntoView();
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
 </body>
 </html>
