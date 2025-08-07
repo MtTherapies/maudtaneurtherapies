@@ -32,14 +32,10 @@
     }
 
     .logo-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-bottom: 2rem;
       animation: rotateLogo 20s linear infinite;
       width: 200px;
       height: 200px;
-      z-index: -1;
     }
 
     .logo-container img {
@@ -133,7 +129,7 @@
 <body>
   <canvas id="bg"></canvas>
 
-  <div class="logo-container">
+  <div class="logo-container-old" style="display:none">
     <img src="logo.png" alt="Logo tournant">
   </div>
 
@@ -145,6 +141,11 @@
   </nav>
 
   <section id="accueil">
+
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo tournant">
+    </div>
+
     <h1>Bienvenue dans le Futur</h1>
     <p>Un site immersif, créatif et dynamique.</p>
   </section>
