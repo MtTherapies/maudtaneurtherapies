@@ -190,7 +190,30 @@
   display: block;
 }
 </style>
-</head>
+<style>
+.logo-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotateLogo 20s linear infinite;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes rotateLogo {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+</style></head>
 <body>
 <audio id="zenPlayer" loop="">
 <source src="zen_audio.mp3" type="audio/mp3"/>
@@ -206,10 +229,8 @@
     }
   }
 </script>
-<canvas id="bg"></canvas>
-<div class="logo-wrapper"><div class="logo-container">
-<img alt="Logo tournant" src="logo.png"/>
-</div></div>
+<canvas id="bg"></canvas><div class="logo-container"><img alt="Logo tournant" src="logo.png"/></div>
+<div class="logo-wrapper"></div>
 <nav>
 <a href="/accueil">Accueil</a>
 <a href="/a-propos">À propos</a>
@@ -305,40 +326,3 @@
     const currentPath = window.location.pathname;
     const target = routes[currentPath];
     if (target) {
-      document.querySelector(target).scrollIntoView();
-    }
-  });
-</script>
-<section id="a-propos" style="display: block; opacity: 1; visibility: visible; position: relative; z-index: 10;">
-<div class="container" style="max-width: 900px; margin: auto; text-align: center; font-size: 1.2em; color: white;">
-<h2>À propos</h2>
-<p><strong>Je suis <span style="color:#00ffff;">Maud Taneur</span></strong>, énergéticienne, rebouteuse, praticienne en hypnose.</p>
-<p>J’accompagne adultes et enfants vers un mieux-être global : <br/>
-    physique, émotionnel et énergétique, grâce à une approche naturelle, intuitive et personnalisée.</p>
-<h3 style="color:#00ffcc; margin-top:2rem;">🌟 Mes prestations principales</h3>
-<ul style="list-style:none; padding:0; line-height:1.8;">
-<li><strong>Soins énergétiques</strong> – Pour soulager les douleurs, le stress, la fatigue, les addictions et les angoisses.</li>
-<li><strong>Soins guérisseurs rebouteux</strong> – Libèrent les tensions et traitent efficacement les douleurs du dos, de la nuque, des épaules, des genoux, ainsi que les hernies discales.</li>
-<li><strong>Hypnose &amp; magnétisme</strong> – Pour l’arrêt du tabac, la perte de poids, les addictions, la gestion du stress, des peurs ou des troubles du sommeil.</li>
-<li><strong>Coaching de vie</strong> – Pour accompagner la gestion des émotions, les problématiques familiales ou personnelles, avec des solutions concrètes.</li>
-<li><strong>Massages énergétiques</strong> – Ciblés ou corps entier, pour une détente profonde et un rééquilibrage complet.</li>
-<li><strong>Prestations à distance</strong> – Soins énergétiques et hypnose en ligne pour les troubles psychiques ou émotionnels.</li>
-<li><strong>Galerie et avis</strong> – Repartez avec une création maison ou une pierre choisie pour prolonger les bienfaits du soin.</li>
-</ul>
-<p style="margin:2em 0 1em; font-size:1.3em; color:#90ee90;">💚 Bienveillance, écoute et soin sur-mesure.</p>
-<h3 style="margin-top:2rem; color:#ff69b4;">🌿 Une séance avec moi</h3>
-<p><em>Chaque séance est une parenthèse de douceur,</em><br/>
-<em>un moment rien que pour vous,</em><br/>
-<em>un espace sacré de reconnexion, de recentrage et de lumière intérieure.</em></p>
-<h3 style="margin-top:2rem;">📞 Me contacter / Réserver</h3>
-<p>Prenez rendez-vous ou contactez-moi pour échanger sur vos besoins.</p>
-<p>✨ <strong>Laissez votre énergie rayonner.</strong></p>
-<p><strong>SMS :</strong> <a href="sms:+33783446214" style="color:#ffd700;">07 83 44 62 14</a></p>
-<p><strong>Réseaux :</strong> <a href="#" style="color:#ffd700;">Facebook</a> /
-        <a href="#" style="color:#ffd700;">Instagram</a> /
-        <a href="#" style="color:#ffd700;">WhatsApp</a></p>
-<p><strong>SIRET</strong> 754 078 970</p>
-</div>
-</section>
-</body>
-</html>
