@@ -16,9 +16,9 @@
       min-height: 100%;
       height: auto;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #6f00ff, #00f0ff, #ff00ff, #00ff88, #ff9900);
+      background: linear-gradient(135deg, #6f00ff, #00f0ff);
       background-size: 400% 400%;
-      animation: gradientFlow 6s ease infinite;
+      animation: gradientFlow 15s ease infinite;
       color: #fff;
       scroll-behavior: smooth;
     }
@@ -133,6 +133,30 @@
   </style>
 </head>
 <body>
+
+<!-- 🎧 Audio automatique -->
+<audio autoplay loop>
+  <source src="zen_audio.mp3" type="audio/mp3">
+  Votre navigateur ne supporte pas l'audio HTML5.
+</audio>
+
+<!-- 🎧 Audio contrôlable -->
+<button onclick="toggleAudio()">🔈 Play/Pause</button>
+<audio id="zenPlayer" loop>
+  <source src="zen_audio.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  const player = document.getElementById('zenPlayer');
+  function toggleAudio() {
+    if (player.paused) {
+      player.play();
+    } else {
+      player.pause();
+    }
+  }
+</script>
+
   <canvas id="bg"></canvas>
 
   <div class="logo-container-old" style="display:none">
@@ -140,10 +164,10 @@
   </div>
 
   <nav>
-    <a href="/accueil">Accueil</a>
-    <a href="/a-propos">À propos</a>
-    <a href="/projets">Projets</a>
-    <a href="/contact">Contact</a>
+    <a href="accueil">Accueil</a>
+    <a href="a-propos">À propos</a>
+    <a href="projets">Projets</a>
+    <a href="contact">Contact</a>
   </nav>
 
   <section id="accueil">
@@ -173,37 +197,5 @@
   <footer>
     &copy; 2025 - Tous droits réservés.
   </footer>
-
-<script>
-  // Scroll fluide et URL clean sans hash
-  const routes = {
-    '/accueil': '#accueil',
-    '/a-propos': '#a-propos',
-    '/projets': '#projets',
-    '/contact': '#contact'
-  };
-
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const path = this.getAttribute('href');
-      const target = routes[path];
-      if (target) {
-        history.pushState({}, '', path);
-        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Au chargement, si on vient de /projets, /contact, etc.
-  window.addEventListener('load', () => {
-    const currentPath = window.location.pathname;
-    const target = routes[currentPath];
-    if (target) {
-      document.querySelector(target).scrollIntoView();
-    }
-  });
-</script>
-
 </body>
 </html>
